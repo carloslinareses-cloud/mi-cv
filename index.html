@@ -3,137 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Linares | CV Profesional</title>
+    <title>Carlos Linares | Trayectoria Profesional</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #cbd5e1; }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .accent-line { border-left: 3px solid #118C4F; }
-        .tech-badge { background: rgba(17, 140, 79, 0.1); border: 1px solid rgba(17, 140, 79, 0.2); color: #118C4F; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0f172a; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0f1a; color: #94a3b8; }
+        .glass { background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .accent-text { color: #118C4F; }
+        .bg-accent { background-color: #118C4F; }
+        .border-accent { border-color: #118C4F; }
+        .card-hover:hover { background: rgba(255, 255, 255, 0.03); transform: translateY(-2px); transition: all 0.3s ease; }
     </style>
 </head>
-<body class="p-4 md:p-10">
+<body class="p-4 md:p-12">
 
-    <div class="max-w-5xl mx-auto glass rounded-[2.5rem] overflow-hidden shadow-2xl">
+    <div class="max-w-6xl mx-auto glass rounded-[3rem] overflow-hidden shadow-2xl border border-white/10">
         
-        <header class="bg-gradient-to-br from-gray-900 via-[#0f172a] to-black p-10 md:p-16 border-b border-white/5 text-center md:text-left flex flex-col md:flex-row items-center gap-10">
-            <div class="w-40 h-40 rounded-full border-4 border-[#118C4F] overflow-hidden shadow-2xl">
-                <img src="https://raw.githubusercontent.com/carloslinareses-cloud/mi-cv/main/hero.png" alt="Carlos Linares" class="w-full h-full object-cover">
-            </div>
-            <div class="flex-1">
-                <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic">Carlos Humberto Linares Morales</h1>
-                <p class="text-[#118C4F] text-lg font-bold uppercase tracking-[0.3em] mt-3">Profesional en Informática</p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6 text-sm font-medium text-gray-400">
-                    <span class="flex items-center gap-2">📍 Charallave, Venezuela</span>
-                    <span class="flex items-center gap-2">📧 carlos.linares.es@gmail.com</span>
-                    <span class="flex items-center gap-2">📱 +58 0414-2272792</span>
+        <header class="relative p-10 md:p-20 border-b border-white/5 overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-[#118C4F]/10 blur-[120px] rounded-full"></div>
+            <div class="relative flex flex-col md:flex-row items-center gap-12">
+                <div class="relative">
+                    <div class="w-44 h-44 rounded-[2.5rem] rotate-3 bg-accent absolute -inset-1 opacity-20 blur-lg"></div>
+                    <img src="https://raw.githubusercontent.com/carloslinareses-cloud/mi-cv/main/hero.png" alt="Carlos Linares" class="relative w-44 h-44 rounded-[2.5rem] object-cover border-2 border-white/10">
+                </div>
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tighter leading-none uppercase italic">Carlos Linares</h1>
+                    <p class="accent-text text-xl font-bold tracking-[0.4em] mt-4 uppercase">Informática & Operaciones</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-sm text-gray-400 font-medium italic">
+                        <span class="flex items-center justify-center md:justify-start gap-2">📍 Charallave, Miranda</span>
+                        <span class="flex items-center justify-center md:justify-start gap-2">✉️ carlos.linares.es@gmail.com</span>
+                        <span class="flex items-center justify-center md:justify-start gap-2">📱 +58 0414-2272792</span>
+                    </div>
                 </div>
             </div>
         </header>
 
-        <div class="p-8 md:p-16 grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
             
-            <aside class="space-y-12">
+            <aside class="lg:col-span-4 p-10 bg-black/20 border-r border-white/5 space-y-12">
                 
                 <section>
-                    <h3 class="text-white font-bold uppercase text-xs tracking-[0.3em] mb-6 border-b border-white/10 pb-2">Perfil</h3>
-                    <p class="text-sm leading-relaxed text-gray-400">
-                        Profesional con trayectoria versátil en desarrollo de software, soporte técnico y gestión operativa. Especializado en Backend con Python y análisis de datos con Pandas.
+                    <h3 class="text-white text-xs font-black uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-accent"></span> Perfil
+                    </h3>
+                    <p class="text-sm leading-relaxed italic text-gray-400">
+                        "Profesional con trayectoria versátil en desarrollo de software, soporte técnico y gestión operativa. Especializado en Backend con Python y análisis de datos avanzado."
                     </p>
                 </section>
 
                 <section>
-                    <h3 class="text-white font-bold uppercase text-xs tracking-[0.3em] mb-6 border-b border-white/10 pb-2">Stack Tecnológico</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <p class="text-[10px] font-black text-gray-500 uppercase mb-3">Programación</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="tech-badge px-3 py-1 rounded-md text-[10px] font-black">PYTHON</span>
-                                <span class="tech-badge px-3 py-1 rounded-md text-[10px] font-black">PANDAS</span>
-                                <span class="tech-badge px-3 py-1 rounded-md text-[10px] font-black">FLASK</span>
-                                <span class="tech-badge px-3 py-1 rounded-md text-[10px] font-black">APIs REST</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-black text-gray-500 uppercase mb-3">Infraestructura & Redes</p>
-                            <div class="flex flex-wrap gap-2 text-[10px] font-bold text-gray-300">
-                                <span class="bg-white/5 px-2 py-1 rounded">TCP/IP</span>
-                                <span class="bg-white/5 px-2 py-1 rounded">Ubiquiti</span>
-                                <span class="bg-white/5 px-2 py-1 rounded">CCTV</span>
-                                <span class="bg-white/5 px-2 py-1 rounded">Linux</span>
-                            </div>
-                        </div>
+                    <h3 class="text-white text-xs font-black uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-accent"></span> Tech Stack
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-accent/10 text-accent text-[10px] font-black px-3 py-1.5 rounded-lg border border-accent/20 uppercase">Python</span>
+                        <span class="bg-accent/10 text-accent text-[10px] font-black px-3 py-1.5 rounded-lg border border-accent/20 uppercase">Pandas</span>
+                        <span class="bg-accent/10 text-accent text-[10px] font-black px-3 py-1.5 rounded-lg border border-accent/20 uppercase">Flask</span>
+                        <span class="bg-accent/10 text-accent text-[10px] font-black px-3 py-1.5 rounded-lg border border-accent/20 uppercase">APIs REST</span>
+                        <span class="bg-white/5 text-gray-300 text-[10px] font-black px-3 py-1.5 rounded-lg border border-white/5 uppercase">Android Studio</span>
+                        <span class="bg-white/5 text-gray-300 text-[10px] font-black px-3 py-1.5 rounded-lg border border-white/5 uppercase">SQL</span>
+                        <span class="bg-white/5 text-gray-300 text-[10px] font-black px-3 py-1.5 rounded-lg border border-white/5 uppercase">Linux</span>
                     </div>
                 </section>
 
                 <section>
-                    <h3 class="text-white font-bold uppercase text-xs tracking-[0.3em] mb-6 border-b border-white/10 pb-2">Formación</h3>
-                    <div class="accent-line pl-4">
-                        <h4 class="text-white text-sm font-bold uppercase">TSU en Informática</h4>
-                        <p class="text-xs text-gray-500">IUT José María Carreño</p>
-                        <p class="text-[10px] text-[#118C4F] font-bold">2011 - 2015</p>
+                    <h3 class="text-white text-xs font-black uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-accent"></span> Formación
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-white text-sm font-bold uppercase">TSU en Informática</p>
+                            <p class="text-xs text-gray-500 italic">IUT José María Carreño</p>
+                            <p class="text-[10px] font-black accent-text mt-1">2011 - 2015</p>
+                        </div>
                     </div>
-                </section>
-
-                <section class="bg-white/5 p-6 rounded-2xl border border-white/5">
-                    <p class="text-[10px] font-black uppercase text-gray-500 mb-2">Otros Datos</p>
-                    <ul class="text-xs space-y-1 text-gray-300">
-                        <li>• Licencia de conducir</li>
-                        <li>• Vehículo propio</li>
-                        <li>• Idioma: Español (Nativo)</li>
-                    </ul>
                 </section>
             </aside>
 
-            <div class="lg:col-span-2 space-y-12">
+            <main class="lg:col-span-8 p-10 md:p-16 space-y-16">
                 
                 <section>
-                    <h3 class="text-white font-bold uppercase text-xs tracking-[0.3em] mb-8 border-b border-white/10 pb-2">Trayectoria Profesional</h3>
-                    
-                    <div class="space-y-12">
-                        <div class="accent-line pl-6 relative">
-                            <div class="absolute -left-[9px] top-0 w-4 h-4 bg-[#118C4F] rounded-full shadow-[0_0_10px_#118C4F]"></div>
-                            <h4 class="text-white font-black text-xl uppercase tracking-tighter">Desarrollador de Software</h4>
-                            <p class="text-[#118C4F] text-xs font-bold uppercase">Independiente / Proyectos Propios (Pana Voy) | Feb 2026 - Presente</p>
-                            <ul class="mt-4 text-sm text-gray-400 space-y-2 list-disc list-inside">
-                                <li>Desarrollo de aplicaciones móviles y escritorio con Android Studio y Visual Studio.</li>
-                                <li>Análisis de datos avanzado con Python y la librería Pandas.</li>
-                                <li>Integración de servicios Backend y APIs RESTful multiplataforma.</li>
+                    <h3 class="text-white text-xs font-black uppercase tracking-[0.3em] mb-12 flex items-center gap-3">
+                        <span class="w-12 h-[1px] bg-accent"></span> Experiencia Profesional
+                    </h3>
+
+                    <div class="space-y-16">
+                        <div class="relative pl-10 border-l border-white/10 card-hover p-6 rounded-3xl transition-all">
+                            <div class="absolute -left-[5px] top-8 w-2 h-2 bg-accent rounded-full shadow-[0_0_15px_#118C4F]"></div>
+                            <span class="text-[10px] font-black text-accent uppercase tracking-widest italic">Feb 2026 - Presente</span>
+                            <h4 class="text-2xl font-black text-white uppercase tracking-tighter mt-1">Desarrollador de Software</h4>
+                            <p class="text-gray-500 font-bold text-xs uppercase italic">Pana Voy / Independiente</p>
+                            <ul class="mt-4 text-sm text-gray-400 space-y-3">
+                                <li class="flex items-start gap-2"><span>•</span> Desarrollo de apps móviles y escritorio (Android Studio / Visual Studio).</li>
+                                <li class="flex items-start gap-2"><span>•</span> Análisis de datos avanzado con Python y Pandas.</li>
+                                <li class="flex items-start gap-2"><span>•</span> Integración de servicios Backend y APIs RESTful.</li>
                             </ul>
                         </div>
 
-                        <div class="accent-line pl-6 relative">
-                            <div class="absolute -left-[9px] top-0 w-4 h-4 bg-gray-700 rounded-full"></div>
-                            <h4 class="text-white font-black text-xl uppercase tracking-tighter text-opacity-80">Gerente Operativo / Logístico</h4>
-                            <p class="text-gray-500 text-xs font-bold uppercase">ParkMadrid - Madrid, España | Dic 2023 - Ene 2026</p>
-                            <p class="mt-2 text-sm text-gray-500">Supervisión de operaciones logísticas, gestión de personal y optimización de procesos operativos diarios.</p>
+                        <div class="relative pl-10 border-l border-white/10 card-hover p-6 rounded-3xl transition-all">
+                            <div class="absolute -left-[5px] top-8 w-2 h-2 bg-white/20 rounded-full"></div>
+                            <span class="text-[10px] font-black text-gray-600 uppercase tracking-widest italic">Dic 2023 - Ene 2026</span>
+                            <h4 class="text-xl font-black text-white/80 uppercase tracking-tighter mt-1">Gerente Operativo / Logístico</h4>
+                            <p class="text-gray-600 font-bold text-xs uppercase italic">ParkMadrid - Madrid, España</p>
+                            <ul class="mt-4 text-sm text-gray-500 space-y-2">
+                                <li>• Supervisión de operaciones logísticas y administrativas.</li>
+                                <li>• Gestión de personal, turnos y control de inventarios.</li>
+                            </ul>
                         </div>
 
-                        <div class="accent-line pl-6 relative">
-                            <div class="absolute -left-[9px] top-0 w-4 h-4 bg-gray-700 rounded-full"></div>
-                            <h4 class="text-white font-black text-xl uppercase tracking-tighter text-opacity-80">Backend Junior</h4>
-                            <p class="text-gray-500 text-xs font-bold uppercase">Ourworld LTD - Madrid, España | Mar 2023 - May 2023</p>
-                            <p class="mt-2 text-sm text-gray-500">Desarrollo de sistemas basados en Python y creación de APIs RESTful utilizando Flask.</p>
+                        <div class="relative pl-10 border-l border-white/10 card-hover p-6 rounded-3xl transition-all">
+                            <div class="absolute -left-[5px] top-8 w-2 h-2 bg-white/20 rounded-full"></div>
+                            <span class="text-[10px] font-black text-gray-600 uppercase tracking-widest italic">Mar 2023 - May 2023</span>
+                            <h4 class="text-xl font-black text-white/80 uppercase tracking-tighter mt-1">Backend Junior</h4>
+                            <p class="text-gray-600 font-bold text-xs uppercase italic">Ourworld LTD - Madrid, España</p>
+                            <p class="mt-2 text-sm text-gray-500">Desarrollo de sistemas Python y APIs con Flask.</p>
                         </div>
 
-                        <div class="accent-line pl-6 relative">
-                            <div class="absolute -left-[9px] top-0 w-4 h-4 bg-gray-700 rounded-full"></div>
-                            <h4 class="text-white font-black text-xl uppercase tracking-tighter text-opacity-80">Soporte Técnico</h4>
-                            <p class="text-gray-500 text-xs font-bold uppercase">WIFITEL - Cua, Venezuela | Nov 2021 - Feb 2022</p>
-                            <p class="mt-2 text-sm text-gray-500">Mantenimiento de redes inalámbricas y configuración de antenas Ubiquiti.</p>
+                        <div class="relative pl-10 border-l border-white/10 card-hover p-6 rounded-3xl transition-all">
+                            <div class="absolute -left-[5px] top-8 w-2 h-2 bg-white/20 rounded-full"></div>
+                            <span class="text-[10px] font-black text-gray-600 uppercase tracking-widest italic">Nov 2021 - Feb 2022</span>
+                            <h4 class="text-xl font-black text-white/80 uppercase tracking-tighter mt-1">Soporte Técnico</h4>
+                            <p class="text-gray-600 font-bold text-xs uppercase italic">WIFITEL - Cua, Venezuela</p>
+                            <p class="mt-2 text-sm text-gray-500">Redes inalámbricas, antenas Ubiquiti y configuración de routers.</p>
+                        </div>
+
+                        <div class="relative pl-10 border-l border-white/10 card-hover p-6 rounded-3xl transition-all">
+                            <div class="absolute -left-[5px] top-8 w-2 h-2 bg-white/20 rounded-full"></div>
+                            <span class="text-[10px] font-black text-gray-600 uppercase tracking-widest italic">Jul 2020 - Nov 2020</span>
+                            <h4 class="text-xl font-black text-white/80 uppercase tracking-tighter mt-1">Agente Contact Center</h4>
+                            <p class="text-gray-600 font-bold text-xs uppercase italic">Teleperformance - Bogotá, Colombia</p>
+                            <p class="mt-2 text-sm text-gray-500">Atención al cliente, soporte técnico y escalamiento de incidencias.</p>
+                        </div>
+
+                        <div class="relative pl-10 border-l border-white/10 card-hover p-6 rounded-3xl transition-all">
+                            <div class="absolute -left-[5px] top-8 w-2 h-2 bg-white/20 rounded-full"></div>
+                            <span class="text-[10px] font-black text-gray-600 uppercase tracking-widest italic">Nov 2018 - Jul 2019</span>
+                            <h4 class="text-xl font-black text-white/80 uppercase tracking-tighter mt-1">Jefe de Servicio / Analista Post Venta</h4>
+                            <p class="text-gray-600 font-bold text-xs uppercase italic">Flotas Service SPA - Santiago, Chile</p>
+                            <p class="mt-2 text-sm text-gray-500">Control de mantenimiento de flotas y elaboración de presupuestos.</p>
+                        </div>
+
+                        <div class="relative pl-10 border-l border-white/10 card-hover p-6 rounded-3xl transition-all">
+                            <div class="absolute -left-[5px] top-8 w-2 h-2 bg-white/20 rounded-full"></div>
+                            <span class="text-[10px] font-black text-gray-600 uppercase tracking-widest italic">Mar 2010 - Dic 2015</span>
+                            <h4 class="text-xl font-black text-white/80 uppercase tracking-tighter mt-1">Gerente de Ventas & TI</h4>
+                            <p class="text-gray-600 font-bold text-xs uppercase italic">Bodegón Chara - Charallave, Venezuela</p>
+                            <p class="mt-2 text-sm text-gray-500">Administración de redes, CCTV y soporte técnico de hardware/software.</p>
                         </div>
                     </div>
                 </section>
-            </div>
+            </main>
         </div>
     </div>
 
     <footer class="text-center py-12">
-        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-gray-600">Carlos Linares • Portfolio Profesional • 2026</p>
+        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-gray-700">Diseñado por Carlos Linares • 2026</p>
     </footer>
 
 </body>
