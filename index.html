@@ -209,78 +209,144 @@
                     <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-1" data-es="tecnologías dominadas" data-en="tech stack mastered">tecnologías dominadas</p>
                 </div>
                 <div class="text-center md:text-left">
-                    <p class="font-mono text-3xl md:text-4xl font-bold neon-text">9</p>
+                    <p class="font-mono text-3xl md:text-4xl font-bold neon-text">10</p>
                     <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-1" data-es="roles profesionales" data-en="professional roles">roles profesionales</p>
                 </div>
             </div>
         </header>
 
-        <!-- ═══════════ PROYECTO DESTACADO: PANA VOY ═══════════ -->
-        <section class="reveal glass rounded-[2rem] p-6 md:p-10 relative overflow-hidden border-l-2 border-[#16a861]">
-            <div class="absolute -top-20 -right-20 w-80 h-80 bg-[#118C4F]/10 rounded-full blur-[80px] pointer-events-none"></div>
+        <!-- ═══════════ PROYECTOS DESTACADOS ═══════════ -->
+        <section class="reveal space-y-6">
+            <div class="text-center md:text-left">
+                <span class="font-mono text-[11px] font-black uppercase tracking-[0.3em] text-[#16a861]" data-es="// Proyectos Destacados" data-en="// Featured Projects">// Proyectos Destacados</span>
+                <h2 class="mt-2 text-2xl md:text-3xl font-bold text-white tracking-tight" data-es="Lo que estoy construyendo" data-en="What I'm building">Lo que estoy construyendo</h2>
+            </div>
 
-            <div class="relative grid md:grid-cols-3 gap-6 md:gap-10 items-start">
-                <div class="md:col-span-2">
-                    <span class="inline-block px-3 py-1 bg-[#118C4F]/20 border border-[#118C4F]/40 text-[#16a861] text-[10px] font-black uppercase tracking-widest rounded-full mb-3" data-es="Proyecto Insignia" data-en="Flagship Project">Proyecto Insignia</span>
+            <div class="grid lg:grid-cols-2 gap-6">
 
-                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
-                        Pana Voy <span class="text-[#16a861]">✨</span>
-                    </h2>
+                <!-- ═════ PANA VOY ═════ -->
+                <article class="glass rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 relative overflow-hidden border-l-2 border-[#16a861]">
+                    <div class="absolute -top-20 -right-20 w-72 h-72 bg-[#118C4F]/10 rounded-full blur-[80px] pointer-events-none"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-3 gap-2">
+                            <span class="inline-block px-2.5 py-1 bg-[#118C4F]/20 border border-[#118C4F]/40 text-[#16a861] text-[10px] font-black uppercase tracking-widest rounded-full" data-es="Startup propia" data-en="Own Startup">Startup propia</span>
+                            <span class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-[#16a861]">
+                                <span class="w-1.5 h-1.5 bg-[#16a861] rounded-full animate-pulse"></span>
+                                <span data-es="EN PRODUCCIÓN" data-en="LIVE">EN PRODUCCIÓN</span>
+                            </span>
+                        </div>
 
-                    <div id="panavoy-es" class="lang-content">
-                        <p class="text-sm font-mono uppercase tracking-wider text-gray-400 mt-1">Fundador · Desarrollador Principal</p>
-                        <p class="mt-4 text-[15px] text-gray-300 leading-relaxed">
-                            Plataforma de <strong class="text-white">delivery + taxi</strong> diseñada y construida para los Valles del Tuy, Venezuela. App nativa Android (Kotlin/Jetpack Compose), backend serverless en Firebase + Cloudflare Workers, panel admin web y portal de socios.
-                        </p>
-                        <ul class="mt-4 space-y-2 text-sm text-gray-400">
-                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Stack:</strong> Kotlin · Jetpack Compose · Firebase RTDB · Cloud Functions · Cloudflare Workers · R2 · MapLibre</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Impacto:</strong> notificaciones push en tiempo real, geofencing 5 km, pagos en Bs a tasa BCV automática, multi-rol (cliente · tienda · repartidor · taxista)</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Estado:</strong> en revisión final de Google Play Store · reclutamiento activo de socios fundadores</span></li>
-                        </ul>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                            Pana Voy <span class="text-[#16a861]">✨</span>
+                        </h3>
+                        <p class="text-xs font-mono uppercase tracking-wider text-gray-400 mt-1" data-es="Fundador · Desarrollador Principal" data-en="Founder · Lead Developer">Fundador · Desarrollador Principal</p>
+
+                        <div id="panavoy-es" class="lang-content">
+                            <p class="mt-4 text-[14px] text-gray-300 leading-relaxed">
+                                Plataforma <strong class="text-white">delivery + taxi</strong> para los Valles del Tuy, Venezuela. App nativa Android, backend serverless y panel de socios.
+                            </p>
+                            <ul class="mt-3 space-y-1.5 text-[13px] text-gray-400">
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Multi-rol: cliente, tienda, repartidor, taxista</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Push real-time + geofencing 5 km</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Pagos en Bs a tasa BCV automática</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>En revisión final Play Store</span></li>
+                            </ul>
+                        </div>
+                        <div id="panavoy-en" class="lang-content hidden">
+                            <p class="mt-4 text-[14px] text-gray-300 leading-relaxed">
+                                <strong class="text-white">Delivery + taxi</strong> platform for Venezuela's Valles del Tuy region. Native Android app, serverless backend and partner portal.
+                            </p>
+                            <ul class="mt-3 space-y-1.5 text-[13px] text-gray-400">
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Multi-role: customer, store, delivery, taxi</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Real-time push + 5 km geofencing</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Automatic BCV-rate payments in Bs</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>In final Play Store review</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-4 flex flex-wrap gap-1">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">Kotlin</span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">Compose</span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">Firebase</span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">CF Workers</span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">R2</span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">MapLibre</span>
+                        </div>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <a href="https://panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#118C4F] hover:bg-[#16a861] text-white text-[11px] font-bold rounded-lg transition-all">
+                                🌐 panavoy.com
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                            <a href="https://admin.panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-2 bg-black/40 border border-gray-700 hover:border-[#16a861] text-gray-300 text-[11px] font-bold rounded-lg transition-all">
+                                ⚙️ admin
+                            </a>
+                            <a href="https://socios.panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-2 bg-black/40 border border-gray-700 hover:border-[#16a861] text-gray-300 text-[11px] font-bold rounded-lg transition-all">
+                                🏪 socios
+                            </a>
+                        </div>
                     </div>
-                    <div id="panavoy-en" class="lang-content hidden">
-                        <p class="text-sm font-mono uppercase tracking-wider text-gray-400 mt-1">Founder · Lead Developer</p>
-                        <p class="mt-4 text-[15px] text-gray-300 leading-relaxed">
-                            <strong class="text-white">Delivery + taxi</strong> platform designed and built for the Valles del Tuy region, Venezuela. Native Android app (Kotlin/Jetpack Compose), serverless backend on Firebase + Cloudflare Workers, web admin panel and partner portal.
-                        </p>
-                        <ul class="mt-4 space-y-2 text-sm text-gray-400">
-                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Stack:</strong> Kotlin · Jetpack Compose · Firebase RTDB · Cloud Functions · Cloudflare Workers · R2 · MapLibre</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Impact:</strong> real-time push notifications, 5 km geofencing, automatic BCV-rate payments in Bs, multi-role (customer · store · delivery · taxi)</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Status:</strong> in final Google Play review · actively recruiting founding partners</span></li>
-                        </ul>
-                    </div>
+                </article>
 
-                    <div class="mt-5 flex flex-wrap gap-2">
-                        <a href="https://panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-[#118C4F] hover:bg-[#16a861] text-white text-xs font-bold rounded-lg transition-all">
-                            🌐 panavoy.com
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </a>
-                        <a href="https://admin.panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-black/40 border border-gray-700 hover:border-[#16a861] text-gray-300 text-xs font-bold rounded-lg transition-all">
-                            ⚙️ admin
-                        </a>
-                        <a href="https://socios.panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-black/40 border border-gray-700 hover:border-[#16a861] text-gray-300 text-xs font-bold rounded-lg transition-all">
-                            🏪 socios
-                        </a>
-                    </div>
-                </div>
+                <!-- ═════ AEROSOCIO ═════ -->
+                <article class="glass rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 relative overflow-hidden border-l-2 border-amber-400">
+                    <div class="absolute -top-20 -right-20 w-72 h-72 bg-amber-500/8 rounded-full blur-[80px] pointer-events-none"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-3 gap-2">
+                            <span class="inline-block px-2.5 py-1 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[10px] font-black uppercase tracking-widest rounded-full" data-es="Proyecto Personal" data-en="Personal Project">Proyecto Personal</span>
+                            <span class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-amber-300">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span data-es="EN DESARROLLO" data-en="IN DEV">EN DESARROLLO</span>
+                            </span>
+                        </div>
 
-                <!-- Stack tarjeta -->
-                <div class="bg-black/40 border border-[#118C4F]/20 rounded-2xl p-5">
-                    <p class="text-[10px] font-mono uppercase tracking-widest text-gray-500 mb-3" data-es="Tech Stack" data-en="Tech Stack">Tech Stack</p>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Kotlin</span>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Compose</span>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Firebase</span>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Cloud Functions</span>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Workers</span>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">R2</span>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">MapLibre</span>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">FCM</span>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">React</span>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Astro</span>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Tailwind</span>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                            AeroSocio <span class="text-amber-400">✈</span>
+                        </h3>
+                        <p class="text-xs font-mono uppercase tracking-wider text-gray-400 mt-1" data-es="Creador · Full-Stack Developer" data-en="Creator · Full-Stack Developer">Creador · Full-Stack Developer</p>
+
+                        <div id="aerosocio-es" class="lang-content">
+                            <p class="mt-4 text-[14px] text-gray-300 leading-relaxed">
+                                <strong class="text-white">Club VIP de servicios para conductores en España</strong>. Membresía mensual (5 €) con alertas ITV, gestión documental, plantillas legales y marketplace.
+                            </p>
+                            <ul class="mt-3 space-y-1.5 text-[13px] text-gray-400">
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Recordatorios automáticos: ITV, seguro, carnet</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Gestión documental en la nube</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Plantillas para recursos de multas</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Marketplace con descuentos</span></li>
+                            </ul>
+                        </div>
+                        <div id="aerosocio-en" class="lang-content hidden">
+                            <p class="mt-4 text-[14px] text-gray-300 leading-relaxed">
+                                <strong class="text-white">VIP services club for drivers in Spain</strong>. Monthly subscription (€5) with vehicle inspection alerts, document management, legal templates and marketplace.
+                            </p>
+                            <ul class="mt-3 space-y-1.5 text-[13px] text-gray-400">
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Automatic reminders: ITV, insurance, license</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Cloud document management</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Fine-appeal templates</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Marketplace with discounts</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-4 flex flex-wrap gap-1">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">React 19</span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">Vite</span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">Supabase</span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">Tailwind v4</span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">PostgreSQL</span>
+                        </div>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-2 bg-amber-500/10 border border-amber-400/30 text-amber-300 text-[11px] font-bold rounded-lg">
+                                🇪🇸 Mercado España
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-2 bg-black/40 border border-gray-700 text-gray-400 text-[11px] font-bold rounded-lg">
+                                💼 SaaS B2C
+                            </span>
+                        </div>
                     </div>
-                </div>
+                </article>
+
             </div>
         </section>
 
@@ -411,17 +477,31 @@
                     <h3 class="font-mono text-base font-bold neon-text uppercase tracking-widest border-b border-[#118C4F]/20 pb-3 mb-8">/ Experiencia Profesional</h3>
                     <div class="relative border-l-2 border-[#118C4F]/20 space-y-8 pl-7">
 
-                        <!-- 2026 -->
+                        <!-- ALCALDÍA DE CHARALLAVE -->
+                        <article class="relative">
+                            <div class="timeline-dot"></div>
+                            <span class="font-mono text-[10px] font-black text-[#16a861] uppercase tracking-widest">2025 — Presente</span>
+                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Desarrollador Android</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Alcaldía de Charallave · Miranda, Venezuela</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Diseño y desarrollo de app móvil de <strong class="text-white">control de acceso</strong> para personal de la alcaldía (v1.0.8 en producción).</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Stack: Kotlin · Jetpack Compose · Supabase (Auth + Postgres) · Navigation3.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Implementación de sesión segura, geolocalización, dashboard administrativo y notificaciones de actualización.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Ciclo completo de release: distribución de APK firmado, gestión de versiones y soporte continuo.</span></li>
+                            </ul>
+                        </article>
+
+                        <!-- INDEPENDIENTE / PANA VOY -->
                         <article class="relative">
                             <div class="timeline-dot"></div>
                             <span class="font-mono text-[10px] font-black text-[#16a861] uppercase tracking-widest">Feb 2026 — Presente</span>
-                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Desarrollador de Software</h4>
-                            <p class="text-sm font-mono text-gray-400 mt-0.5">Independiente · Pana Voy · Proyectos Propios</p>
+                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Fundador & Desarrollador Full-Stack</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Independiente · Pana Voy · AeroSocio</p>
                             <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Desarrollo de aplicaciones móviles Android (Kotlin/Jetpack Compose) y de escritorio.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Backend serverless con Firebase Cloud Functions + Cloudflare Workers.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Análisis y manipulación de datos en Python utilizando Pandas.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Integración de servicios backend y APIs RESTful para aplicaciones multiplataforma.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Diseño y construcción de <strong class="text-white">Pana Voy</strong>: app Android nativa + admin web + portal de socios + backend serverless.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Desarrollo de <strong class="text-white">AeroSocio</strong> (React 19 + Supabase): club de servicios mensuales para conductores en España.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Backend serverless: Firebase Cloud Functions + Cloudflare Workers + R2.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Análisis y manipulación de datos en Python con Pandas; APIs REST con Flask.</span></li>
                             </ul>
                         </article>
 
@@ -542,16 +622,31 @@
                 <div id="exp-en" class="lang-content hidden">
                     <h3 class="font-mono text-base font-bold neon-text uppercase tracking-widest border-b border-[#118C4F]/20 pb-3 mb-8">/ Professional Experience</h3>
                     <div class="relative border-l-2 border-[#118C4F]/20 space-y-8 pl-7">
+                        <!-- ALCALDÍA -->
+                        <article class="relative">
+                            <div class="timeline-dot"></div>
+                            <span class="font-mono text-[10px] font-black text-[#16a861] uppercase tracking-widest">2025 — Present</span>
+                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Android Developer</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Charallave City Hall (Alcaldía) · Miranda, Venezuela</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Design and development of an <strong class="text-white">access control</strong> mobile app for city hall personnel (v1.0.8 in production).</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Stack: Kotlin · Jetpack Compose · Supabase (Auth + Postgres) · Navigation3.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Implementation of secure session, geolocation, admin dashboard and update notifications.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Full release cycle: signed APK distribution, version management and ongoing support.</span></li>
+                            </ul>
+                        </article>
+
+                        <!-- INDEPENDIENTE EN -->
                         <article class="relative">
                             <div class="timeline-dot"></div>
                             <span class="font-mono text-[10px] font-black text-[#16a861] uppercase tracking-widest">Feb 2026 — Present</span>
-                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Software Developer</h4>
-                            <p class="text-sm font-mono text-gray-400 mt-0.5">Independent · Pana Voy · Personal Projects</p>
+                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Founder & Full-Stack Developer</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Independent · Pana Voy · AeroSocio</p>
                             <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Android (Kotlin/Jetpack Compose) and desktop application development.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Serverless backend with Firebase Cloud Functions + Cloudflare Workers.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Data analysis and manipulation in Python using Pandas.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Backend services and RESTful API integration for cross-platform applications.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Design and build of <strong class="text-white">Pana Voy</strong>: native Android app + web admin + partner portal + serverless backend.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Development of <strong class="text-white">AeroSocio</strong> (React 19 + Supabase): monthly services club for drivers in Spain.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Serverless backend: Firebase Cloud Functions + Cloudflare Workers + R2.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Python data analysis with Pandas; REST APIs with Flask.</span></li>
                             </ul>
                         </article>
                         <article class="relative">
