@@ -3,515 +3,760 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Humberto Linares Morales | Portfolio Profesional</title>
+    <title>Carlos Humberto Linares Morales · Desarrollador Full-Stack & Especialista Operativo</title>
+    <meta name="description" content="Profesional en informática con 16+ años de experiencia en desarrollo backend Python, apps Android, redes e infraestructura. Fundador de Pana Voy (delivery + taxi).">
+
+    <!-- Open Graph / WhatsApp / LinkedIn preview -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Carlos H. Linares Morales · Desarrollador Full-Stack">
+    <meta property="og:description" content="Python · Android · Firebase · Cloudflare · Redes. 16+ años entre Venezuela, Colombia, Chile y España. Fundador de Pana Voy.">
+    <meta property="og:image" content="https://carloslinareses-cloud.github.io/mi-cv/foto.jpg">
+    <meta property="og:url" content="https://carloslinareses-cloud.github.io/mi-cv/">
+    <meta property="og:locale" content="es_VE">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/jpeg" href="foto.jpg">
+    <link rel="canonical" href="https://carloslinareses-cloud.github.io/mi-cv/">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Structured data: persona (Google indexa bien) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Carlos Humberto Linares Morales",
+      "jobTitle": "Desarrollador Full-Stack & Especialista Operativo",
+      "image": "https://carloslinareses-cloud.github.io/mi-cv/foto.jpg",
+      "email": "mailto:carlos.linares.es@gmail.com",
+      "telephone": "+584142272792",
+      "address": {"@type": "PostalAddress", "addressLocality": "Charallave", "addressRegion": "Miranda", "addressCountry": "VE"},
+      "url": "https://carloslinareses-cloud.github.io/mi-cv/",
+      "sameAs": [
+        "https://www.linkedin.com/in/carlos-humberto-linares-morales-a474642a6/",
+        "https://github.com/carloslinareses-cloud",
+        "https://panavoy.com"
+      ],
+      "knowsAbout": ["Python", "Flask", "Android Studio", "Kotlin", "Jetpack Compose", "Firebase", "Cloudflare Workers", "Pandas", "REST APIs", "Networks"],
+      "alumniOf": {"@type": "EducationalOrganization", "name": "IUT José María Carreño"}
+    }
+    </script>
+
     <style>
-        :root { --neon: #118C4F; --bg: #030712; }
-        body { font-family: 'Rajdhani', sans-serif; background-color: var(--bg); color: #94a3b8; }
-        .font-tech { font-family: 'Orbitron', sans-serif; }
-        .glass { background: rgba(17, 140, 79, 0.03); backdrop-filter: blur(24px); border: 1px solid rgba(17, 140, 79, 0.15); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); }
-        .neon-text { color: var(--neon); text-shadow: 0 0 15px rgba(17, 140, 79, 0.6); }
-        .neon-border { border-color: var(--neon); box-shadow: 0 0 15px rgba(17, 140, 79, 0.3); }
-        .timeline-node { position: absolute; left: -6px; top: 24px; width: 12px; height: 12px; border-radius: 50%; background: var(--neon); box-shadow: 0 0 10px var(--neon); }
+        :root { --neon: #118C4F; --neon-bright: #16a861; --neon-dim: #0e7642; --bg: #030712; --bg-soft: #0a1019; }
+        * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: #94a3b8;
+            background-image:
+              radial-gradient(circle at 20% 0%, rgba(17,140,79,0.07), transparent 50%),
+              radial-gradient(circle at 80% 100%, rgba(17,140,79,0.05), transparent 50%);
+            background-attachment: fixed;
+        }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { background: rgba(10, 16, 25, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(17, 140, 79, 0.12); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35); }
+        .neon-text { color: var(--neon-bright); }
+        .neon-glow { box-shadow: 0 0 24px rgba(17, 140, 79, 0.45), 0 0 60px rgba(17, 140, 79, 0.15); }
+        .timeline-dot { position: absolute; left: -7px; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: var(--neon); border: 3px solid var(--bg); box-shadow: 0 0 12px var(--neon); }
+        .timeline-dot-muted { position: absolute; left: -6px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: #475569; border: 2px solid var(--bg); }
         .lang-content.hidden { display: none; }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg); }
         ::-webkit-scrollbar-thumb { background: var(--neon); border-radius: 4px; }
+
+        /* Animation on scroll reveal — minimal */
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* Subtle floating animation on hero photo */
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        .photo-float { animation: float 5s ease-in-out infinite; }
+
+        /* ─────────────────────────── PRINT STYLES ─────────────────────────── */
+        @media print {
+            @page { size: A4; margin: 14mm 12mm; }
+            html, body { background: white !important; color: #0f172a !important; font-size: 10.5pt; }
+            body { background-image: none !important; }
+            .no-print { display: none !important; }
+            .glass { background: white !important; backdrop-filter: none !important; border: none !important; box-shadow: none !important; padding: 0 !important; margin: 0 0 12pt 0 !important; border-radius: 0 !important; page-break-inside: avoid; }
+            .neon-text, .neon-glow { color: #118C4F !important; text-shadow: none !important; box-shadow: none !important; }
+            h1, h2, h3, h4 { color: #0f172a !important; page-break-after: avoid; }
+            .text-white, .text-gray-300, .text-gray-400 { color: #0f172a !important; }
+            .text-gray-500, .text-gray-600 { color: #475569 !important; }
+            a { color: #0f172a !important; text-decoration: none !important; }
+            .timeline-dot, .timeline-dot-muted { background: #118C4F !important; box-shadow: none !important; border-color: white !important; }
+            .border-l, .border-l-2 { border-color: #cbd5e1 !important; }
+            .bg-gray-900\\/80, .bg-gray-800\\/50, .bg-\\[\\#118C4F\\]\\/10 { background: white !important; border: 1px solid #cbd5e1 !important; }
+            .photo-float { animation: none !important; }
+            .reveal { opacity: 1 !important; transform: none !important; }
+            section, header, main, aside { page-break-inside: avoid; }
+            .max-w-7xl { max-width: 100% !important; }
+            footer { display: none !important; }
+        }
     </style>
 </head>
 <body class="p-4 md:p-8 overflow-x-hidden">
 
-    <div class="fixed top-4 right-4 md:top-8 md:right-8 z-50">
-        <button onclick="toggleLanguage()" class="glass px-5 py-2.5 rounded-xl border border-[#118C4F]/40 text-white font-tech text-[11px] font-bold hover:bg-[#118C4F]/20 transition-all flex items-center gap-2 shadow-2xl backdrop-blur-md cursor-pointer">
-            <span id="flag-icon" class="text-lg">🇺🇸</span>
-            <span id="lang-label" class="tracking-widest">ENGLISH</span>
+    <!-- ═══════════ TOP BAR FLOTANTE: idioma + descarga PDF ═══════════ -->
+    <div class="no-print fixed top-4 right-4 md:top-6 md:right-6 z-50 flex gap-2 md:gap-3">
+        <a href="CV Carlos Linares.pdf" download
+           class="glass px-4 md:px-5 py-2.5 rounded-xl text-white font-mono text-[11px] font-bold flex items-center gap-2 hover:border-[#16a861] hover:bg-[#118C4F]/15 hover:scale-105 transition-all neon-glow"
+           title="Descargar CV en PDF">
+            <svg class="w-4 h-4 text-[#16a861]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            <span class="hidden md:inline tracking-widest">DESCARGAR PDF</span>
+            <span class="md:hidden tracking-widest">PDF</span>
+        </a>
+        <button onclick="window.print()"
+                class="glass px-4 py-2.5 rounded-xl text-white font-mono text-[11px] font-bold hover:border-[#16a861] hover:bg-[#118C4F]/15 hover:scale-105 transition-all"
+                title="Imprimir">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+            </svg>
+        </button>
+        <button onclick="toggleLanguage()"
+                class="glass px-4 py-2.5 rounded-xl text-white font-mono text-[11px] font-bold hover:border-[#16a861] hover:bg-[#118C4F]/15 hover:scale-105 transition-all flex items-center gap-2">
+            <span id="flag-icon" class="text-base">🇺🇸</span>
+            <span id="lang-label" class="tracking-widest hidden md:inline">EN</span>
         </button>
     </div>
 
-    <div class="max-w-7xl mx-auto space-y-10 mt-14 md:mt-0">
-        
-        <header class="glass rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden flex flex-col md:flex-row items-center md:items-start gap-10 border-t-4 border-[#118C4F]">
-            <div class="absolute -top-32 -right-32 w-96 h-96 bg-[#118C4F]/10 rounded-full blur-[120px] pointer-events-none"></div>
-            
-            <div class="shrink-0 relative group">
-                <div class="absolute -inset-1 bg-[#118C4F] rounded-full opacity-30 group-hover:opacity-50 blur transition-all duration-500"></div>
-                <img src="foto.jpg" alt="Carlos Linares" class="relative w-48 h-48 md:w-56 md:h-56 rounded-full object-cover neon-border border-[3px]">
-            </div>
+    <div class="max-w-7xl mx-auto space-y-8 md:space-y-10 mt-16 md:mt-0">
 
-            <div class="text-center md:text-left space-y-5 flex-1 z-10">
-                <h1 class="text-4xl md:text-6xl font-black font-tech text-white uppercase tracking-tighter leading-none drop-shadow-lg">
-                    Carlos Humberto <br class="hidden md:block"> <span class="neon-text">Linares Morales</span>
-                </h1>
-                
-                <div id="role-es" class="lang-content">
-                    <p class="text-xl font-bold uppercase tracking-[0.3em] text-gray-400">Desarrollador Full-Stack & Especialista Operativo</p>
+        <!-- ═══════════ HERO ═══════════ -->
+        <header class="glass rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 relative overflow-hidden border-t-2 border-[#118C4F]">
+            <div class="absolute -top-32 -right-32 w-[28rem] h-[28rem] bg-[#118C4F]/12 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-[#118C4F]/8 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 relative">
+                <div class="shrink-0 relative">
+                    <div class="absolute -inset-1 bg-gradient-to-br from-[#16a861] to-[#0e7642] rounded-full opacity-40 blur-lg"></div>
+                    <img src="foto.jpg" alt="Carlos Linares" class="photo-float relative w-44 h-44 md:w-52 md:h-52 rounded-full object-cover border-2 border-[#16a861] neon-glow">
                 </div>
-                <div id="role-en" class="lang-content hidden">
-                    <p class="text-xl font-bold uppercase tracking-[0.3em] text-gray-400">Full-Stack Developer & Operations Specialist</p>
-                </div>
-                
-                <div class="flex flex-col space-y-3 pt-2">
-                    <div class="flex flex-wrap justify-center md:justify-start gap-3">
-                        <a href="mailto:carlos.linares.es@gmail.com" class="bg-gray-900/80 border border-gray-700 px-5 py-2.5 rounded-xl text-xs font-bold text-white hover:border-[#118C4F] hover:text-[#118C4F] transition-all flex items-center gap-2">
-                            📧 carlos.linares.es@gmail.com
+
+                <div class="text-center md:text-left flex-1 space-y-5 z-10">
+                    <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                        <span class="w-2 h-2 bg-[#16a861] rounded-full animate-pulse"></span>
+                        <span class="font-mono text-[11px] uppercase tracking-[0.25em] text-[#16a861] font-bold" id="status-text">Disponible para proyectos</span>
+                    </div>
+
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05]">
+                        Carlos Humberto<br>
+                        <span class="bg-gradient-to-r from-[#16a861] via-[#118C4F] to-[#0e7642] bg-clip-text text-transparent">Linares Morales</span>
+                    </h1>
+
+                    <div id="role-es" class="lang-content">
+                        <p class="text-base md:text-lg text-gray-300 font-medium leading-relaxed max-w-xl">
+                            <strong class="text-white">Desarrollador Full-Stack</strong> y <strong class="text-white">especialista operativo</strong>. Construyo apps Android nativas, APIs en Python, y resuelvo problemas reales con redes e infraestructura.
+                        </p>
+                    </div>
+                    <div id="role-en" class="lang-content hidden">
+                        <p class="text-base md:text-lg text-gray-300 font-medium leading-relaxed max-w-xl">
+                            <strong class="text-white">Full-Stack Developer</strong> and <strong class="text-white">operations specialist</strong>. I build native Android apps, Python APIs, and solve real-world problems with networking and infrastructure.
+                        </p>
+                    </div>
+
+                    <!-- Contacto principal -->
+                    <div class="flex flex-wrap justify-center md:justify-start gap-2 pt-1">
+                        <a href="mailto:carlos.linares.es@gmail.com" class="bg-black/40 border border-[#118C4F]/30 px-4 py-2 rounded-lg text-xs font-bold text-white hover:border-[#16a861] hover:bg-[#118C4F]/15 transition-all flex items-center gap-2">
+                            <svg class="w-3.5 h-3.5 text-[#16a861]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            carlos.linares.es@gmail.com
                         </a>
-                        <a href="https://wa.me/584142272792" target="_blank" class="bg-gray-900/80 border border-gray-700 px-5 py-2.5 rounded-xl text-xs font-bold text-white hover:border-[#118C4F] hover:text-[#118C4F] transition-all flex items-center gap-2">
-                            📱 +58 0414-2272792
+                        <a href="https://wa.me/584142272792" target="_blank" class="bg-black/40 border border-[#118C4F]/30 px-4 py-2 rounded-lg text-xs font-bold text-white hover:border-[#16a861] hover:bg-[#118C4F]/15 transition-all flex items-center gap-2">
+                            <svg class="w-3.5 h-3.5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                            +58 414-2272792
                         </a>
-                        <span class="bg-gray-900/80 border border-gray-700 px-5 py-2.5 rounded-xl text-xs font-bold text-gray-400 flex items-center gap-2 cursor-default">
-                            📍 Charallave - Miranda, Venezuela
+                        <span class="bg-black/40 border border-gray-700 px-4 py-2 rounded-lg text-xs font-bold text-gray-400 flex items-center gap-2">
+                            <svg class="w-3.5 h-3.5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Charallave, Miranda · Venezuela
                         </span>
                     </div>
 
-                    <div class="flex flex-wrap justify-center md:justify-start gap-3">
-                        <a href="https://www.linkedin.com/in/carlos-humberto-linares-morales-a474642a6/" target="_blank" class="bg-gray-900/80 border border-gray-700 px-4 py-2 rounded-xl text-xs font-bold text-gray-300 hover:border-[#118C4F] hover:text-[#118C4F] transition-all flex items-center gap-2 hover:shadow-[0_0_15px_rgba(17,140,79,0.3)]">
+                    <!-- Redes sociales -->
+                    <div class="flex flex-wrap justify-center md:justify-start gap-2 no-print">
+                        <a href="https://www.linkedin.com/in/carlos-humberto-linares-morales-a474642a6/" target="_blank" rel="noopener" aria-label="LinkedIn"
+                           class="w-9 h-9 rounded-lg bg-black/40 border border-gray-700 flex items-center justify-center text-gray-400 hover:border-[#16a861] hover:text-[#16a861] hover:scale-110 transition-all">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            LinkedIn
                         </a>
-                        <a href="https://www.instagram.com/cahulin18/" target="_blank" class="bg-gray-900/80 border border-gray-700 px-4 py-2 rounded-xl text-xs font-bold text-gray-300 hover:border-[#118C4F] hover:text-[#118C4F] transition-all flex items-center gap-2 hover:shadow-[0_0_15px_rgba(17,140,79,0.3)]">
-                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 1.79-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 1.79 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-1.791 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-1.792-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            Instagram
+                        <a href="https://github.com/carloslinareses-cloud" target="_blank" rel="noopener" aria-label="GitHub"
+                           class="w-9 h-9 rounded-lg bg-black/40 border border-gray-700 flex items-center justify-center text-gray-400 hover:border-[#16a861] hover:text-[#16a861] hover:scale-110 transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                         </a>
-                        <a href="https://www.facebook.com/cahulin18/" target="_blank" class="bg-gray-900/80 border border-gray-700 px-4 py-2 rounded-xl text-xs font-bold text-gray-300 hover:border-[#118C4F] hover:text-[#118C4F] transition-all flex items-center gap-2 hover:shadow-[0_0_15px_rgba(17,140,79,0.3)]">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                            Facebook
+                        <a href="https://panavoy.com" target="_blank" rel="noopener" aria-label="Pana Voy"
+                           class="px-3 h-9 rounded-lg bg-[#118C4F]/15 border border-[#118C4F]/40 flex items-center gap-1.5 text-[11px] font-bold text-[#16a861] hover:bg-[#118C4F]/25 hover:scale-105 transition-all">
+                            <span>✨</span> panavoy.com
                         </a>
                     </div>
+                </div>
+            </div>
+
+            <!-- Stats bar -->
+            <div class="relative mt-8 pt-6 border-t border-[#118C4F]/15 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                <div class="text-center md:text-left">
+                    <p class="font-mono text-3xl md:text-4xl font-bold neon-text">16+</p>
+                    <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-1" data-es="años de experiencia" data-en="years experience">años de experiencia</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <p class="font-mono text-3xl md:text-4xl font-bold neon-text">4</p>
+                    <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-1" data-es="países de trabajo" data-en="countries worked in">países de trabajo</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <p class="font-mono text-3xl md:text-4xl font-bold neon-text">10+</p>
+                    <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-1" data-es="tecnologías dominadas" data-en="tech stack mastered">tecnologías dominadas</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <p class="font-mono text-3xl md:text-4xl font-bold neon-text">9</p>
+                    <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-1" data-es="roles profesionales" data-en="professional roles">roles profesionales</p>
                 </div>
             </div>
         </header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            
-            <aside class="lg:col-span-4 space-y-10">
-                
-                <section class="glass p-8 rounded-[2rem]">
+        <!-- ═══════════ PROYECTO DESTACADO: PANA VOY ═══════════ -->
+        <section class="reveal glass rounded-[2rem] p-6 md:p-10 relative overflow-hidden border-l-2 border-[#16a861]">
+            <div class="absolute -top-20 -right-20 w-80 h-80 bg-[#118C4F]/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+            <div class="relative grid md:grid-cols-3 gap-6 md:gap-10 items-start">
+                <div class="md:col-span-2">
+                    <span class="inline-block px-3 py-1 bg-[#118C4F]/20 border border-[#118C4F]/40 text-[#16a861] text-[10px] font-black uppercase tracking-widest rounded-full mb-3" data-es="Proyecto Insignia" data-en="Flagship Project">Proyecto Insignia</span>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                        Pana Voy <span class="text-[#16a861]">✨</span>
+                    </h2>
+
+                    <div id="panavoy-es" class="lang-content">
+                        <p class="text-sm font-mono uppercase tracking-wider text-gray-400 mt-1">Fundador · Desarrollador Principal</p>
+                        <p class="mt-4 text-[15px] text-gray-300 leading-relaxed">
+                            Plataforma de <strong class="text-white">delivery + taxi</strong> diseñada y construida para los Valles del Tuy, Venezuela. App nativa Android (Kotlin/Jetpack Compose), backend serverless en Firebase + Cloudflare Workers, panel admin web y portal de socios.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-400">
+                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Stack:</strong> Kotlin · Jetpack Compose · Firebase RTDB · Cloud Functions · Cloudflare Workers · R2 · MapLibre</span></li>
+                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Impacto:</strong> notificaciones push en tiempo real, geofencing 5 km, pagos en Bs a tasa BCV automática, multi-rol (cliente · tienda · repartidor · taxista)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Estado:</strong> en revisión final de Google Play Store · reclutamiento activo de socios fundadores</span></li>
+                        </ul>
+                    </div>
+                    <div id="panavoy-en" class="lang-content hidden">
+                        <p class="text-sm font-mono uppercase tracking-wider text-gray-400 mt-1">Founder · Lead Developer</p>
+                        <p class="mt-4 text-[15px] text-gray-300 leading-relaxed">
+                            <strong class="text-white">Delivery + taxi</strong> platform designed and built for the Valles del Tuy region, Venezuela. Native Android app (Kotlin/Jetpack Compose), serverless backend on Firebase + Cloudflare Workers, web admin panel and partner portal.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-400">
+                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Stack:</strong> Kotlin · Jetpack Compose · Firebase RTDB · Cloud Functions · Cloudflare Workers · R2 · MapLibre</span></li>
+                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Impact:</strong> real-time push notifications, 5 km geofencing, automatic BCV-rate payments in Bs, multi-role (customer · store · delivery · taxi)</span></li>
+                            <li class="flex items-start gap-2"><span class="text-[#16a861] mt-1">▸</span><span><strong class="text-white">Status:</strong> in final Google Play review · actively recruiting founding partners</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-5 flex flex-wrap gap-2">
+                        <a href="https://panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-[#118C4F] hover:bg-[#16a861] text-white text-xs font-bold rounded-lg transition-all">
+                            🌐 panavoy.com
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                        <a href="https://admin.panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-black/40 border border-gray-700 hover:border-[#16a861] text-gray-300 text-xs font-bold rounded-lg transition-all">
+                            ⚙️ admin
+                        </a>
+                        <a href="https://socios.panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-black/40 border border-gray-700 hover:border-[#16a861] text-gray-300 text-xs font-bold rounded-lg transition-all">
+                            🏪 socios
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stack tarjeta -->
+                <div class="bg-black/40 border border-[#118C4F]/20 rounded-2xl p-5">
+                    <p class="text-[10px] font-mono uppercase tracking-widest text-gray-500 mb-3" data-es="Tech Stack" data-en="Tech Stack">Tech Stack</p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Kotlin</span>
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Compose</span>
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Firebase</span>
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Cloud Functions</span>
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Workers</span>
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">R2</span>
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">MapLibre</span>
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">FCM</span>
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">React</span>
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Astro</span>
+                        <span class="text-[10px] font-mono px-2 py-1 bg-[#118C4F]/15 text-[#16a861] rounded">Tailwind</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CONTENIDO PRINCIPAL ═══════════ -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10">
+
+            <!-- SIDEBAR IZQUIERDO -->
+            <aside class="lg:col-span-4 space-y-6 md:space-y-10">
+
+                <!-- Perfil -->
+                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]">
                     <div id="profile-es" class="lang-content">
-                        <h3 class="font-tech text-sm font-bold neon-text uppercase mb-5 tracking-widest border-b border-[#118C4F]/20 pb-2">Perfil Profesional</h3>
-                        <p class="text-[15px] leading-relaxed text-gray-300 font-medium text-justify">
-                            Profesional en informática con una trayectoria versátil en desarrollo de software, soporte técnico y gestión operativa. Especializado en el desarrollo backend con Python, creación de APIs RESTful y manejo de bases de datos. Recientemente he ampliado mis competencias hacia el desarrollo de aplicaciones integrando entornos como Visual Studio y Android Studio, además del análisis y manipulación de datos con Pandas. Destaco por mi capacidad para liderar equipos, optimizar procesos logísticos y aportar soluciones tecnológicas eficientes, manteniendo siempre un enfoque en el aprendizaje continuo y la resolución de problemas complejos.
+                        <h3 class="font-mono text-xs font-bold neon-text uppercase mb-4 tracking-widest border-b border-[#118C4F]/20 pb-2">/ Perfil Profesional</h3>
+                        <p class="text-[14px] leading-relaxed text-gray-300 font-medium">
+                            Profesional en informática con una trayectoria versátil en <strong class="text-white">desarrollo de software, soporte técnico y gestión operativa</strong>. Especializado en backend con Python, APIs RESTful y bases de datos. Recientemente he ampliado mi stack al desarrollo de apps Android nativas con Kotlin/Compose y al análisis de datos con Pandas. Destaco por mi capacidad para <strong class="text-white">liderar equipos, optimizar procesos logísticos y aportar soluciones tecnológicas eficientes</strong>, con enfoque constante en el aprendizaje y resolución de problemas complejos.
                         </p>
                     </div>
                     <div id="profile-en" class="lang-content hidden">
-                        <h3 class="font-tech text-sm font-bold neon-text uppercase mb-5 tracking-widest border-b border-[#118C4F]/20 pb-2">Professional Profile</h3>
-                        <p class="text-[15px] leading-relaxed text-gray-300 font-medium text-justify">
-                            IT professional with a versatile background in software development, technical support, and operational management. Specialized in Python backend development, RESTful API creation, and database management. Recently expanded skills into application development using Visual Studio and Android Studio, as well as data analysis and manipulation with Pandas. I stand out for my ability to lead teams, optimize logistics processes, and provide efficient technological solutions, always maintaining a focus on continuous learning and complex problem-solving.
+                        <h3 class="font-mono text-xs font-bold neon-text uppercase mb-4 tracking-widest border-b border-[#118C4F]/20 pb-2">/ Professional Profile</h3>
+                        <p class="text-[14px] leading-relaxed text-gray-300 font-medium">
+                            IT professional with a versatile background in <strong class="text-white">software development, technical support, and operational management</strong>. Specialized in Python backend, RESTful APIs, and databases. Recently expanded my stack to native Android development with Kotlin/Compose and data analysis with Pandas. I stand out for my ability to <strong class="text-white">lead teams, optimize logistics, and deliver efficient tech solutions</strong>, with continuous focus on learning and complex problem-solving.
                         </p>
                     </div>
                 </section>
 
-                <section class="glass p-8 rounded-[2rem]">
-                    <div id="skills-es" class="lang-content">
-                        <h3 class="font-tech text-sm font-bold neon-text uppercase mb-6 tracking-widest border-b border-[#118C4F]/20 pb-2">Matriz de Habilidades</h3>
-                    </div>
-                    <div id="skills-en" class="lang-content hidden">
-                        <h3 class="font-tech text-sm font-bold neon-text uppercase mb-6 tracking-widest border-b border-[#118C4F]/20 pb-2">Skill Matrix</h3>
-                    </div>
+                <!-- Habilidades -->
+                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]">
+                    <h3 class="font-mono text-xs font-bold neon-text uppercase mb-6 tracking-widest border-b border-[#118C4F]/20 pb-2" data-es="/ Stack Técnico" data-en="/ Tech Stack">/ Stack Técnico</h3>
 
-                    <div class="space-y-6">
+                    <div class="space-y-5">
                         <div>
-                            <p class="text-[11px] font-black text-gray-500 uppercase mb-3 tracking-widest">Desarrollo & Programación</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-[#118C4F]/10 border border-[#118C4F]/30 text-[#118C4F] px-3 py-1.5 rounded-lg text-xs font-bold shadow-sm">Python</span>
-                                <span class="bg-[#118C4F]/10 border border-[#118C4F]/30 text-[#118C4F] px-3 py-1.5 rounded-lg text-xs font-bold shadow-sm">Pandas</span>
-                                <span class="bg-[#118C4F]/10 border border-[#118C4F]/30 text-[#118C4F] px-3 py-1.5 rounded-lg text-xs font-bold shadow-sm">Flask / APIs REST</span>
-                                <span class="bg-[#118C4F]/10 border border-[#118C4F]/30 text-[#118C4F] px-3 py-1.5 rounded-lg text-xs font-bold shadow-sm">Operaciones CRUD</span>
+                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Backend & Datos" data-en="Backend & Data">Backend & Datos</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Python</span>
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Flask</span>
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">REST APIs</span>
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Pandas</span>
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">CRUD</span>
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Firebase</span>
                             </div>
                         </div>
                         <div>
-                            <p class="text-[11px] font-black text-gray-500 uppercase mb-3 tracking-widest">Entornos (IDE)</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-3 py-1.5 rounded-lg text-xs font-bold">Android Studio</span>
-                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-3 py-1.5 rounded-lg text-xs font-bold">Visual Studio</span>
+                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Mobile & Frontend" data-en="Mobile & Frontend">Mobile & Frontend</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Kotlin</span>
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Jetpack Compose</span>
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Android Studio</span>
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">React</span>
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Astro</span>
+                                <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Tailwind</span>
                             </div>
                         </div>
                         <div>
-                            <p class="text-[11px] font-black text-gray-500 uppercase mb-3 tracking-widest">Redes & Infraestructura</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-3 py-1.5 rounded-lg text-xs font-bold">TCP/IP</span>
-                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-3 py-1.5 rounded-lg text-xs font-bold">Ubiquiti</span>
-                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-3 py-1.5 rounded-lg text-xs font-bold">CCTV</span>
-                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-3 py-1.5 rounded-lg text-xs font-bold">Mantenimiento HW</span>
+                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Cloud & DevOps" data-en="Cloud & DevOps">Cloud & DevOps</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Cloudflare Workers</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">R2 Storage</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Cloud Functions</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Git</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Linux</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Redes & Infraestructura" data-en="Networks & Infrastructure">Redes & Infraestructura</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">TCP/IP</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Ubiquiti</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Routers</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">CCTV</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">RJ45</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Sistemas & Productividad" data-en="Systems & Productivity">Sistemas & Productividad</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Windows</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Linux</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">SAINT</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">SIGA</span>
+                                <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">MS Office</span>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="glass p-8 rounded-[2rem]">
-                    <div id="edu-es" class="lang-content">
-                        <h3 class="font-tech text-sm font-bold neon-text uppercase mb-5 tracking-widest border-b border-[#118C4F]/20 pb-2">Formación Académica</h3>
-                        <div class="pl-4 border-l-2 border-[#118C4F]">
-                            <h4 class="text-white text-[15px] font-black uppercase">TSU en Informática</h4>
-                            <p class="text-sm text-gray-400 font-medium">IUT José María Carreño</p>
-                            <p class="text-xs font-black text-[#118C4F] mt-1 tracking-widest">2011 - 2015</p>
-                        </div>
+                <!-- Educación -->
+                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]">
+                    <h3 class="font-mono text-xs font-bold neon-text uppercase mb-5 tracking-widest border-b border-[#118C4F]/20 pb-2" data-es="/ Formación" data-en="/ Education">/ Formación</h3>
+                    <div class="pl-4 border-l-2 border-[#118C4F]">
+                        <h4 class="text-white text-[15px] font-bold" data-es="TSU en Informática" data-en="Associate Degree in Computer Science">TSU en Informática</h4>
+                        <p class="text-sm text-gray-400 font-medium mt-0.5">IUT José María Carreño</p>
+                        <p class="text-[11px] font-mono font-bold text-[#16a861] mt-1.5 tracking-widest">2011 – 2015</p>
                     </div>
-                    <div id="edu-en" class="lang-content hidden">
-                        <h3 class="font-tech text-sm font-bold neon-text uppercase mb-5 tracking-widest border-b border-[#118C4F]/20 pb-2">Academic Education</h3>
-                        <div class="pl-4 border-l-2 border-[#118C4F]">
-                            <h4 class="text-white text-[15px] font-black uppercase">Associate Degree in Computer Science</h4>
-                            <p class="text-sm text-gray-400 font-medium">IUT José María Carreño</p>
-                            <p class="text-xs font-black text-[#118C4F] mt-1 tracking-widest">2011 - 2015</p>
+                </section>
+
+                <!-- Idiomas + Otros -->
+                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]">
+                    <h3 class="font-mono text-xs font-bold neon-text uppercase mb-5 tracking-widest border-b border-[#118C4F]/20 pb-2" data-es="/ Idiomas & Extras" data-en="/ Languages & Extras">/ Idiomas & Extras</h3>
+
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-white text-[14px] font-bold">🇻🇪 Español</span>
+                                <span class="font-mono text-[11px] text-[#16a861] font-bold" data-es="Nativo" data-en="Native">Nativo</span>
+                            </div>
+                            <div class="h-1.5 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-[#0e7642] to-[#16a861] rounded-full" style="width:100%"></div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-[#118C4F]/15">
+                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Otros Datos" data-en="Other Info">Otros Datos</p>
+                            <ul class="space-y-1.5 text-sm text-gray-300">
+                                <li class="flex items-center gap-2"><span class="text-[#16a861]">✓</span><span data-es="Licencia de conducir" data-en="Driver's license">Licencia de conducir</span></li>
+                                <li class="flex items-center gap-2"><span class="text-[#16a861]">✓</span><span data-es="Vehículo propio" data-en="Own vehicle">Vehículo propio</span></li>
+                                <li class="flex items-center gap-2"><span class="text-[#16a861]">✓</span><span data-es="Disponible para trabajo remoto" data-en="Available for remote work">Disponible para trabajo remoto</span></li>
+                            </ul>
                         </div>
                     </div>
                 </section>
-                
+
             </aside>
 
-            <main class="lg:col-span-8 glass p-8 md:p-12 rounded-[2.5rem]">
-                
-                <div id="exp-es" class="lang-content space-y-10">
-                    <h3 class="font-tech text-xl font-bold neon-text uppercase tracking-widest border-b border-[#118C4F]/20 pb-4 mb-8">Experiencia Profesional</h3>
-                    
-                    <div class="relative border-l border-gray-700 space-y-10 pl-6">
-                        
-                        <div class="relative">
-                            <div class="timeline-node"></div>
-                            <h4 class="text-2xl font-black text-white uppercase tracking-tight">Desarrollador de Software</h4>
-                            <p class="text-[#118C4F] text-xs font-bold uppercase tracking-widest mt-1">Independiente / Proyectos Propios | Febrero 2026 - Presente</p>
-                            <ul class="mt-4 text-[15px] text-gray-300 space-y-2 font-medium">
-                                <li><span class="text-[#118C4F] font-black mr-2">►</span>Desarrollo de aplicaciones móviles y de escritorio utilizando Android Studio y Visual Studio.</li>
-                                <li><span class="text-[#118C4F] font-black mr-2">►</span>Implementación de análisis y manipulación de datos en Python utilizando la librería Pandas.</li>
-                                <li><span class="text-[#118C4F] font-black mr-2">►</span>Integración de servicios backend y APIs RESTful para aplicaciones multiplataforma.</li>
-                            </ul>
-                        </div>
+            <!-- TIMELINE EXPERIENCIA -->
+            <main class="lg:col-span-8 reveal glass p-6 md:p-12 rounded-[1.5rem] md:rounded-[2.5rem]">
 
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Gerente / Administrador Administrativo / Operador Logístico</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">ParkMadrid - Madrid, España | Diciembre 2023 - Enero 2026</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Gestión y supervisión de operaciones logísticas y administrativas.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Coordinación de personal y organización de turnos de trabajo.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Control de inventarios y seguimiento de activos.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Manejo de documentación administrativa y elaboración de reportes.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Resolución de incidencias operativas y mejora continua de procesos.</li>
-                            </ul>
-                        </div>
+                <div id="exp-es" class="lang-content">
+                    <h3 class="font-mono text-base font-bold neon-text uppercase tracking-widest border-b border-[#118C4F]/20 pb-3 mb-8">/ Experiencia Profesional</h3>
+                    <div class="relative border-l-2 border-[#118C4F]/20 space-y-8 pl-7">
 
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Backend Junior</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">Ourworld LTD - Madrid, España | Marzo 2023 - Mayo 2023</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Desarrollo de sistemas basados en Python.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Creación de APIs RESTful utilizando Flask.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Implementación de operaciones CRUD.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Desarrollo de scripts personalizados para automatización de tareas.</li>
+                        <!-- 2026 -->
+                        <article class="relative">
+                            <div class="timeline-dot"></div>
+                            <span class="font-mono text-[10px] font-black text-[#16a861] uppercase tracking-widest">Feb 2026 — Presente</span>
+                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Desarrollador de Software</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Independiente · Pana Voy · Proyectos Propios</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Desarrollo de aplicaciones móviles Android (Kotlin/Jetpack Compose) y de escritorio.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Backend serverless con Firebase Cloud Functions + Cloudflare Workers.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Análisis y manipulación de datos en Python utilizando Pandas.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Integración de servicios backend y APIs RESTful para aplicaciones multiplataforma.</span></li>
                             </ul>
-                        </div>
+                        </article>
 
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Soporte Técnico</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">WIFITEL - Cua, Venezuela | Noviembre 2021 - Febrero 2022</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Instalación y mantenimiento de servicios de internet y redes inalámbricas.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Configuración de antenas Ubiquiti y routers.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Administración de redes locales.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Cableado estructurado RJ45.</li>
+                        <!-- ParkMadrid -->
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Dic 2023 — Ene 2026</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Gerente / Administrador / Operador Logístico</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">ParkMadrid · Madrid, España</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Gestión y supervisión de operaciones logísticas y administrativas.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Coordinación de personal y organización de turnos de trabajo.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Control de inventarios y seguimiento de procesos operativos.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Manejo de documentación administrativa y elaboración de reportes.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Resolución de incidencias operativas y optimización de eficiencia diaria.</span></li>
                             </ul>
-                        </div>
+                        </article>
 
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Notificador</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">COFESCO - Bogota, Colombia | Noviembre 2020 - Julio 2021</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Registro de documentos de predios.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Visitas de campo y levantamiento de información.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Actualización de bases de datos.</li>
+                        <!-- Ourworld -->
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Mar 2023 — May 2023</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Backend Junior</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Ourworld LTD · Madrid, España</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Desarrollo de sistema basado en Python.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Creación de APIs RESTful utilizando Flask.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Implementación de operaciones CRUD.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Desarrollo de scripts personalizados.</span></li>
                             </ul>
-                        </div>
+                        </article>
 
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Agente Contact Center</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">Teleperformance - Bogota, Colombia | Julio 2020 - Noviembre 2020</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Atención al cliente y soporte técnico.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Escalamiento de incidencias a segundo nivel.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Gestión de backoffice.</li>
+                        <!-- WIFITEL -->
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2021 — Feb 2022</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Soporte Técnico</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">WIFITEL · Cúa, Venezuela</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Instalación y mantenimiento de servicios de internet.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Configuración de antenas Ubiquiti y redes inalámbricas.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Administración de redes y routers.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Cableado estructurado (RJ45).</span></li>
                             </ul>
-                        </div>
+                        </article>
 
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Jefe de Servicio y Analista Post Venta</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">Flotas Service SPA - Santiago, Chile | Noviembre 2018 - Julio 2019</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Elaboración de presupuestos preventivos y correctivos.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Gestión de repuestos y tarifarios.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Control de mantenimiento de flotas.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Manejo de bases de datos y Excel.</li>
+                        <!-- COFESCO -->
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2020 — Jul 2021</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Notificador</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">COFESCO · Bogotá, Colombia</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Registro y gestión de documentos de predios.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Validación de información mediante visitas de campo.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Actualización de bases de datos.</span></li>
                             </ul>
-                        </div>
+                        </article>
 
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Operador Informático</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">Inversiones Novatex - Bogota, Colombia | Junio 2016 - Mayo 2018</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Mantenimiento de servidores y equipos.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Instalación de redes y CCTV.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Configuración de routers.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Atención al cliente y manejo de personal.</li>
+                        <!-- Teleperformance -->
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Jul 2020 — Nov 2020</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Agente Contact Center</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Teleperformance · Bogotá, Colombia</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Atención al cliente y soporte técnico.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Escalamiento de incidencias a segundo nivel.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Gestión de backoffice.</span></li>
                             </ul>
-                        </div>
+                        </article>
 
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Gerente de Ventas</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">Bodegón Chara - Charallave, Venezuela | Marzo 2010 - Diciembre 2015</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Gestión de ventas y atención al cliente.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Soporte técnico de hardware y software.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Administración de redes y CCTV.</li>
+                        <!-- Flotas -->
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2018 — Jul 2019</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Jefe de Servicio y Analista Post Venta</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Flotas Service SPA · Santiago, Chile</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Elaboración de presupuestos preventivos y correctivos.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Gestión de repuestos y tarifarios.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Control de mantenimiento de flotas.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Manejo de bases de datos y Excel avanzado.</span></li>
                             </ul>
-                        </div>
+                        </article>
+
+                        <!-- Novatex -->
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Jun 2016 — May 2018</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Operador Informático</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Inversiones Novatex · Bogotá, Colombia</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Mantenimiento de servidores y equipos.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Instalación de redes y CCTV.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Configuración de routers.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Atención al cliente y manejo de personal.</span></li>
+                            </ul>
+                        </article>
+
+                        <!-- Bodegón Chara -->
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Mar 2010 — Dic 2015</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Gerente de Ventas</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Bodegón Chara · Charallave, Venezuela</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Gestión de ventas y atención al cliente.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Soporte técnico de hardware y software.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Administración de redes y CCTV.</span></li>
+                            </ul>
+                        </article>
 
                     </div>
                 </div>
 
-                <div id="exp-en" class="lang-content hidden space-y-10">
-                    <h3 class="font-tech text-xl font-bold neon-text uppercase tracking-widest border-b border-[#118C4F]/20 pb-4 mb-8">Professional Experience</h3>
-                    
-                    <div class="relative border-l border-gray-700 space-y-10 pl-6">
-                        
-                        <div class="relative">
-                            <div class="timeline-node"></div>
-                            <h4 class="text-2xl font-black text-white uppercase tracking-tight">Software Developer</h4>
-                            <p class="text-[#118C4F] text-xs font-bold uppercase tracking-widest mt-1">Independent / Own Projects | February 2026 - Present</p>
-                            <ul class="mt-4 text-[15px] text-gray-300 space-y-2 font-medium">
-                                <li><span class="text-[#118C4F] font-black mr-2">►</span>Mobile and desktop application development using Android Studio and Visual Studio.</li>
-                                <li><span class="text-[#118C4F] font-black mr-2">►</span>Implementation of data analysis and manipulation in Python using the Pandas library.</li>
-                                <li><span class="text-[#118C4F] font-black mr-2">►</span>Integration of backend services and RESTful APIs for cross-platform applications.</li>
+                <!-- VERSIÓN INGLÉS -->
+                <div id="exp-en" class="lang-content hidden">
+                    <h3 class="font-mono text-base font-bold neon-text uppercase tracking-widest border-b border-[#118C4F]/20 pb-3 mb-8">/ Professional Experience</h3>
+                    <div class="relative border-l-2 border-[#118C4F]/20 space-y-8 pl-7">
+                        <article class="relative">
+                            <div class="timeline-dot"></div>
+                            <span class="font-mono text-[10px] font-black text-[#16a861] uppercase tracking-widest">Feb 2026 — Present</span>
+                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Software Developer</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Independent · Pana Voy · Personal Projects</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Android (Kotlin/Jetpack Compose) and desktop application development.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Serverless backend with Firebase Cloud Functions + Cloudflare Workers.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Data analysis and manipulation in Python using Pandas.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Backend services and RESTful API integration for cross-platform applications.</span></li>
                             </ul>
-                        </div>
-
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Manager / Administrative Admin / Logistics Operator</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">ParkMadrid - Madrid, Spain | December 2023 - January 2026</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Management and supervision of logistics and administrative operations.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Staff coordination and organization of work shifts.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Inventory control and asset tracking.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Handling of administrative documentation and report generation.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Resolution of operational incidents and continuous process improvement.</li>
+                        </article>
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Dec 2023 — Jan 2026</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Manager / Administrative Admin / Logistics Operator</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">ParkMadrid · Madrid, Spain</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Management and supervision of logistics and administrative operations.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Staff coordination and work shift organization.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Inventory control and operational process tracking.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Administrative documentation handling and report generation.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Operational incident resolution and daily efficiency optimization.</span></li>
                             </ul>
-                        </div>
-
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Junior Backend</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">Ourworld LTD - Madrid, Spain | March 2023 - May 2023</p>
-                            <ul class="mt-4 text-[15px] text-gray-300 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Development of Python-based systems.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Creation of RESTful APIs using Flask.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Implementation of CRUD operations.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Development of custom scripts for task automation.</li>
+                        </article>
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Mar 2023 — May 2023</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Junior Backend</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Ourworld LTD · Madrid, Spain</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Python-based system development.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Creation of RESTful APIs using Flask.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Implementation of CRUD operations.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Custom script development.</span></li>
                             </ul>
-                        </div>
-
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Technical Support</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">WIFITEL - Cua, Venezuela | November 2021 - February 2022</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Installation and maintenance of internet services and wireless networks.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Configuration of Ubiquiti antennas and routers.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Local network administration.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>RJ45 structured cabling.</li>
+                        </article>
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2021 — Feb 2022</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Technical Support</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">WIFITEL · Cúa, Venezuela</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Internet service installation and maintenance.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Ubiquiti antenna and wireless network configuration.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Network and router administration.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Structured cabling (RJ45).</span></li>
                             </ul>
-                        </div>
-
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Notifier</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">COFESCO - Bogota, Colombia | November 2020 - July 2021</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Registration of property documents.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Field visits and data gathering.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Database updates.</li>
+                        </article>
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2020 — Jul 2021</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Notifier</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">COFESCO · Bogotá, Colombia</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Property document registration and management.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Information validation through field visits.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Database updating.</span></li>
                             </ul>
-                        </div>
-
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Contact Center Agent</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">Teleperformance - Bogota, Colombia | July 2020 - November 2020</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Customer service and technical support.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Escalation of incidents to second level.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Backoffice management.</li>
+                        </article>
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Jul 2020 — Nov 2020</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Contact Center Agent</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Teleperformance · Bogotá, Colombia</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Customer service and technical support.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Incident escalation to second level.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Backoffice management.</span></li>
                             </ul>
-                        </div>
-
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Service Manager and Post-Sales Analyst</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">Flotas Service SPA - Santiago, Chile | November 2018 - July 2019</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Preparation of preventive and corrective budgets.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Management of parts and pricing structures.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Fleet maintenance control.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Database and Excel management.</li>
+                        </article>
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2018 — Jul 2019</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Service Manager & Post-Sales Analyst</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Flotas Service SPA · Santiago, Chile</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Preventive and corrective budget preparation.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Parts and pricing management.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Fleet maintenance control.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Database and advanced Excel handling.</span></li>
                             </ul>
-                        </div>
-
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Computer Operator</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">Inversiones Novatex - Bogota, Colombia | June 2016 - May 2018</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Maintenance of servers and equipment.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Installation of networks and CCTV.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Router configuration.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Customer service and staff management.</li>
+                        </article>
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Jun 2016 — May 2018</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Computer Operator</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Inversiones Novatex · Bogotá, Colombia</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Server and equipment maintenance.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Network and CCTV installation.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Router configuration.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Customer service and staff management.</span></li>
                             </ul>
-                        </div>
-
-                        <div class="relative">
-                            <div class="timeline-node bg-gray-600 shadow-none"></div>
-                            <h4 class="text-xl font-black text-white/90 uppercase tracking-tight">Sales Manager</h4>
-                            <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">Bodegón Chara - Charallave, Venezuela | March 2010 - December 2015</p>
-                            <ul class="mt-4 text-[15px] text-gray-400 space-y-2 font-medium">
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Sales management and customer service.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Hardware and software technical support.</li>
-                                <li><span class="text-gray-600 font-black mr-2">►</span>Network and CCTV administration.</li>
+                        </article>
+                        <article class="relative">
+                            <div class="timeline-dot-muted"></div>
+                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Mar 2010 — Dec 2015</span>
+                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Sales Manager</h4>
+                            <p class="text-sm font-mono text-gray-400 mt-0.5">Bodegón Chara · Charallave, Venezuela</p>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Sales management and customer service.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Hardware and software technical support.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Network and CCTV administration.</span></li>
                             </ul>
-                        </div>
-
+                        </article>
                     </div>
                 </div>
 
             </main>
         </div>
 
-        <div class="glass p-8 md:p-14 rounded-[2.5rem]">
-            
-            <div id="services-es" class="lang-content space-y-10">
-                <div class="text-center space-y-2">
-                    <h3 class="font-tech text-2xl md:text-3xl font-bold text-white uppercase tracking-widest">¿Buscas Soluciones?</h3>
-                    <p class="neon-text font-black uppercase tracking-[0.3em] text-sm md:text-base">Servicios Especializados</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="glass p-8 rounded-2xl border border-[#118C4F]/20 hover:border-[#118C4F] hover:shadow-[0_0_25px_rgba(17,140,79,0.15)] transition-all group">
-                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">💻</div>
-                        <h4 class="text-white font-black text-lg uppercase tracking-widest mb-3">Desarrollo de Software a Medida</h4>
-                        <p class="text-sm text-gray-400 font-medium leading-relaxed">Creación de apps móviles y paneles administrativos (como Pana Voy) para digitalizar tu negocio.</p>
-                    </div>
-                    
-                    <div class="glass p-8 rounded-2xl border border-[#118C4F]/20 hover:border-[#118C4F] hover:shadow-[0_0_25px_rgba(17,140,79,0.15)] transition-all group">
-                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
-                        <h4 class="text-white font-black text-lg uppercase tracking-widest mb-3">Automatización y Análisis de Datos</h4>
-                        <p class="text-sm text-gray-400 font-medium leading-relaxed">Optimización de tareas repetitivas y creación de reportes inteligentes con Python para la toma de decisiones.</p>
-                    </div>
-                    
-                    <div class="glass p-8 rounded-2xl border border-[#118C4F]/20 hover:border-[#118C4F] hover:shadow-[0_0_25px_rgba(17,140,79,0.15)] transition-all group">
-                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📡</div>
-                        <h4 class="text-white font-black text-lg uppercase tracking-widest mb-3">Infraestructura y Redes</h4>
-                        <p class="text-sm text-gray-400 font-medium leading-relaxed">Instalación de redes, CCTV y configuración de servidores para empresas locales.</p>
-                    </div>
-                    
-                    <div class="glass p-8 rounded-2xl border border-[#118C4F]/20 hover:border-[#118C4F] hover:shadow-[0_0_25px_rgba(17,140,79,0.15)] transition-all group">
-                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">⚙️</div>
-                        <h4 class="text-white font-black text-lg uppercase tracking-widest mb-3">Consultoría Operativa</h4>
-                        <p class="text-sm text-gray-400 font-medium leading-relaxed">Asesoría para optimizar la logística y operaciones de tu flota o inventario.</p>
-                    </div>
-                </div>
+        <!-- ═══════════ SERVICIOS / CTA ═══════════ -->
+        <section class="reveal glass rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-12 relative overflow-hidden no-print">
+            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#118C4F]/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-                <div class="text-center pt-6">
-                    <a href="https://wa.me/584142272792?text=Hola%20Carlos,%20me%20interesa%20contratar%20tus%20servicios" target="_blank" class="inline-flex items-center gap-3 bg-[#118C4F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest hover:bg-[#0e7642] hover:scale-105 transition-all shadow-[0_0_20px_rgba(17,140,79,0.4)]">
-                        🚀 Contratar Servicios
-                    </a>
+            <div class="relative text-center max-w-2xl mx-auto mb-10">
+                <span class="font-mono text-[11px] font-black uppercase tracking-[0.3em] text-[#16a861]" data-es="// Servicios" data-en="// Services">// Servicios</span>
+                <h3 class="mt-3 text-2xl md:text-4xl font-bold text-white tracking-tight" data-es="¿Tienes un proyecto?" data-en="Got a project?">¿Tienes un proyecto?</h3>
+                <p class="mt-3 text-gray-400" data-es="Resuelvo problemas de software, redes y operación. Trabajo remoto o presencial en Venezuela." data-en="I solve software, network and operations problems. Remote or on-site in Venezuela.">Resuelvo problemas de software, redes y operación. Trabajo remoto o presencial en Venezuela.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+                <div class="bg-black/30 border border-[#118C4F]/20 p-6 rounded-2xl hover:border-[#16a861] hover:bg-[#118C4F]/5 hover:-translate-y-1 transition-all">
+                    <div class="text-3xl mb-3">💻</div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Apps a medida" data-en="Custom apps">Apps a medida</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed" data-es="Android nativo con Kotlin + paneles web. Como Pana Voy." data-en="Native Android with Kotlin + web panels. Like Pana Voy.">Android nativo con Kotlin + paneles web. Como Pana Voy.</p>
+                </div>
+                <div class="bg-black/30 border border-[#118C4F]/20 p-6 rounded-2xl hover:border-[#16a861] hover:bg-[#118C4F]/5 hover:-translate-y-1 transition-all">
+                    <div class="text-3xl mb-3">📊</div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Datos & APIs" data-en="Data & APIs">Datos & APIs</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed" data-es="APIs Python/Flask, automatización con Pandas, reportes." data-en="Python/Flask APIs, automation with Pandas, reports.">APIs Python/Flask, automatización con Pandas, reportes.</p>
+                </div>
+                <div class="bg-black/30 border border-[#118C4F]/20 p-6 rounded-2xl hover:border-[#16a861] hover:bg-[#118C4F]/5 hover:-translate-y-1 transition-all">
+                    <div class="text-3xl mb-3">📡</div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Redes & CCTV" data-en="Networks & CCTV">Redes & CCTV</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed" data-es="Ubiquiti, cableado RJ45, configuración de routers y servidores." data-en="Ubiquiti, RJ45 cabling, router and server configuration.">Ubiquiti, cableado RJ45, configuración de routers y servidores.</p>
+                </div>
+                <div class="bg-black/30 border border-[#118C4F]/20 p-6 rounded-2xl hover:border-[#16a861] hover:bg-[#118C4F]/5 hover:-translate-y-1 transition-all">
+                    <div class="text-3xl mb-3">⚙️</div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Consultoría" data-en="Consulting">Consultoría</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed" data-es="Procesos operativos, logística, inventario, equipos." data-en="Operational processes, logistics, inventory, teams.">Procesos operativos, logística, inventario, equipos.</p>
                 </div>
             </div>
 
-            <div id="services-en" class="lang-content hidden space-y-10">
-                <div class="text-center space-y-2">
-                    <h3 class="font-tech text-2xl md:text-3xl font-bold text-white uppercase tracking-widest">Looking for Solutions?</h3>
-                    <p class="neon-text font-black uppercase tracking-[0.3em] text-sm md:text-base">Specialized Services</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="glass p-8 rounded-2xl border border-[#118C4F]/20 hover:border-[#118C4F] hover:shadow-[0_0_25px_rgba(17,140,79,0.15)] transition-all group">
-                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">💻</div>
-                        <h4 class="text-white font-black text-lg uppercase tracking-widest mb-3">Custom Software Development</h4>
-                        <p class="text-sm text-gray-400 font-medium leading-relaxed">Creation of mobile apps and administrative panels (like Pana Voy) to digitize your business.</p>
-                    </div>
-                    
-                    <div class="glass p-8 rounded-2xl border border-[#118C4F]/20 hover:border-[#118C4F] hover:shadow-[0_0_25px_rgba(17,140,79,0.15)] transition-all group">
-                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
-                        <h4 class="text-white font-black text-lg uppercase tracking-widest mb-3">Automation & Data Analysis</h4>
-                        <p class="text-sm text-gray-400 font-medium leading-relaxed">Optimization of repetitive tasks and creation of smart reports with Python for decision-making.</p>
-                    </div>
-                    
-                    <div class="glass p-8 rounded-2xl border border-[#118C4F]/20 hover:border-[#118C4F] hover:shadow-[0_0_25px_rgba(17,140,79,0.15)] transition-all group">
-                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📡</div>
-                        <h4 class="text-white font-black text-lg uppercase tracking-widest mb-3">Infrastructure & Networks</h4>
-                        <p class="text-sm text-gray-400 font-medium leading-relaxed">Network installation, CCTV, and server configuration for local businesses.</p>
-                    </div>
-                    
-                    <div class="glass p-8 rounded-2xl border border-[#118C4F]/20 hover:border-[#118C4F] hover:shadow-[0_0_25px_rgba(17,140,79,0.15)] transition-all group">
-                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">⚙️</div>
-                        <h4 class="text-white font-black text-lg uppercase tracking-widest mb-3">Operational Consulting</h4>
-                        <p class="text-sm text-gray-400 font-medium leading-relaxed">Advisory to optimize the logistics and operations of your fleet or inventory.</p>
-                    </div>
-                </div>
-
-                <div class="text-center pt-6">
-                    <a href="https://wa.me/584142272792?text=Hello%20Carlos,%20I'm%20interested%20in%20hiring%20your%20services" target="_blank" class="inline-flex items-center gap-3 bg-[#118C4F] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest hover:bg-[#0e7642] hover:scale-105 transition-all shadow-[0_0_20px_rgba(17,140,79,0.4)]">
-                        🚀 Hire My Services
-                    </a>
-                </div>
+            <div class="relative mt-10 flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <a href="https://wa.me/584142272792?text=Hola%20Carlos,%20me%20interesa%20hablar%20contigo" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-3 bg-[#118C4F] hover:bg-[#16a861] text-white px-7 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider shadow-[0_0_30px_rgba(17,140,79,0.4)] hover:scale-105 transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    <span data-es="Hablemos por WhatsApp" data-en="Let's talk on WhatsApp">Hablemos por WhatsApp</span>
+                </a>
+                <a href="mailto:carlos.linares.es@gmail.com" class="inline-flex items-center gap-3 bg-black/40 border border-[#118C4F]/30 hover:border-[#16a861] text-white px-7 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all">
+                    <span data-es="Enviar email" data-en="Send email">Enviar email</span>
+                </a>
             </div>
-        </div>
+        </section>
 
     </div>
 
-    <footer class="text-center py-16 flex flex-col items-center justify-center gap-6">
-        <a href="https://hits.sh/carloslinareses-cloud.github.io/mi-cv/">
+    <footer class="text-center py-12 flex flex-col items-center justify-center gap-3 no-print">
+        <a href="https://hits.sh/carloslinareses-cloud.github.io/mi-cv/" rel="noopener">
             <img alt="Hits" src="https://hits.sh/carloslinareses-cloud.github.io/mi-cv.svg?style=for-the-badge&label=VIEWS&color=118C4F&labelColor=030712"/>
         </a>
-        <p class="font-tech text-xs font-bold uppercase tracking-[0.5em] text-gray-600">Carlos H Linares M • 2026</p>
+        <p class="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-gray-600">Carlos H. Linares M. · <span id="year">2026</span></p>
+        <p class="font-mono text-[9px] text-gray-700" data-es="Hecho con código y café en Charallave 🇻🇪" data-en="Made with code and coffee in Charallave 🇻🇪">Hecho con código y café en Charallave 🇻🇪</p>
     </footer>
 
     <script>
+        // ── Language toggle ──────────────────────────────────────────────
         let isEnglish = false;
-        
+
+        function applyLangAttrs() {
+            document.querySelectorAll('[data-es]').forEach(el => {
+                el.textContent = isEnglish ? (el.getAttribute('data-en') || el.textContent) : (el.getAttribute('data-es') || el.textContent);
+            });
+        }
+
         function toggleLanguage() {
             isEnglish = !isEnglish;
-            
-            // Toggle Content
-            const allContent = document.querySelectorAll('.lang-content');
-            allContent.forEach(el => el.classList.add('hidden'));
-            
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.add('hidden'));
+
             if (isEnglish) {
-                document.getElementById('role-en').classList.remove('hidden');
-                document.getElementById('profile-en').classList.remove('hidden');
-                document.getElementById('skills-en').classList.remove('hidden');
-                document.getElementById('edu-en').classList.remove('hidden');
-                document.getElementById('exp-en').classList.remove('hidden');
-                document.getElementById('services-en').classList.remove('hidden');
-                
-                document.getElementById('flag-icon').innerText = '🇪🇸';
-                document.getElementById('lang-label').innerText = 'ESPAÑOL';
+                document.documentElement.lang = 'en';
+                ['role-en','panavoy-en','profile-en','exp-en'].forEach(id => {
+                    const el = document.getElementById(id); if (el) el.classList.remove('hidden');
+                });
+                document.getElementById('flag-icon').textContent = '🇪🇸';
+                document.getElementById('lang-label').textContent = 'ES';
             } else {
-                document.getElementById('role-es').classList.remove('hidden');
-                document.getElementById('profile-es').classList.remove('hidden');
-                document.getElementById('skills-es').classList.remove('hidden');
-                document.getElementById('edu-es').classList.remove('hidden');
-                document.getElementById('exp-es').classList.remove('hidden');
-                document.getElementById('services-es').classList.remove('hidden');
-                
-                document.getElementById('flag-icon').innerText = '🇺🇸';
-                document.getElementById('lang-label').innerText = 'ENGLISH';
+                document.documentElement.lang = 'es';
+                ['role-es','panavoy-es','profile-es','exp-es'].forEach(id => {
+                    const el = document.getElementById(id); if (el) el.classList.remove('hidden');
+                });
+                document.getElementById('flag-icon').textContent = '🇺🇸';
+                document.getElementById('lang-label').textContent = 'EN';
             }
+            applyLangAttrs();
         }
+
+        // ── Scroll reveal ────────────────────────────────────────────────
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // ── Year en footer ───────────────────────────────────────────────
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ── Keyboard shortcut: Ctrl/Cmd+P imprime correctamente ──────────
+        // (No interceptamos, dejamos el comportamiento nativo)
     </script>
 </body>
 </html>
