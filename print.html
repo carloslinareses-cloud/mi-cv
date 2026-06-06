@@ -2,430 +2,870 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>CV - Carlos Humberto Linares Morales</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carlos Humberto Linares Morales · CV</title>
+<meta name="description" content="CV profesional de Carlos Humberto Linares Morales — Desarrollador Full-Stack Android + Python, Fundador de Pana Voy.">
+<meta name="author" content="Carlos Humberto Linares Morales">
+<meta name="robots" content="noindex,nofollow">
 <style>
-@page { size: A4; margin: 14mm 12mm; }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body {
-  background: #ffffff;
-  color: #1a1a1a;
-  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 10.5pt;
-  line-height: 1.4;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-}
-body { padding: 0; }
+    /* ─────────────── RESET MÍNIMO ─────────────── */
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 
-/* HEADER */
-.header {
-  border-bottom: 2px solid #118C4F;
-  padding-bottom: 8px;
-  margin-bottom: 12px;
-}
-.name {
-  font-size: 22pt;
-  font-weight: 700;
-  color: #0a1019;
-  letter-spacing: -0.3px;
-}
-.role {
-  font-size: 11.5pt;
-  color: #118C4F;
-  font-weight: 600;
-  margin-top: 2px;
-}
-.contact {
-  margin-top: 6px;
-  font-size: 9.5pt;
-  color: #444;
-}
-.contact span { margin-right: 12px; white-space: nowrap; }
-.contact a { color: #444; text-decoration: none; }
+    /* ─────────────── PRINT / PÁGINA ─────────────── */
+    @page {
+        size: A4;
+        margin: 12mm 14mm;
+    }
 
-/* SECTIONS */
-section { margin-top: 12px; page-break-inside: avoid; }
-h2 {
-  font-size: 12pt;
-  font-weight: 700;
-  color: #0a1019;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 3px;
-  margin-bottom: 7px;
-}
-p { text-align: justify; }
+    html, body {
+        background: #ffffff;
+        color: #1a1a1a;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.45;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-/* EXPERIENCE */
-.exp-item {
-  margin-bottom: 9px;
-  page-break-inside: avoid;
-}
-.exp-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 10px;
-}
-.exp-title {
-  font-weight: 700;
-  font-size: 10.5pt;
-  color: #0a1019;
-}
-.exp-period {
-  font-size: 9pt;
-  color: #666;
-  white-space: nowrap;
-  font-weight: 500;
-}
-.exp-company {
-  font-size: 10pt;
-  color: #118C4F;
-  font-weight: 600;
-  margin-bottom: 3px;
-}
-.exp-item ul {
-  margin-left: 16px;
-  margin-top: 2px;
-}
-.exp-item li {
-  font-size: 9.5pt;
-  margin-bottom: 1px;
-}
+    body {
+        max-width: 210mm;
+        margin: 0 auto;
+        padding: 8mm 10mm;
+    }
 
-/* PROJECTS */
-.project {
-  border-left: 3px solid #118C4F;
-  padding-left: 9px;
-  margin-bottom: 9px;
-  page-break-inside: avoid;
-}
-.project.amber { border-left-color: #d97706; }
-.project-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 8px;
-}
-.project-title {
-  font-weight: 700;
-  font-size: 11pt;
-  color: #0a1019;
-}
-.project-status {
-  font-size: 8pt;
-  font-weight: 700;
-  padding: 1px 6px;
-  border-radius: 3px;
-  background: #118C4F;
-  color: #fff;
-  letter-spacing: 0.4px;
-}
-.project.amber .project-status { background: #d97706; }
-.project-role {
-  font-size: 9pt;
-  color: #666;
-  margin-bottom: 3px;
-  font-weight: 500;
-}
-.project-desc {
-  font-size: 9.5pt;
-  margin-bottom: 3px;
-}
-.project-bullets {
-  margin-left: 16px;
-  font-size: 9.5pt;
-}
-.project-stack {
-  font-size: 8.5pt;
-  color: #666;
-  margin-top: 3px;
-  font-style: italic;
-}
+    /* ─────────────── HEADER ─────────────── */
+    header.cv-header {
+        display: flex;
+        gap: 6mm;
+        align-items: center;
+        padding-bottom: 5mm;
+        border-bottom: 2px solid #118C4F;
+        margin-bottom: 6mm;
+    }
 
-/* STACK */
-.stack-cat {
-  margin-bottom: 5px;
-  font-size: 9.5pt;
-}
-.stack-cat strong {
-  display: inline-block;
-  min-width: 165px;
-  color: #118C4F;
-  font-weight: 700;
-}
+    .cv-photo {
+        flex-shrink: 0;
+    }
 
-/* GRID */
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
+    .cv-photo img {
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #118C4F;
+        display: block;
+    }
 
-/* FORMACION / IDIOMAS */
-.info-block {
-  font-size: 9.5pt;
-}
-.info-block .title {
-  font-weight: 700;
-  color: #0a1019;
-}
-.info-block .sub {
-  color: #666;
-  font-size: 9pt;
-}
-.info-block ul {
-  margin-left: 16px;
-  margin-top: 3px;
-}
+    .cv-id {
+        flex: 1;
+    }
 
-/* SERVICIOS */
-.services-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px 16px;
-}
-.service {
-  font-size: 9.5pt;
-}
-.service strong { color: #118C4F; }
+    .cv-id h1 {
+        font-size: 22pt;
+        font-weight: 700;
+        color: #111111;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        margin-bottom: 2mm;
+    }
 
-/* page-break helper */
-.page-break { page-break-before: always; }
+    .cv-role {
+        font-size: 11pt;
+        font-weight: 500;
+        color: #118C4F;
+        margin-bottom: 3mm;
+        letter-spacing: 0.01em;
+    }
+
+    .cv-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2mm 5mm;
+        font-size: 9.5pt;
+        color: #333333;
+    }
+
+    .cv-contact span {
+        white-space: nowrap;
+    }
+
+    .cv-contact .ico {
+        margin-right: 1mm;
+    }
+
+    /* ─────────────── LAYOUT DOS COLUMNAS ─────────────── */
+    .cv-body {
+        display: grid;
+        grid-template-columns: 35% 1fr;
+        gap: 8mm;
+    }
+
+    aside.cv-sidebar {
+        font-size: 9.5pt;
+    }
+
+    section.cv-main {
+        font-size: 10pt;
+    }
+
+    /* ─────────────── SECCIONES ─────────────── */
+    .cv-section {
+        margin-bottom: 7mm;
+        page-break-inside: avoid;
+    }
+
+    h2.cv-h2 {
+        font-size: 12pt;
+        font-weight: 700;
+        color: #118C4F;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        border-bottom: 1px solid #d4d4d4;
+        padding-bottom: 1.2mm;
+        margin-bottom: 3.5mm;
+    }
+
+    h3.cv-h3 {
+        font-size: 11pt;
+        font-weight: 700;
+        color: #1a1a1a;
+        line-height: 1.25;
+    }
+
+    .cv-meta {
+        font-size: 9.5pt;
+        font-style: italic;
+        color: #555555;
+        margin-top: 0.3mm;
+        margin-bottom: 1.5mm;
+    }
+
+    /* ─────────────── BULLETS ─────────────── */
+    ul.cv-bullets {
+        list-style: none;
+        padding: 0;
+        margin: 1.5mm 0 0 0;
+    }
+
+    ul.cv-bullets li {
+        position: relative;
+        padding-left: 4.5mm;
+        margin-bottom: 1mm;
+        font-size: 10pt;
+        line-height: 1.4;
+        color: #2a2a2a;
+    }
+
+    ul.cv-bullets li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #118C4F;
+        font-weight: 700;
+    }
+
+    /* ─────────────── SIDEBAR · CONTACTO ─────────────── */
+    .cv-contact-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .cv-contact-list li {
+        margin-bottom: 1.5mm;
+        font-size: 9.5pt;
+        color: #2a2a2a;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+
+    .cv-contact-list .ico {
+        color: #118C4F;
+        margin-right: 1.5mm;
+    }
+
+    /* ─────────────── SIDEBAR · STACK ─────────────── */
+    .cv-stack-group {
+        margin-bottom: 3mm;
+    }
+
+    .cv-stack-group h4 {
+        font-size: 9pt;
+        font-weight: 700;
+        color: #555555;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 1mm;
+    }
+
+    .cv-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1mm 1.2mm;
+    }
+
+    .cv-chip {
+        display: inline-block;
+        background: #f1f5f3;
+        border: 1px solid #c9e0d3;
+        color: #118C4F;
+        font-size: 8.5pt;
+        font-weight: 600;
+        padding: 0.5mm 2mm;
+        border-radius: 2px;
+        line-height: 1.3;
+    }
+
+    /* ─────────────── SIDEBAR · FORMACIÓN ─────────────── */
+    .cv-edu h3 {
+        font-size: 10pt;
+        font-weight: 700;
+        color: #1a1a1a;
+    }
+
+    .cv-edu .org {
+        font-size: 9.5pt;
+        color: #2a2a2a;
+        margin-top: 0.5mm;
+    }
+
+    .cv-edu .years {
+        font-size: 9pt;
+        color: #555555;
+        font-style: italic;
+        margin-top: 0.5mm;
+    }
+
+    /* ─────────────── SIDEBAR · IDIOMAS ─────────────── */
+    .cv-langs {
+        list-style: none;
+        padding: 0;
+    }
+
+    .cv-langs li {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1.5mm;
+        font-size: 9.5pt;
+    }
+
+    .cv-langs .lvl {
+        color: #118C4F;
+        font-weight: 600;
+        font-size: 9pt;
+    }
+
+    /* ─────────────── SIDEBAR · EXTRAS ─────────────── */
+    .cv-extras {
+        list-style: none;
+        padding: 0;
+    }
+
+    .cv-extras li {
+        position: relative;
+        padding-left: 4mm;
+        font-size: 9.5pt;
+        margin-bottom: 1mm;
+        color: #2a2a2a;
+    }
+
+    .cv-extras li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #118C4F;
+        font-weight: 700;
+    }
+
+    /* ─────────────── MAIN · PERFIL ─────────────── */
+    .cv-profile p {
+        text-align: justify;
+        font-size: 10pt;
+        line-height: 1.5;
+        color: #2a2a2a;
+    }
+
+    .cv-profile strong {
+        color: #1a1a1a;
+        font-weight: 700;
+    }
+
+    /* ─────────────── MAIN · TIMELINE EXPERIENCIA ─────────────── */
+    .cv-timeline {
+        position: relative;
+        padding-left: 4mm;
+        border-left: 1.5px solid #c9e0d3;
+    }
+
+    .cv-job {
+        position: relative;
+        margin-bottom: 5mm;
+        padding-left: 3mm;
+        page-break-inside: avoid;
+    }
+
+    .cv-job::before {
+        content: "";
+        position: absolute;
+        left: -5.5mm;
+        top: 2mm;
+        width: 2.5mm;
+        height: 2.5mm;
+        border-radius: 50%;
+        background: #118C4F;
+    }
+
+    .cv-job-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 4mm;
+        flex-wrap: wrap;
+    }
+
+    .cv-job-head h3 {
+        font-size: 11pt;
+        font-weight: 700;
+        color: #1a1a1a;
+    }
+
+    .cv-job-head .dates {
+        font-size: 9pt;
+        font-weight: 700;
+        color: #118C4F;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+    }
+
+    .cv-job .org {
+        font-size: 9.5pt;
+        font-style: italic;
+        color: #555555;
+        margin-top: 0.3mm;
+        margin-bottom: 1.5mm;
+    }
+
+    /* ─────────────── MAIN · PROYECTOS ─────────────── */
+    .cv-projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4mm;
+    }
+
+    .cv-project {
+        border-left: 3px solid #118C4F;
+        padding-left: 3.5mm;
+        page-break-inside: avoid;
+    }
+
+    .cv-project-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 3mm;
+        flex-wrap: wrap;
+        margin-bottom: 0.5mm;
+    }
+
+    .cv-project-head h3 {
+        font-size: 11.5pt;
+        font-weight: 700;
+        color: #1a1a1a;
+    }
+
+    .cv-project .status {
+        font-size: 8.5pt;
+        font-weight: 700;
+        color: #118C4F;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        background: #f1f5f3;
+        border: 1px solid #c9e0d3;
+        padding: 0.3mm 1.5mm;
+        border-radius: 2px;
+        white-space: nowrap;
+    }
+
+    .cv-project .status.dev {
+        color: #b45309;
+        background: #fdf6e7;
+        border-color: #f0d9a8;
+    }
+
+    .cv-project .subtitle {
+        font-size: 9pt;
+        color: #555555;
+        font-style: italic;
+        margin-bottom: 1.5mm;
+    }
+
+    .cv-project p {
+        font-size: 9.5pt;
+        line-height: 1.4;
+        color: #2a2a2a;
+        margin-bottom: 1.5mm;
+    }
+
+    .cv-project .stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1mm;
+        margin-top: 1.5mm;
+    }
+
+    /* ─────────────── MAIN · SERVICIOS ─────────────── */
+    .cv-services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2mm 4mm;
+    }
+
+    .cv-service {
+        padding-left: 4mm;
+        position: relative;
+        font-size: 9.5pt;
+        color: #2a2a2a;
+        line-height: 1.35;
+    }
+
+    .cv-service::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #118C4F;
+        font-weight: 700;
+    }
+
+    .cv-service strong {
+        color: #1a1a1a;
+        display: block;
+        font-size: 10pt;
+        margin-bottom: 0.3mm;
+    }
+
+    /* ─────────────── ENLACES ─────────────── */
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /* ─────────────── PAGE BREAKS ─────────────── */
+    h2.cv-h2, h3.cv-h3 {
+        page-break-after: avoid;
+    }
 </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="name">Carlos Humberto Linares Morales</div>
-  <div class="role">Desarrollador Full-Stack &amp; Especialista Operativo</div>
-  <div class="contact">
-    <span>Charallave, Miranda &middot; Venezuela</span>
-    <span>contacto@panavoy.com</span>
-    <span>WhatsApp: +58 414-2272792</span>
-    <span>linkedin.com/in/carlos-humberto-linares-morales-a474642a6</span>
-    <span>github.com/carloslinareses-cloud</span>
-    <span>panavoy.com</span>
-  </div>
-</header>
+    <!-- ═══════════════ HEADER ═══════════════ -->
+    <header class="cv-header">
+        <div class="cv-photo">
+            <img src="./foto.jpg" width="120" height="120" alt="Carlos Humberto Linares Morales">
+        </div>
+        <div class="cv-id">
+            <h1>Carlos Humberto Linares Morales</h1>
+            <div class="cv-role">Desarrollador Full-Stack · Android + Python · Fundador de Pana Voy</div>
+            <div class="cv-contact">
+                <span><span class="ico">📧</span>carlos.linares.es@gmail.com</span>
+                <span><span class="ico">📱</span>+58 414-2272792</span>
+                <span><span class="ico">📍</span>Charallave, Miranda, Venezuela</span>
+                <span><span class="ico">💼</span>linkedin.com/in/carlos-humberto-linares-morales-a474642a6</span>
+                <span><span class="ico">💻</span>github.com/carloslinareses-cloud</span>
+                <span><span class="ico">🌐</span>panavoy.com</span>
+            </div>
+        </div>
+    </header>
 
-<section>
-  <h2>Perfil Profesional</h2>
-  <p>Profesional en informatica con una trayectoria versatil en desarrollo de software, soporte tecnico y gestion operativa. Especializado en backend con Python, APIs RESTful y bases de datos. Recientemente he ampliado mi stack al desarrollo de apps Android nativas con Kotlin/Compose y al analisis de datos con Pandas. Destaco por mi capacidad para liderar equipos, optimizar procesos logisticos y aportar soluciones tecnologicas eficientes, con enfoque constante en el aprendizaje y resolucion de problemas complejos. 16+ anos de experiencia en 4 paises (Venezuela, Colombia, Chile y Espana).</p>
-</section>
+    <!-- ═══════════════ BODY DOS COLUMNAS ═══════════════ -->
+    <div class="cv-body">
 
-<section>
-  <h2>Experiencia Profesional</h2>
+        <!-- ═══════════ SIDEBAR ═══════════ -->
+        <aside class="cv-sidebar">
 
-  <div class="exp-item">
-    <div class="exp-head">
-      <div class="exp-title">Desarrollador Android</div>
-      <div class="exp-period">2025 &mdash; Presente</div>
+            <!-- CONTACTO -->
+            <div class="cv-section">
+                <h2 class="cv-h2">Contacto</h2>
+                <ul class="cv-contact-list">
+                    <li><span class="ico">📧</span>carlos.linares.es@gmail.com</li>
+                    <li><span class="ico">📱</span>+58 414-2272792</li>
+                    <li><span class="ico">📍</span>Charallave, Miranda, Venezuela</li>
+                    <li><span class="ico">💼</span>linkedin.com/in/carlos-humberto-linares-morales-a474642a6</li>
+                    <li><span class="ico">💻</span>github.com/carloslinareses-cloud</li>
+                    <li><span class="ico">🌐</span>panavoy.com</li>
+                </ul>
+            </div>
+
+            <!-- STACK TÉCNICO -->
+            <div class="cv-section">
+                <h2 class="cv-h2">Stack Técnico</h2>
+
+                <div class="cv-stack-group">
+                    <h4>Lenguajes</h4>
+                    <div class="cv-chips">
+                        <span class="cv-chip">Python</span>
+                        <span class="cv-chip">Kotlin</span>
+                        <span class="cv-chip">JavaScript</span>
+                        <span class="cv-chip">Java</span>
+                    </div>
+                </div>
+
+                <div class="cv-stack-group">
+                    <h4>Mobile</h4>
+                    <div class="cv-chips">
+                        <span class="cv-chip">Android nativo</span>
+                        <span class="cv-chip">Jetpack Compose</span>
+                        <span class="cv-chip">Material Design 3</span>
+                        <span class="cv-chip">Android Studio</span>
+                        <span class="cv-chip">Navigation3</span>
+                    </div>
+                </div>
+
+                <div class="cv-stack-group">
+                    <h4>Backend</h4>
+                    <div class="cv-chips">
+                        <span class="cv-chip">Firebase RTDB</span>
+                        <span class="cv-chip">Firebase Auth</span>
+                        <span class="cv-chip">FCM</span>
+                        <span class="cv-chip">Cloud Functions</span>
+                        <span class="cv-chip">Storage</span>
+                        <span class="cv-chip">Node.js</span>
+                        <span class="cv-chip">Flask</span>
+                        <span class="cv-chip">REST APIs</span>
+                        <span class="cv-chip">Supabase</span>
+                        <span class="cv-chip">PostgreSQL</span>
+                        <span class="cv-chip">Pandas</span>
+                    </div>
+                </div>
+
+                <div class="cv-stack-group">
+                    <h4>Frontend</h4>
+                    <div class="cv-chips">
+                        <span class="cv-chip">React</span>
+                        <span class="cv-chip">Vite</span>
+                        <span class="cv-chip">Astro</span>
+                        <span class="cv-chip">Tailwind</span>
+                    </div>
+                </div>
+
+                <div class="cv-stack-group">
+                    <h4>Cloud / DevOps</h4>
+                    <div class="cv-chips">
+                        <span class="cv-chip">Cloudflare Workers</span>
+                        <span class="cv-chip">Pages</span>
+                        <span class="cv-chip">R2 Storage</span>
+                        <span class="cv-chip">GitHub Actions</span>
+                        <span class="cv-chip">Git</span>
+                        <span class="cv-chip">Linux</span>
+                    </div>
+                </div>
+
+                <div class="cv-stack-group">
+                    <h4>Pagos</h4>
+                    <div class="cv-chips">
+                        <span class="cv-chip">Pago Móvil VE</span>
+                        <span class="cv-chip">Integraciones bancarias</span>
+                        <span class="cv-chip">Tasa BCV</span>
+                    </div>
+                </div>
+
+                <div class="cv-stack-group">
+                    <h4>Redes &amp; Infraestructura</h4>
+                    <div class="cv-chips">
+                        <span class="cv-chip">TCP/IP</span>
+                        <span class="cv-chip">Ubiquiti</span>
+                        <span class="cv-chip">Routers</span>
+                        <span class="cv-chip">CCTV</span>
+                        <span class="cv-chip">RJ45</span>
+                    </div>
+                </div>
+
+                <div class="cv-stack-group">
+                    <h4>Sistemas</h4>
+                    <div class="cv-chips">
+                        <span class="cv-chip">Windows</span>
+                        <span class="cv-chip">Linux</span>
+                        <span class="cv-chip">SAINT</span>
+                        <span class="cv-chip">SIGA</span>
+                        <span class="cv-chip">MS Office</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMACIÓN -->
+            <div class="cv-section cv-edu">
+                <h2 class="cv-h2">Formación</h2>
+                <h3>TSU en Informática</h3>
+                <div class="org">IUT José María Carreño</div>
+                <div class="years">2011 — 2015</div>
+            </div>
+
+            <!-- IDIOMAS -->
+            <div class="cv-section">
+                <h2 class="cv-h2">Idiomas</h2>
+                <ul class="cv-langs">
+                    <li><span>Español</span><span class="lvl">Nativo</span></li>
+                    <li><span>Inglés</span><span class="lvl">Técnico / Lectura</span></li>
+                </ul>
+            </div>
+
+            <!-- EXTRAS -->
+            <div class="cv-section">
+                <h2 class="cv-h2">Extras</h2>
+                <ul class="cv-extras">
+                    <li>Licencia de conducir vigente</li>
+                    <li>Vehículo propio</li>
+                    <li>Disponible para trabajo remoto</li>
+                    <li>Experiencia en 4 países (VE · CO · CL · ES)</li>
+                    <li>Liderazgo de equipos y operaciones</li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <!-- ═══════════ MAIN ═══════════ -->
+        <section class="cv-main">
+
+            <!-- PERFIL PROFESIONAL -->
+            <div class="cv-section cv-profile">
+                <h2 class="cv-h2">Perfil Profesional</h2>
+                <p>
+                    Profesional en informática con <strong>más de 16 años de trayectoria</strong> combinando <strong>desarrollo de software, soporte técnico y gestión operativa</strong>. <strong>Fundador y Desarrollador Principal de Pana Voy</strong>, plataforma nativa Android + serverless de delivery y taxi en producción para los Valles del Tuy (Venezuela). Especializado en backend con Python (Flask, Pandas, REST APIs), apps Android nativas con Kotlin/Jetpack Compose, y arquitecturas serverless sobre Firebase y Cloudflare. Experiencia comprobada en <strong>liderar equipos, optimizar procesos logísticos y entregar productos digitales de extremo a extremo</strong>, desde el diseño hasta la publicación en Play Store. Enfoque constante en el aprendizaje continuo, la resolución de problemas complejos y el equilibrio entre rigor técnico y resultados de negocio.
+                </p>
+            </div>
+
+            <!-- EXPERIENCIA PROFESIONAL -->
+            <div class="cv-section">
+                <h2 class="cv-h2">Experiencia Profesional</h2>
+                <div class="cv-timeline">
+
+                    <!-- ALCALDÍA DE CHARALLAVE -->
+                    <article class="cv-job">
+                        <div class="cv-job-head">
+                            <h3>Desarrollador Android</h3>
+                            <span class="dates">2025 — Presente</span>
+                        </div>
+                        <div class="org">Alcaldía de Charallave · Miranda, Venezuela</div>
+                        <ul class="cv-bullets">
+                            <li>Diseño y desarrollo de una app móvil de <strong>control de acceso</strong> para el personal de la alcaldía, actualmente en producción (v1.0.8).</li>
+                            <li>Stack: Kotlin, Jetpack Compose, Supabase (Auth + PostgreSQL) y Navigation3.</li>
+                            <li>Implementación de sesión segura, geolocalización, dashboard administrativo y sistema de notificaciones de actualización.</li>
+                            <li>Ciclo completo de release: distribución de APK firmado, gestión de versiones y soporte continuo a usuarios internos.</li>
+                        </ul>
+                    </article>
+
+                    <!-- INDEPENDIENTE / PANA VOY -->
+                    <article class="cv-job">
+                        <div class="cv-job-head">
+                            <h3>Fundador &amp; Desarrollador Full-Stack</h3>
+                            <span class="dates">Feb 2026 — Presente</span>
+                        </div>
+                        <div class="org">Independiente · Pana Voy · AeroSocio</div>
+                        <ul class="cv-bullets">
+                            <li>Diseño y construcción integral de <strong>Pana Voy</strong>: app Android nativa, panel administrativo web, portal de socios y backend serverless desplegado en producción.</li>
+                            <li>Desarrollo de <strong>AeroSocio</strong> (React 19 + Supabase + PostgreSQL): club de servicios mensuales para conductores en España.</li>
+                            <li>Arquitectura serverless escalable con Firebase Cloud Functions, Cloudflare Workers, R2 Storage y Pages.</li>
+                            <li>Análisis y manipulación de datos en Python con Pandas; construcción de APIs REST con Flask.</li>
+                            <li>Integración de pagos en Bolívares con conversión automática a tasa BCV y geofencing en radio de 5 km.</li>
+                        </ul>
+                    </article>
+
+                    <!-- PARKMADRID -->
+                    <article class="cv-job">
+                        <div class="cv-job-head">
+                            <h3>Gerente · Administrador · Operador Logístico</h3>
+                            <span class="dates">Dic 2023 — Ene 2026</span>
+                        </div>
+                        <div class="org">ParkMadrid · Madrid, España</div>
+                        <ul class="cv-bullets">
+                            <li>Gestión y supervisión de operaciones logísticas y administrativas diarias.</li>
+                            <li>Coordinación de personal, organización de turnos y resolución de incidencias operativas.</li>
+                            <li>Control de inventarios, seguimiento de procesos y elaboración de reportes administrativos.</li>
+                            <li>Optimización continua de la eficiencia operativa y manejo de documentación corporativa.</li>
+                        </ul>
+                    </article>
+
+                    <!-- OURWORLD -->
+                    <article class="cv-job">
+                        <div class="cv-job-head">
+                            <h3>Backend Junior</h3>
+                            <span class="dates">Mar 2023 — May 2023</span>
+                        </div>
+                        <div class="org">Ourworld LTD · Madrid, España</div>
+                        <ul class="cv-bullets">
+                            <li>Desarrollo de sistema basado en Python para automatización de procesos internos.</li>
+                            <li>Creación de APIs RESTful con Flask y diseño de operaciones CRUD sobre bases relacionales.</li>
+                            <li>Desarrollo de scripts personalizados para tareas de integración y procesamiento de datos.</li>
+                        </ul>
+                    </article>
+
+                    <!-- WIFITEL -->
+                    <article class="cv-job">
+                        <div class="cv-job-head">
+                            <h3>Soporte Técnico</h3>
+                            <span class="dates">Nov 2021 — Feb 2022</span>
+                        </div>
+                        <div class="org">WIFITEL · Cúa, Venezuela</div>
+                        <ul class="cv-bullets">
+                            <li>Instalación y mantenimiento de servicios de internet inalámbrico residenciales y comerciales.</li>
+                            <li>Configuración de antenas Ubiquiti, enlaces punto a punto y redes inalámbricas urbanas.</li>
+                            <li>Administración de redes y routers; cableado estructurado con RJ45.</li>
+                        </ul>
+                    </article>
+
+                    <!-- COFESCO -->
+                    <article class="cv-job">
+                        <div class="cv-job-head">
+                            <h3>Notificador</h3>
+                            <span class="dates">Nov 2020 — Jul 2021</span>
+                        </div>
+                        <div class="org">COFESCO · Bogotá, Colombia</div>
+                        <ul class="cv-bullets">
+                            <li>Registro y gestión de documentos de predios en sistemas catastrales.</li>
+                            <li>Validación de información mediante visitas de campo y verificación in situ.</li>
+                            <li>Actualización constante de bases de datos institucionales.</li>
+                        </ul>
+                    </article>
+
+                    <!-- TELEPERFORMANCE -->
+                    <article class="cv-job">
+                        <div class="cv-job-head">
+                            <h3>Agente Contact Center</h3>
+                            <span class="dates">Jul 2020 — Nov 2020</span>
+                        </div>
+                        <div class="org">Teleperformance · Bogotá, Colombia</div>
+                        <ul class="cv-bullets">
+                            <li>Atención al cliente y soporte técnico de primer nivel.</li>
+                            <li>Escalamiento estructurado de incidencias a segundo nivel.</li>
+                            <li>Gestión de tareas de backoffice y cierre de casos.</li>
+                        </ul>
+                    </article>
+
+                    <!-- FLOTAS SERVICE -->
+                    <article class="cv-job">
+                        <div class="cv-job-head">
+                            <h3>Jefe de Servicio &amp; Analista Post-Venta</h3>
+                            <span class="dates">Nov 2018 — Jul 2019</span>
+                        </div>
+                        <div class="org">Flotas Service SPA · Santiago, Chile</div>
+                        <ul class="cv-bullets">
+                            <li>Elaboración de presupuestos preventivos y correctivos para flotas vehiculares.</li>
+                            <li>Gestión integral de repuestos, tarifarios y control de mantenimiento.</li>
+                            <li>Manejo avanzado de bases de datos y Excel para análisis de costos operativos.</li>
+                        </ul>
+                    </article>
+
+                    <!-- NOVATEX -->
+                    <article class="cv-job">
+                        <div class="cv-job-head">
+                            <h3>Operador Informático</h3>
+                            <span class="dates">Jun 2016 — May 2018</span>
+                        </div>
+                        <div class="org">Inversiones Novatex · Bogotá, Colombia</div>
+                        <ul class="cv-bullets">
+                            <li>Mantenimiento preventivo y correctivo de servidores y equipos de cómputo.</li>
+                            <li>Instalación de redes LAN y sistemas de CCTV; configuración de routers.</li>
+                            <li>Atención al cliente y coordinación de personal técnico.</li>
+                        </ul>
+                    </article>
+
+                    <!-- BODEGÓN CHARA -->
+                    <article class="cv-job">
+                        <div class="cv-job-head">
+                            <h3>Gerente de Ventas</h3>
+                            <span class="dates">Mar 2010 — Dic 2015</span>
+                        </div>
+                        <div class="org">Bodegón Chara · Charallave, Venezuela</div>
+                        <ul class="cv-bullets">
+                            <li>Gestión integral de ventas, atención al cliente y operación diaria del negocio.</li>
+                            <li>Soporte técnico de hardware y software para puntos de venta.</li>
+                            <li>Administración de redes locales y sistemas de CCTV.</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- PROYECTOS DESTACADOS -->
+            <div class="cv-section">
+                <h2 class="cv-h2">Proyectos Destacados</h2>
+                <div class="cv-projects">
+
+                    <article class="cv-project">
+                        <div class="cv-project-head">
+                            <h3>Pana Voy</h3>
+                            <span class="status">En producción</span>
+                        </div>
+                        <div class="subtitle">Fundador · Desarrollador Principal · panavoy.com</div>
+                        <p>
+                            Plataforma <strong>delivery + taxi</strong> para los Valles del Tuy (Venezuela). App nativa Android multi-rol (cliente, tienda, repartidor, taxista), backend serverless en Firebase + Cloudflare, panel administrativo web y portal de socios. Incluye notificaciones push en tiempo real, geofencing de 5 km, pagos en Bolívares con tasa BCV automática y modelo de membresías quincenales para socios comerciales.
+                        </p>
+                        <div class="stack">
+                            <span class="cv-chip">Kotlin</span>
+                            <span class="cv-chip">Jetpack Compose</span>
+                            <span class="cv-chip">Firebase RTDB</span>
+                            <span class="cv-chip">Cloud Functions</span>
+                            <span class="cv-chip">FCM</span>
+                            <span class="cv-chip">Cloudflare Workers</span>
+                            <span class="cv-chip">R2</span>
+                            <span class="cv-chip">MapLibre</span>
+                            <span class="cv-chip">React</span>
+                        </div>
+                    </article>
+
+                    <article class="cv-project">
+                        <div class="cv-project-head">
+                            <h3>AeroSocio</h3>
+                            <span class="status dev">En desarrollo</span>
+                        </div>
+                        <div class="subtitle">Creador · Full-Stack Developer · Mercado España</div>
+                        <p>
+                            <strong>Club VIP de servicios para conductores en España</strong> bajo modelo SaaS B2C de 5 €/mes. Ofrece alertas automáticas de ITV, seguro y carnet; gestión documental en la nube; plantillas legales para recursos de multas; y marketplace con descuentos. Construido con React 19 + Vite y Supabase (PostgreSQL) como backend.
+                        </p>
+                        <div class="stack">
+                            <span class="cv-chip">React 19</span>
+                            <span class="cv-chip">Vite</span>
+                            <span class="cv-chip">Tailwind v4</span>
+                            <span class="cv-chip">Supabase</span>
+                            <span class="cv-chip">PostgreSQL</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- SERVICIOS -->
+            <div class="cv-section">
+                <h2 class="cv-h2">Servicios</h2>
+                <div class="cv-services">
+                    <div class="cv-service">
+                        <strong>Apps a medida</strong>
+                        Android nativo con Kotlin/Compose + paneles web administrativos, al estilo Pana Voy.
+                    </div>
+                    <div class="cv-service">
+                        <strong>Datos &amp; APIs</strong>
+                        APIs en Python/Flask, automatización con Pandas y generación de reportes operativos.
+                    </div>
+                    <div class="cv-service">
+                        <strong>Redes &amp; CCTV</strong>
+                        Ubiquiti, cableado RJ45, configuración de routers y servidores.
+                    </div>
+                    <div class="cv-service">
+                        <strong>Consultoría operativa</strong>
+                        Optimización de procesos, logística, inventarios y coordinación de equipos.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
     </div>
-    <div class="exp-company">Alcaldia de Charallave &middot; Miranda, Venezuela</div>
-    <ul>
-      <li>Diseno y desarrollo de app movil de control de acceso para personal de la alcaldia (v1.0.8 en produccion).</li>
-      <li>Stack: Kotlin, Jetpack Compose, Supabase (Auth + Postgres), Navigation3.</li>
-      <li>Implementacion de sesion segura, geolocalizacion, dashboard administrativo y notificaciones de actualizacion.</li>
-      <li>Ciclo completo de release: distribucion de APK firmado, gestion de versiones y soporte continuo.</li>
-    </ul>
-  </div>
-
-  <div class="exp-item">
-    <div class="exp-head">
-      <div class="exp-title">Fundador &amp; Desarrollador Full-Stack</div>
-      <div class="exp-period">Feb 2026 &mdash; Presente</div>
-    </div>
-    <div class="exp-company">Independiente &middot; Pana Voy &middot; AeroSocio</div>
-    <ul>
-      <li>Diseno y construccion de Pana Voy: app Android nativa + admin web + portal de socios + backend serverless.</li>
-      <li>Desarrollo de AeroSocio (React 19 + Supabase): club de servicios mensuales para conductores en Espana.</li>
-      <li>Backend serverless: Firebase Cloud Functions + Cloudflare Workers + R2.</li>
-      <li>Analisis y manipulacion de datos en Python con Pandas; APIs REST con Flask.</li>
-    </ul>
-  </div>
-
-  <div class="exp-item">
-    <div class="exp-head">
-      <div class="exp-title">Gerente / Administrador / Operador Logistico</div>
-      <div class="exp-period">Dic 2023 &mdash; Ene 2026</div>
-    </div>
-    <div class="exp-company">ParkMadrid &middot; Madrid, Espana</div>
-    <ul>
-      <li>Gestion y supervision de operaciones logisticas y administrativas.</li>
-      <li>Coordinacion de personal y organizacion de turnos de trabajo.</li>
-      <li>Control de inventarios y seguimiento de procesos operativos.</li>
-      <li>Manejo de documentacion administrativa y elaboracion de reportes.</li>
-      <li>Resolucion de incidencias operativas y optimizacion de eficiencia diaria.</li>
-    </ul>
-  </div>
-
-  <div class="exp-item">
-    <div class="exp-head">
-      <div class="exp-title">Backend Junior</div>
-      <div class="exp-period">Mar 2023 &mdash; May 2023</div>
-    </div>
-    <div class="exp-company">Ourworld LTD &middot; Madrid, Espana</div>
-    <ul>
-      <li>Desarrollo de sistema basado en Python.</li>
-      <li>Creacion de APIs RESTful utilizando Flask.</li>
-      <li>Implementacion de operaciones CRUD.</li>
-      <li>Desarrollo de scripts personalizados.</li>
-    </ul>
-  </div>
-
-  <div class="exp-item">
-    <div class="exp-head">
-      <div class="exp-title">Soporte Tecnico</div>
-      <div class="exp-period">Nov 2021 &mdash; Feb 2022</div>
-    </div>
-    <div class="exp-company">WIFITEL &middot; Cua, Venezuela</div>
-    <ul>
-      <li>Instalacion y mantenimiento de servicios de internet.</li>
-      <li>Configuracion de antenas Ubiquiti y redes inalambricas.</li>
-      <li>Administracion de redes y routers; cableado estructurado (RJ45).</li>
-    </ul>
-  </div>
-
-  <div class="exp-item">
-    <div class="exp-head">
-      <div class="exp-title">Notificador</div>
-      <div class="exp-period">Nov 2020 &mdash; Jul 2021</div>
-    </div>
-    <div class="exp-company">COFESCO &middot; Bogota, Colombia</div>
-    <ul>
-      <li>Registro y gestion de documentos de predios.</li>
-      <li>Validacion de informacion mediante visitas de campo.</li>
-      <li>Actualizacion de bases de datos.</li>
-    </ul>
-  </div>
-
-  <div class="exp-item">
-    <div class="exp-head">
-      <div class="exp-title">Agente Contact Center</div>
-      <div class="exp-period">Jul 2020 &mdash; Nov 2020</div>
-    </div>
-    <div class="exp-company">Teleperformance &middot; Bogota, Colombia</div>
-    <ul>
-      <li>Atencion al cliente y soporte tecnico.</li>
-      <li>Escalamiento de incidencias a segundo nivel y gestion de backoffice.</li>
-    </ul>
-  </div>
-
-  <div class="exp-item">
-    <div class="exp-head">
-      <div class="exp-title">Jefe de Servicio y Analista Post Venta</div>
-      <div class="exp-period">Nov 2018 &mdash; Jul 2019</div>
-    </div>
-    <div class="exp-company">Flotas Service SPA &middot; Santiago, Chile</div>
-    <ul>
-      <li>Direccion del area de servicio post-venta y coordinacion de equipos tecnicos.</li>
-      <li>Analisis de procesos y seguimiento a clientes corporativos.</li>
-    </ul>
-  </div>
-
-  <div class="exp-item">
-    <div class="exp-head">
-      <div class="exp-title">Operador Informatico</div>
-      <div class="exp-period">Jun 2016 &mdash; May 2018</div>
-    </div>
-    <div class="exp-company">Inversiones Novatex &middot; Bogota, Colombia</div>
-    <ul>
-      <li>Manejo de sistemas administrativos (SAINT, SIGA) y soporte de hardware/software.</li>
-    </ul>
-  </div>
-
-  <div class="exp-item">
-    <div class="exp-head">
-      <div class="exp-title">Gerente de Ventas</div>
-      <div class="exp-period">Mar 2010 &mdash; Dic 2015</div>
-    </div>
-    <div class="exp-company">Bodegon Chara &middot; Charallave, Venezuela</div>
-    <ul>
-      <li>Liderazgo del equipo de ventas, control de inventario y gestion comercial.</li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <h2>Proyectos Destacados</h2>
-
-  <div class="project">
-    <div class="project-head">
-      <div class="project-title">Pana Voy &mdash; Fundador &middot; Desarrollador Principal</div>
-      <div class="project-status">EN PRODUCCION</div>
-    </div>
-    <div class="project-role">Startup propia &middot; panavoy.com</div>
-    <div class="project-desc">Plataforma delivery + taxi para los Valles del Tuy, Venezuela. App nativa Android, backend serverless y panel de socios.</div>
-    <ul class="project-bullets">
-      <li>Multi-rol: cliente, tienda, repartidor, taxista.</li>
-      <li>Push real-time + geofencing 5 km.</li>
-      <li>Pagos en Bs a tasa BCV automatica.</li>
-      <li>En revision final Play Store.</li>
-    </ul>
-    <div class="project-stack">Stack: Kotlin &middot; Compose &middot; Firebase &middot; CF Workers &middot; R2 &middot; MapLibre</div>
-  </div>
-
-  <div class="project amber">
-    <div class="project-head">
-      <div class="project-title">AeroSocio &mdash; Creador &middot; Full-Stack Developer</div>
-      <div class="project-status">EN DESARROLLO</div>
-    </div>
-    <div class="project-role">Proyecto personal &middot; SaaS B2C &middot; Mercado Espana</div>
-    <div class="project-desc">Club VIP de servicios para conductores en Espana. Membresia mensual (5 EUR) con alertas ITV, gestion documental, plantillas legales y marketplace.</div>
-    <ul class="project-bullets">
-      <li>Recordatorios automaticos: ITV, seguro, carnet.</li>
-      <li>Gestion documental en la nube.</li>
-      <li>Plantillas para recursos de multas.</li>
-      <li>Marketplace con descuentos.</li>
-    </ul>
-    <div class="project-stack">Stack: React 19 &middot; Vite &middot; Supabase &middot; Tailwind v4 &middot; PostgreSQL</div>
-  </div>
-</section>
-
-<section>
-  <h2>Stack Tecnico</h2>
-  <div class="stack-cat"><strong>Backend &amp; Datos:</strong> Python, Flask, REST APIs, Pandas, CRUD, Firebase</div>
-  <div class="stack-cat"><strong>Mobile &amp; Frontend:</strong> Kotlin, Jetpack Compose, Android Studio, React, Astro, Tailwind</div>
-  <div class="stack-cat"><strong>Cloud &amp; DevOps:</strong> Cloudflare Workers, R2 Storage, Cloud Functions, Git, Linux</div>
-  <div class="stack-cat"><strong>Redes &amp; Infraestructura:</strong> TCP/IP, Ubiquiti, Routers, CCTV, RJ45</div>
-  <div class="stack-cat"><strong>Sistemas &amp; Productividad:</strong> Windows, Linux, SAINT, SIGA, MS Office</div>
-</section>
-
-<section>
-  <div class="two-col">
-    <div>
-      <h2>Formacion</h2>
-      <div class="info-block">
-        <div class="title">TSU en Informatica</div>
-        <div class="sub">IUT Jose Maria Carreno</div>
-        <div class="sub">2011 &ndash; 2015</div>
-      </div>
-    </div>
-    <div>
-      <h2>Idiomas &amp; Extras</h2>
-      <div class="info-block">
-        <div class="title">Espanol &mdash; Nativo</div>
-        <ul>
-          <li>Licencia de conducir</li>
-          <li>Vehiculo propio</li>
-          <li>Disponible para trabajo remoto</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Servicios</h2>
-  <div class="services-grid">
-    <div class="service"><strong>Apps a medida.</strong> Android nativo con Kotlin + paneles web. Como Pana Voy.</div>
-    <div class="service"><strong>Datos &amp; APIs.</strong> APIs Python/Flask, automatizacion con Pandas, reportes.</div>
-    <div class="service"><strong>Redes &amp; CCTV.</strong> Ubiquiti, cableado RJ45, configuracion de routers y servidores.</div>
-    <div class="service"><strong>Consultoria.</strong> Procesos operativos, logistica, inventario, equipos.</div>
-  </div>
-</section>
 
 </body>
 </html>
