@@ -3,35 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Humberto Linares Morales · Desarrollador Full-Stack & Especialista Operativo</title>
-    <meta name="description" content="Profesional en informática con 16+ años de experiencia en desarrollo backend Python, apps Android, redes e infraestructura. Fundador de Pana Voy (delivery + taxi).">
 
-    <!-- Open Graph / WhatsApp / LinkedIn preview -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="author" content="Carlos Humberto Linares Morales">
+    <meta name="theme-color" content="#118C4F">
+    <meta name="color-scheme" content="dark light">
+
+    <title>Carlos Linares · Desarrollador Full-Stack Android + Python</title>
+    <meta name="description" content="Desarrollador Full-Stack con 16+ años en Python, Android (Kotlin/Compose), Firebase y redes. Fundador de Pana Voy. Proyectos remotos.">
+
+    <!-- Open Graph -->
     <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="CV Carlos Linares">
     <meta property="og:title" content="Carlos H. Linares Morales · Desarrollador Full-Stack">
-    <meta property="og:description" content="Python · Android · Firebase · Cloudflare · Redes. 16+ años entre Venezuela, Colombia, Chile y España. Fundador de Pana Voy.">
-    <meta property="og:image" content="https://carloslinareses-cloud.github.io/mi-cv/foto.jpg">
+    <meta property="og:description" content="Python · Android · Firebase · Cloudflare · Redes. 16+ años de experiencia. Fundador de Pana Voy.">
+    <meta property="og:image" content="./og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="CV de Carlos Humberto Linares Morales, Desarrollador Full-Stack">
     <meta property="og:url" content="https://carloslinareses-cloud.github.io/mi-cv/">
     <meta property="og:locale" content="es_VE">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carlos H. Linares Morales · Desarrollador Full-Stack">
+    <meta name="twitter:description" content="Python · Android · Firebase · Cloudflare · Redes. 16+ años. Fundador de Pana Voy.">
+    <meta name="twitter:image" content="./og-card.png">
+    <meta name="twitter:image:alt" content="CV de Carlos Humberto Linares Morales">
 
-    <link rel="icon" type="image/jpeg" href="foto.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+
     <link rel="canonical" href="https://carloslinareses-cloud.github.io/mi-cv/">
+    <link rel="alternate" hreflang="es" href="https://carloslinareses-cloud.github.io/mi-cv/">
+    <link rel="alternate" hreflang="x-default" href="https://carloslinareses-cloud.github.io/mi-cv/">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 
-    <!-- Structured data: persona (Google indexa bien) -->
+    <!-- Structured data: Person (privacy-safe, sin email/teléfono/dirección detallada) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Carlos Humberto Linares Morales",
       "jobTitle": "Desarrollador Full-Stack & Especialista Operativo",
+      "description": "Desarrollador Full-Stack con 16+ años de experiencia en Python, Android (Kotlin/Compose), Firebase, Cloudflare y redes. Fundador de Pana Voy.",
+      "nationality": "VE",
       "image": "https://carloslinareses-cloud.github.io/mi-cv/foto.jpg",
-      "email": "mailto:carlos.linares.es@gmail.com",
-      "telephone": "+584142272792",
-      "address": {"@type": "PostalAddress", "addressLocality": "Charallave", "addressRegion": "Miranda", "addressCountry": "VE"},
+      "address": {"@type": "PostalAddress", "addressCountry": "VE"},
       "url": "https://carloslinareses-cloud.github.io/mi-cv/",
       "sameAs": [
         "https://www.linkedin.com/in/carlos-humberto-linares-morales-a474642a6/",
@@ -39,11 +63,68 @@
         "https://panavoy.com"
       ],
       "knowsAbout": ["Python", "Flask", "Android Studio", "Kotlin", "Jetpack Compose", "Firebase", "Cloudflare Workers", "Pandas", "REST APIs", "Networks"],
-      "alumniOf": {"@type": "EducationalOrganization", "name": "IUT José María Carreño"}
+      "knowsLanguage": ["es", "en"],
+      "alumniOf": {"@type": "EducationalOrganization", "name": "IUT José María Carreño"},
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Full-Stack Developer",
+        "skills": "Python, Flask, Kotlin, Jetpack Compose, Android, Firebase, Cloudflare Workers, Pandas, REST APIs, Networks, CCTV"
+      }
     }
     </script>
 
     <style>
+        /* Self-hosted fonts */
+        @font-face {
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('./fonts/SpaceGrotesk-Regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url('./fonts/SpaceGrotesk-Medium.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('./fonts/SpaceGrotesk-SemiBold.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('./fonts/SpaceGrotesk-Bold.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'JetBrains Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'JetBrains Mono';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url('./fonts/JetBrainsMono-Medium.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'JetBrains Mono';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('./fonts/JetBrainsMono-Bold.woff2') format('woff2');
+        }
+
         :root { --neon: #118C4F; --neon-bright: #16a861; --neon-dim: #0e7642; --bg: #030712; --bg-soft: #0a1019; }
         * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         html { scroll-behavior: smooth; }
@@ -54,7 +135,6 @@
             background-image:
               radial-gradient(circle at 20% 0%, rgba(17,140,79,0.07), transparent 50%),
               radial-gradient(circle at 80% 100%, rgba(17,140,79,0.05), transparent 50%);
-            background-attachment: fixed;
         }
         .font-mono { font-family: 'JetBrains Mono', monospace; }
         .glass { background: rgba(10, 16, 25, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(17, 140, 79, 0.12); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35); }
@@ -62,10 +142,37 @@
         .neon-glow { box-shadow: 0 0 24px rgba(17, 140, 79, 0.45), 0 0 60px rgba(17, 140, 79, 0.15); }
         .timeline-dot { position: absolute; left: -7px; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: var(--neon); border: 3px solid var(--bg); box-shadow: 0 0 12px var(--neon); }
         .timeline-dot-muted { position: absolute; left: -6px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: #475569; border: 2px solid var(--bg); }
-        .lang-content.hidden { display: none; }
+        .hidden { display: none !important; }
+        .lang-content.hidden { display: none !important; }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg); }
         ::-webkit-scrollbar-thumb { background: var(--neon); border-radius: 4px; }
+
+        /* Accessibility: focus-visible global */
+        *:focus-visible { outline: 2px solid #16a861 !important; outline-offset: 3px !important; }
+
+        /* Screen-reader-only utility */
+        .sr-only {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+        .focus\:not-sr-only:focus {
+            position: fixed !important;
+            width: auto !important;
+            height: auto !important;
+            padding: 0.5rem 1rem !important;
+            margin: 0 !important;
+            overflow: visible !important;
+            clip: auto !important;
+            white-space: normal !important;
+        }
 
         /* Animation on scroll reveal — minimal */
         .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -75,9 +182,23 @@
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
         .photo-float { animation: float 5s ease-in-out infinite; }
 
+        /* Respect prefers-reduced-motion */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto !important; }
+            *, *::before, *::after {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+            }
+            .photo-float { animation: none !important; }
+            .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .animate-pulse { animation: none !important; }
+        }
+
         /* ─────────────────────────── PRINT STYLES ─────────────────────────── */
         @media print {
             @page { size: A4; margin: 14mm 12mm; }
+            * { print-color-adjust: exact !important; -webkit-print-color-adjust: exact !important; }
             html, body { background: white !important; color: #0f172a !important; font-size: 10.5pt; }
             body { background-image: none !important; }
             .no-print { display: none !important; }
@@ -89,59 +210,82 @@
             a { color: #0f172a !important; text-decoration: none !important; }
             .timeline-dot, .timeline-dot-muted { background: #118C4F !important; box-shadow: none !important; border-color: white !important; }
             .border-l, .border-l-2 { border-color: #cbd5e1 !important; }
-            .bg-gray-900\\/80, .bg-gray-800\\/50, .bg-\\[\\#118C4F\\]\\/10 { background: white !important; border: 1px solid #cbd5e1 !important; }
+            .bg-gray-900\/80, .bg-gray-800\/50, .bg-\[\#118C4F\]\/10 { background: white !important; border: 1px solid #cbd5e1 !important; }
+            .bg-amber-500\/20, .bg-amber-500\/15, .bg-amber-500\/10, .bg-amber-500\/8 { background: white !important; border: 1px solid #cbd5e1 !important; }
+            .bg-black\/40, .bg-black\/30 { background: white !important; border: 1px solid #cbd5e1 !important; }
+            .text-amber-400, .text-amber-300 { color: #b45309 !important; }
             .photo-float { animation: none !important; }
             .reveal { opacity: 1 !important; transform: none !important; }
-            section, header, main, aside { page-break-inside: avoid; }
+            article { page-break-inside: avoid; }
             .max-w-7xl { max-width: 100% !important; }
             footer { display: none !important; }
         }
     </style>
+
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}.lang-content.hidden{display:none!important}</style></noscript>
 </head>
 <body class="p-4 md:p-8 overflow-x-hidden">
 
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:top-2 focus:left-2 bg-[#118C4F] text-white px-4 py-2 rounded z-[100]">Saltar al contenido principal</a>
+
+    <!-- aria-live region para anunciar cambios de idioma -->
+    <div role="status" aria-live="polite" id="lang-announce" class="sr-only"></div>
+
     <!-- ═══════════ TOP BAR FLOTANTE: idioma + descarga PDF ═══════════ -->
-    <div class="no-print fixed top-4 right-4 md:top-6 md:right-6 z-50 flex gap-2 md:gap-3">
-        <a href="CV Carlos Linares.pdf" download
-           class="glass px-4 md:px-5 py-2.5 rounded-xl text-white font-mono text-[11px] font-bold flex items-center gap-2 hover:border-[#16a861] hover:bg-[#118C4F]/15 hover:scale-105 transition-all neon-glow"
+    <nav aria-label="Acciones" class="no-print fixed top-4 right-4 md:top-6 md:right-6 z-50 flex gap-2 md:gap-3">
+        <a href="./cv-carlos-linares.pdf" download
+           class="glass px-4 md:px-5 py-2.5 rounded-xl text-white font-mono text-[11px] font-bold flex items-center gap-2 hover:border-[#16a861] hover:bg-[#118C4F]/15 hover:scale-105 transition-all neon-glow min-h-[44px] min-w-[44px]"
+           aria-label="Descargar CV en formato PDF"
            title="Descargar CV en PDF">
-            <svg class="w-4 h-4 text-[#16a861]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 text-[#16a861]" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/>
             </svg>
             <span class="hidden md:inline tracking-widest">DESCARGAR PDF</span>
             <span class="md:hidden tracking-widest">PDF</span>
         </a>
-        <button onclick="window.print()"
-                class="glass px-4 py-2.5 rounded-xl text-white font-mono text-[11px] font-bold hover:border-[#16a861] hover:bg-[#118C4F]/15 hover:scale-105 transition-all"
+        <button type="button" onclick="window.print()"
+                aria-label="Imprimir CV"
+                class="glass px-4 py-2.5 rounded-xl text-white font-mono text-[11px] font-bold hover:border-[#16a861] hover:bg-[#118C4F]/15 hover:scale-105 transition-all min-h-[44px] min-w-[44px]"
                 title="Imprimir">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <svg class="w-4 h-4" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
             </svg>
         </button>
-        <button onclick="toggleLanguage()"
-                class="glass px-4 py-2.5 rounded-xl text-white font-mono text-[11px] font-bold hover:border-[#16a861] hover:bg-[#118C4F]/15 hover:scale-105 transition-all flex items-center gap-2">
-            <span id="flag-icon" class="text-base">🇺🇸</span>
+        <button type="button" id="lang-toggle-btn" onclick="toggleLanguage()"
+                aria-label="Cambiar idioma a inglés"
+                aria-pressed="false"
+                class="glass px-4 py-2.5 rounded-xl text-white font-mono text-[11px] font-bold hover:border-[#16a861] hover:bg-[#118C4F]/15 hover:scale-105 transition-all flex items-center gap-2 min-h-[44px] min-w-[44px]">
+            <span id="flag-icon" class="text-base" aria-hidden="true">🇺🇸</span>
             <span id="lang-label" class="tracking-widest hidden md:inline">EN</span>
         </button>
-    </div>
+    </nav>
 
-    <div class="max-w-7xl mx-auto space-y-8 md:space-y-10 mt-16 md:mt-0">
+    <main id="main-content" class="max-w-7xl mx-auto space-y-8 md:space-y-10 mt-16 md:mt-0">
 
         <!-- ═══════════ HERO ═══════════ -->
         <header class="glass rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 relative overflow-hidden border-t-2 border-[#118C4F]">
-            <div class="absolute -top-32 -right-32 w-[28rem] h-[28rem] bg-[#118C4F]/12 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-[#118C4F]/8 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute -top-32 -right-32 w-[28rem] h-[28rem] bg-[#118C4F]/12 rounded-full blur-[60px] pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-[#118C4F]/8 rounded-full blur-[60px] pointer-events-none" aria-hidden="true"></div>
 
             <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 relative">
                 <div class="shrink-0 relative">
-                    <div class="absolute -inset-1 bg-gradient-to-br from-[#16a861] to-[#0e7642] rounded-full opacity-40 blur-lg"></div>
-                    <img src="foto.jpg" alt="Carlos Linares" class="photo-float relative w-44 h-44 md:w-52 md:h-52 rounded-full object-cover border-2 border-[#16a861] neon-glow">
+                    <div class="absolute -inset-1 bg-gradient-to-br from-[#16a861] to-[#0e7642] rounded-full opacity-40 blur-lg" aria-hidden="true"></div>
+                    <picture>
+                        <source srcset="./foto.webp" type="image/webp">
+                        <img src="./foto.jpg"
+                             alt="Foto de Carlos Humberto Linares Morales, Desarrollador Full-Stack"
+                             width="208" height="208"
+                             fetchpriority="high"
+                             decoding="async"
+                             class="photo-float relative w-44 h-44 md:w-52 md:h-52 rounded-full object-cover border-2 border-[#16a861] neon-glow">
+                    </picture>
                 </div>
 
                 <div class="text-center md:text-left flex-1 space-y-5 z-10">
                     <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
-                        <span class="w-2 h-2 bg-[#16a861] rounded-full animate-pulse"></span>
-                        <span class="font-mono text-[11px] uppercase tracking-[0.25em] text-[#16a861] font-bold" id="status-text">Disponible para proyectos</span>
+                        <span class="w-2 h-2 bg-[#16a861] rounded-full animate-pulse" aria-hidden="true"></span>
+                        <span class="font-mono text-[11px] uppercase tracking-[0.25em] text-[#16a861] font-bold" id="status-text" data-es="Disponible para proyectos" data-en="Available for projects">Disponible para proyectos</span>
                     </div>
 
                     <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05]">
@@ -149,12 +293,12 @@
                         <span class="bg-gradient-to-r from-[#16a861] via-[#118C4F] to-[#0e7642] bg-clip-text text-transparent">Linares Morales</span>
                     </h1>
 
-                    <div id="role-es" class="lang-content">
+                    <div id="role-es" class="lang-content" lang="es">
                         <p class="text-base md:text-lg text-gray-300 font-medium leading-relaxed max-w-xl">
                             <strong class="text-white">Desarrollador Full-Stack</strong> y <strong class="text-white">especialista operativo</strong>. Construyo apps Android nativas, APIs en Python, y resuelvo problemas reales con redes e infraestructura.
                         </p>
                     </div>
-                    <div id="role-en" class="lang-content hidden">
+                    <div id="role-en" class="lang-content hidden" lang="en">
                         <p class="text-base md:text-lg text-gray-300 font-medium leading-relaxed max-w-xl">
                             <strong class="text-white">Full-Stack Developer</strong> and <strong class="text-white">operations specialist</strong>. I build native Android apps, Python APIs, and solve real-world problems with networking and infrastructure.
                         </p>
@@ -162,33 +306,30 @@
 
                     <!-- Contacto principal -->
                     <div class="flex flex-wrap justify-center md:justify-start gap-2 pt-1">
-                        <a href="mailto:carlos.linares.es@gmail.com" class="bg-black/40 border border-[#118C4F]/30 px-4 py-2 rounded-lg text-xs font-bold text-white hover:border-[#16a861] hover:bg-[#118C4F]/15 transition-all flex items-center gap-2">
-                            <svg class="w-3.5 h-3.5 text-[#16a861]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            carlos.linares.es@gmail.com
+                        <a href="#" data-contact-email aria-label="Enviar email a Carlos"
+                           class="bg-black/40 border border-[#118C4F]/30 px-4 py-2 rounded-lg text-xs font-bold text-white hover:border-[#16a861] hover:bg-[#118C4F]/15 transition-all flex items-center gap-2 break-all">
+                            <svg class="w-3.5 h-3.5 text-[#16a861]" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <span data-es="CONTACTAR" data-en="CONTACT">CONTACTAR</span>
                         </a>
-                        <a href="https://wa.me/584142272792" target="_blank" class="bg-black/40 border border-[#118C4F]/30 px-4 py-2 rounded-lg text-xs font-bold text-white hover:border-[#16a861] hover:bg-[#118C4F]/15 transition-all flex items-center gap-2">
-                            <svg class="w-3.5 h-3.5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-                            +58 414-2272792
-                        </a>
-                        <span class="bg-black/40 border border-gray-700 px-4 py-2 rounded-lg text-xs font-bold text-gray-400 flex items-center gap-2">
-                            <svg class="w-3.5 h-3.5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            Charallave, Miranda · Venezuela
+                        <span class="bg-black/40 border border-gray-700 px-4 py-2 rounded-lg text-xs font-bold text-gray-300 flex items-center gap-2">
+                            <svg class="w-3.5 h-3.5 text-gray-400" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span data-es="Venezuela · Remoto" data-en="Venezuela · Remote">Venezuela · Remoto</span>
                         </span>
                     </div>
 
                     <!-- Redes sociales -->
                     <div class="flex flex-wrap justify-center md:justify-start gap-2 no-print">
-                        <a href="https://www.linkedin.com/in/carlos-humberto-linares-morales-a474642a6/" target="_blank" rel="noopener" aria-label="LinkedIn"
-                           class="w-9 h-9 rounded-lg bg-black/40 border border-gray-700 flex items-center justify-center text-gray-400 hover:border-[#16a861] hover:text-[#16a861] hover:scale-110 transition-all">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <a href="https://www.linkedin.com/in/carlos-humberto-linares-morales-a474642a6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Carlos Linares"
+                           class="w-9 h-9 rounded-lg bg-black/40 border border-gray-700 flex items-center justify-center text-gray-300 hover:border-[#16a861] hover:text-[#16a861] hover:scale-110 transition-all">
+                            <svg class="w-4 h-4" aria-hidden="true" focusable="false" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
-                        <a href="https://github.com/carloslinareses-cloud" target="_blank" rel="noopener" aria-label="GitHub"
-                           class="w-9 h-9 rounded-lg bg-black/40 border border-gray-700 flex items-center justify-center text-gray-400 hover:border-[#16a861] hover:text-[#16a861] hover:scale-110 transition-all">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <a href="https://github.com/carloslinareses-cloud" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Carlos Linares"
+                           class="w-9 h-9 rounded-lg bg-black/40 border border-gray-700 flex items-center justify-center text-gray-300 hover:border-[#16a861] hover:text-[#16a861] hover:scale-110 transition-all">
+                            <svg class="w-4 h-4" aria-hidden="true" focusable="false" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                         </a>
-                        <a href="https://panavoy.com" target="_blank" rel="noopener" aria-label="Pana Voy"
+                        <a href="https://panavoy.com" target="_blank" rel="noopener noreferrer" aria-label="Pana Voy"
                            class="px-3 h-9 rounded-lg bg-[#118C4F]/15 border border-[#118C4F]/40 flex items-center gap-1.5 text-[11px] font-bold text-[#16a861] hover:bg-[#118C4F]/25 hover:scale-105 transition-all">
-                            <span>✨</span> panavoy.com
+                            <span aria-hidden="true">✨</span> panavoy.com
                         </a>
                     </div>
                 </div>
@@ -196,93 +337,93 @@
 
             <!-- Stats bar -->
             <div class="relative mt-8 pt-6 border-t border-[#118C4F]/15 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-                <div class="text-center md:text-left">
+                <div class="text-center md:text-left" aria-label="16+ años de experiencia">
                     <p class="font-mono text-3xl md:text-4xl font-bold neon-text">16+</p>
-                    <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-1" data-es="años de experiencia" data-en="years experience">años de experiencia</p>
+                    <p class="text-[11px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-1" data-es="años de experiencia" data-en="years experience">años de experiencia</p>
                 </div>
-                <div class="text-center md:text-left">
+                <div class="text-center md:text-left" aria-label="4 países de trabajo">
                     <p class="font-mono text-3xl md:text-4xl font-bold neon-text">4</p>
-                    <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-1" data-es="países de trabajo" data-en="countries worked in">países de trabajo</p>
+                    <p class="text-[11px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-1" data-es="países de trabajo" data-en="countries worked in">países de trabajo</p>
                 </div>
-                <div class="text-center md:text-left">
+                <div class="text-center md:text-left" aria-label="10+ tecnologías dominadas">
                     <p class="font-mono text-3xl md:text-4xl font-bold neon-text">10+</p>
-                    <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-1" data-es="tecnologías dominadas" data-en="tech stack mastered">tecnologías dominadas</p>
+                    <p class="text-[11px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-1" data-es="tecnologías dominadas" data-en="tech stack mastered">tecnologías dominadas</p>
                 </div>
-                <div class="text-center md:text-left">
+                <div class="text-center md:text-left" aria-label="10 roles profesionales">
                     <p class="font-mono text-3xl md:text-4xl font-bold neon-text">10</p>
-                    <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-1" data-es="roles profesionales" data-en="professional roles">roles profesionales</p>
+                    <p class="text-[11px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-1" data-es="roles profesionales" data-en="professional roles">roles profesionales</p>
                 </div>
             </div>
         </header>
 
         <!-- ═══════════ PROYECTOS DESTACADOS ═══════════ -->
-        <section class="reveal space-y-6">
+        <section class="reveal space-y-6" aria-labelledby="proyectos-heading">
             <div class="text-center md:text-left">
                 <span class="font-mono text-[11px] font-black uppercase tracking-[0.3em] text-[#16a861]" data-es="// Proyectos Destacados" data-en="// Featured Projects">// Proyectos Destacados</span>
-                <h2 class="mt-2 text-2xl md:text-3xl font-bold text-white tracking-tight" data-es="Lo que estoy construyendo" data-en="What I'm building">Lo que estoy construyendo</h2>
+                <h2 id="proyectos-heading" class="mt-2 text-2xl md:text-3xl font-bold text-white tracking-tight" data-es="Lo que estoy construyendo" data-en="What I'm building">Lo que estoy construyendo</h2>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-6">
 
                 <!-- ═════ PANA VOY ═════ -->
                 <article class="glass rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 relative overflow-hidden border-l-2 border-[#16a861]">
-                    <div class="absolute -top-20 -right-20 w-72 h-72 bg-[#118C4F]/10 rounded-full blur-[80px] pointer-events-none"></div>
+                    <div class="absolute -top-20 -right-20 w-72 h-72 bg-[#118C4F]/10 rounded-full blur-[60px] pointer-events-none" aria-hidden="true"></div>
                     <div class="relative">
                         <div class="flex items-center justify-between mb-3 gap-2">
-                            <span class="inline-block px-2.5 py-1 bg-[#118C4F]/20 border border-[#118C4F]/40 text-[#16a861] text-[10px] font-black uppercase tracking-widest rounded-full" data-es="Startup propia" data-en="Own Startup">Startup propia</span>
-                            <span class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-[#16a861]">
-                                <span class="w-1.5 h-1.5 bg-[#16a861] rounded-full animate-pulse"></span>
+                            <span class="inline-block px-2.5 py-1 bg-[#118C4F]/20 border border-[#118C4F]/40 text-[#16a861] text-[11px] md:text-[10px] font-black uppercase tracking-widest rounded-full" data-es="Startup propia" data-en="Own Startup">Startup propia</span>
+                            <span class="inline-flex items-center gap-1.5 text-[11px] md:text-[10px] font-mono font-bold text-[#16a861]">
+                                <span class="w-1.5 h-1.5 bg-[#16a861] rounded-full animate-pulse" aria-hidden="true"></span>
                                 <span data-es="EN PRODUCCIÓN" data-en="LIVE">EN PRODUCCIÓN</span>
                             </span>
                         </div>
 
                         <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
-                            Pana Voy <span class="text-[#16a861]">✨</span>
+                            Pana Voy <span class="text-[#16a861]" aria-hidden="true">✨</span>
                         </h3>
                         <p class="text-xs font-mono uppercase tracking-wider text-gray-400 mt-1" data-es="Fundador · Desarrollador Principal" data-en="Founder · Lead Developer">Fundador · Desarrollador Principal</p>
 
-                        <div id="panavoy-es" class="lang-content">
+                        <div id="panavoy-es" class="lang-content" lang="es">
                             <p class="mt-4 text-[14px] text-gray-300 leading-relaxed">
                                 Plataforma <strong class="text-white">delivery + taxi</strong> para los Valles del Tuy, Venezuela. App nativa Android, backend serverless y panel de socios.
                             </p>
                             <ul class="mt-3 space-y-1.5 text-[13px] text-gray-400">
-                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Multi-rol: cliente, tienda, repartidor, taxista</span></li>
-                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Push real-time + geofencing 5 km</span></li>
-                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Pagos en Bs a tasa BCV automática</span></li>
-                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>En revisión final Play Store</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5" aria-hidden="true">▸</span><span>Multi-rol: cliente, tienda, repartidor, taxista</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5" aria-hidden="true">▸</span><span>Push real-time + geofencing 5 km</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5" aria-hidden="true">▸</span><span>Pagos en Bs a tasa BCV automática</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5" aria-hidden="true">▸</span><span>En revisión final Play Store</span></li>
                             </ul>
                         </div>
-                        <div id="panavoy-en" class="lang-content hidden">
+                        <div id="panavoy-en" class="lang-content hidden" lang="en">
                             <p class="mt-4 text-[14px] text-gray-300 leading-relaxed">
                                 <strong class="text-white">Delivery + taxi</strong> platform for Venezuela's Valles del Tuy region. Native Android app, serverless backend and partner portal.
                             </p>
                             <ul class="mt-3 space-y-1.5 text-[13px] text-gray-400">
-                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Multi-role: customer, store, delivery, taxi</span></li>
-                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Real-time push + 5 km geofencing</span></li>
-                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>Automatic BCV-rate payments in Bs</span></li>
-                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5">▸</span><span>In final Play Store review</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5" aria-hidden="true">▸</span><span>Multi-role: customer, store, delivery, taxi</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5" aria-hidden="true">▸</span><span>Real-time push + 5 km geofencing</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5" aria-hidden="true">▸</span><span>Automatic BCV-rate payments in Bs</span></li>
+                                <li class="flex items-start gap-2"><span class="text-[#16a861] mt-0.5" aria-hidden="true">▸</span><span>In final Play Store review</span></li>
                             </ul>
                         </div>
 
                         <div class="mt-4 flex flex-wrap gap-1">
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">Kotlin</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">Compose</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">Firebase</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">CF Workers</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">R2</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">MapLibre</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">Kotlin</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">Compose</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">Firebase</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">CF Workers</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">R2</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-[#118C4F]/15 text-[#16a861] rounded">MapLibre</span>
                         </div>
 
                         <div class="mt-5 flex flex-wrap gap-2">
-                            <a href="https://panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#118C4F] hover:bg-[#16a861] text-white text-[11px] font-bold rounded-lg transition-all">
-                                🌐 panavoy.com
-                                <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            <a href="https://panavoy.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#118C4F] hover:bg-[#16a861] text-white text-[11px] font-bold rounded-lg transition-all">
+                                <span aria-hidden="true">🌐</span> panavoy.com
+                                <svg class="w-3 h-3" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                             </a>
-                            <a href="https://admin.panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-2 bg-black/40 border border-gray-700 hover:border-[#16a861] text-gray-300 text-[11px] font-bold rounded-lg transition-all">
-                                ⚙️ admin
+                            <a href="https://admin.panavoy.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-2 bg-black/40 border border-gray-700 hover:border-[#16a861] text-gray-300 text-[11px] font-bold rounded-lg transition-all">
+                                <span aria-hidden="true">⚙️</span> admin
                             </a>
-                            <a href="https://socios.panavoy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-2 bg-black/40 border border-gray-700 hover:border-[#16a861] text-gray-300 text-[11px] font-bold rounded-lg transition-all">
-                                🏪 socios
+                            <a href="https://socios.panavoy.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-2 bg-black/40 border border-gray-700 hover:border-[#16a861] text-gray-300 text-[11px] font-bold rounded-lg transition-all">
+                                <span aria-hidden="true">🏪</span> socios
                             </a>
                         </div>
                     </div>
@@ -290,58 +431,58 @@
 
                 <!-- ═════ AEROSOCIO ═════ -->
                 <article class="glass rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 relative overflow-hidden border-l-2 border-amber-400">
-                    <div class="absolute -top-20 -right-20 w-72 h-72 bg-amber-500/8 rounded-full blur-[80px] pointer-events-none"></div>
+                    <div class="absolute -top-20 -right-20 w-72 h-72 bg-amber-500/8 rounded-full blur-[60px] pointer-events-none" aria-hidden="true"></div>
                     <div class="relative">
                         <div class="flex items-center justify-between mb-3 gap-2">
-                            <span class="inline-block px-2.5 py-1 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[10px] font-black uppercase tracking-widest rounded-full" data-es="Proyecto Personal" data-en="Personal Project">Proyecto Personal</span>
-                            <span class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-amber-300">
-                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                            <span class="inline-block px-2.5 py-1 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[11px] md:text-[10px] font-black uppercase tracking-widest rounded-full" data-es="Proyecto Personal" data-en="Personal Project">Proyecto Personal</span>
+                            <span class="inline-flex items-center gap-1.5 text-[11px] md:text-[10px] font-mono font-bold text-amber-300">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full" aria-hidden="true"></span>
                                 <span data-es="EN DESARROLLO" data-en="IN DEV">EN DESARROLLO</span>
                             </span>
                         </div>
 
                         <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
-                            AeroSocio <span class="text-amber-400">✈</span>
+                            AeroSocio <span class="text-amber-400" aria-hidden="true">✈</span>
                         </h3>
                         <p class="text-xs font-mono uppercase tracking-wider text-gray-400 mt-1" data-es="Creador · Full-Stack Developer" data-en="Creator · Full-Stack Developer">Creador · Full-Stack Developer</p>
 
-                        <div id="aerosocio-es" class="lang-content">
+                        <div id="aerosocio-es" class="lang-content" lang="es">
                             <p class="mt-4 text-[14px] text-gray-300 leading-relaxed">
                                 <strong class="text-white">Club VIP de servicios para conductores en España</strong>. Membresía mensual (5 €) con alertas ITV, gestión documental, plantillas legales y marketplace.
                             </p>
                             <ul class="mt-3 space-y-1.5 text-[13px] text-gray-400">
-                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Recordatorios automáticos: ITV, seguro, carnet</span></li>
-                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Gestión documental en la nube</span></li>
-                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Plantillas para recursos de multas</span></li>
-                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Marketplace con descuentos</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5" aria-hidden="true">▸</span><span>Recordatorios automáticos: ITV, seguro, carnet</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5" aria-hidden="true">▸</span><span>Gestión documental en la nube</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5" aria-hidden="true">▸</span><span>Plantillas para recursos de multas</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5" aria-hidden="true">▸</span><span>Marketplace con descuentos</span></li>
                             </ul>
                         </div>
-                        <div id="aerosocio-en" class="lang-content hidden">
+                        <div id="aerosocio-en" class="lang-content hidden" lang="en">
                             <p class="mt-4 text-[14px] text-gray-300 leading-relaxed">
                                 <strong class="text-white">VIP services club for drivers in Spain</strong>. Monthly subscription (€5) with vehicle inspection alerts, document management, legal templates and marketplace.
                             </p>
                             <ul class="mt-3 space-y-1.5 text-[13px] text-gray-400">
-                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Automatic reminders: ITV, insurance, license</span></li>
-                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Cloud document management</span></li>
-                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Fine-appeal templates</span></li>
-                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">▸</span><span>Marketplace with discounts</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5" aria-hidden="true">▸</span><span>Automatic reminders: ITV, insurance, license</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5" aria-hidden="true">▸</span><span>Cloud document management</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5" aria-hidden="true">▸</span><span>Fine-appeal templates</span></li>
+                                <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5" aria-hidden="true">▸</span><span>Marketplace with discounts</span></li>
                             </ul>
                         </div>
 
                         <div class="mt-4 flex flex-wrap gap-1">
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">React 19</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">Vite</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">Supabase</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">Tailwind v4</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">PostgreSQL</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">React 19</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">Vite</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">Supabase</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">Tailwind v4</span>
+                            <span class="text-[11px] md:text-[10px] font-mono px-2 py-0.5 bg-amber-500/15 text-amber-300 rounded">PostgreSQL</span>
                         </div>
 
                         <div class="mt-5 flex flex-wrap gap-2">
                             <span class="inline-flex items-center gap-1.5 px-3 py-2 bg-amber-500/10 border border-amber-400/30 text-amber-300 text-[11px] font-bold rounded-lg">
-                                🇪🇸 Mercado España
+                                <span aria-hidden="true">🇪🇸</span> Mercado España
                             </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-2 bg-black/40 border border-gray-700 text-gray-400 text-[11px] font-bold rounded-lg">
-                                💼 SaaS B2C
+                            <span class="inline-flex items-center gap-1.5 px-3 py-2 bg-black/40 border border-gray-700 text-gray-300 text-[11px] font-bold rounded-lg">
+                                <span aria-hidden="true">💼</span> SaaS B2C
                             </span>
                         </div>
                     </div>
@@ -354,18 +495,17 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10">
 
             <!-- SIDEBAR IZQUIERDO -->
-            <aside class="lg:col-span-4 space-y-6 md:space-y-10">
+            <aside class="lg:col-span-4 space-y-6 md:space-y-10" aria-label="Información personal y habilidades">
 
                 <!-- Perfil -->
-                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]">
-                    <div id="profile-es" class="lang-content">
-                        <h3 class="font-mono text-xs font-bold neon-text uppercase mb-4 tracking-widest border-b border-[#118C4F]/20 pb-2">/ Perfil Profesional</h3>
+                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]" aria-labelledby="perfil-heading">
+                    <h2 id="perfil-heading" class="font-mono text-xs font-bold neon-text uppercase mb-4 tracking-widest border-b border-[#118C4F]/20 pb-2" data-es="/ Perfil Profesional" data-en="/ Professional Profile">/ Perfil Profesional</h2>
+                    <div id="profile-es" class="lang-content" lang="es">
                         <p class="text-[14px] leading-relaxed text-gray-300 font-medium">
                             Profesional en informática con una trayectoria versátil en <strong class="text-white">desarrollo de software, soporte técnico y gestión operativa</strong>. Especializado en backend con Python, APIs RESTful y bases de datos. Recientemente he ampliado mi stack al desarrollo de apps Android nativas con Kotlin/Compose y al análisis de datos con Pandas. Destaco por mi capacidad para <strong class="text-white">liderar equipos, optimizar procesos logísticos y aportar soluciones tecnológicas eficientes</strong>, con enfoque constante en el aprendizaje y resolución de problemas complejos.
                         </p>
                     </div>
-                    <div id="profile-en" class="lang-content hidden">
-                        <h3 class="font-mono text-xs font-bold neon-text uppercase mb-4 tracking-widest border-b border-[#118C4F]/20 pb-2">/ Professional Profile</h3>
+                    <div id="profile-en" class="lang-content hidden" lang="en">
                         <p class="text-[14px] leading-relaxed text-gray-300 font-medium">
                             IT professional with a versatile background in <strong class="text-white">software development, technical support, and operational management</strong>. Specialized in Python backend, RESTful APIs, and databases. Recently expanded my stack to native Android development with Kotlin/Compose and data analysis with Pandas. I stand out for my ability to <strong class="text-white">lead teams, optimize logistics, and deliver efficient tech solutions</strong>, with continuous focus on learning and complex problem-solving.
                         </p>
@@ -373,12 +513,12 @@
                 </section>
 
                 <!-- Habilidades -->
-                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]">
-                    <h3 class="font-mono text-xs font-bold neon-text uppercase mb-6 tracking-widest border-b border-[#118C4F]/20 pb-2" data-es="/ Stack Técnico" data-en="/ Tech Stack">/ Stack Técnico</h3>
+                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]" aria-labelledby="stack-heading">
+                    <h2 id="stack-heading" class="font-mono text-xs font-bold neon-text uppercase mb-6 tracking-widest border-b border-[#118C4F]/20 pb-2" data-es="/ Stack Técnico" data-en="/ Tech Stack">/ Stack Técnico</h2>
 
                     <div class="space-y-5">
                         <div>
-                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Backend & Datos" data-en="Backend & Data">Backend & Datos</p>
+                            <p class="text-[11px] md:text-[10px] font-mono font-black text-gray-400 uppercase mb-2 tracking-widest" data-es="Backend & Datos" data-en="Backend & Data">Backend & Datos</p>
                             <div class="flex flex-wrap gap-1.5">
                                 <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Python</span>
                                 <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Flask</span>
@@ -389,7 +529,7 @@
                             </div>
                         </div>
                         <div>
-                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Mobile & Frontend" data-en="Mobile & Frontend">Mobile & Frontend</p>
+                            <p class="text-[11px] md:text-[10px] font-mono font-black text-gray-400 uppercase mb-2 tracking-widest" data-es="Mobile & Frontend" data-en="Mobile & Frontend">Mobile & Frontend</p>
                             <div class="flex flex-wrap gap-1.5">
                                 <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Kotlin</span>
                                 <span class="bg-[#118C4F]/15 border border-[#118C4F]/40 text-[#16a861] px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Jetpack Compose</span>
@@ -400,7 +540,7 @@
                             </div>
                         </div>
                         <div>
-                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Cloud & DevOps" data-en="Cloud & DevOps">Cloud & DevOps</p>
+                            <p class="text-[11px] md:text-[10px] font-mono font-black text-gray-400 uppercase mb-2 tracking-widest" data-es="Cloud & DevOps" data-en="Cloud & DevOps">Cloud & DevOps</p>
                             <div class="flex flex-wrap gap-1.5">
                                 <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Cloudflare Workers</span>
                                 <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">R2 Storage</span>
@@ -410,7 +550,7 @@
                             </div>
                         </div>
                         <div>
-                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Redes & Infraestructura" data-en="Networks & Infrastructure">Redes & Infraestructura</p>
+                            <p class="text-[11px] md:text-[10px] font-mono font-black text-gray-400 uppercase mb-2 tracking-widest" data-es="Redes & Infraestructura" data-en="Networks & Infrastructure">Redes & Infraestructura</p>
                             <div class="flex flex-wrap gap-1.5">
                                 <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">TCP/IP</span>
                                 <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Ubiquiti</span>
@@ -420,7 +560,7 @@
                             </div>
                         </div>
                         <div>
-                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Sistemas & Productividad" data-en="Systems & Productivity">Sistemas & Productividad</p>
+                            <p class="text-[11px] md:text-[10px] font-mono font-black text-gray-400 uppercase mb-2 tracking-widest" data-es="Sistemas & Productividad" data-en="Systems & Productivity">Sistemas & Productividad</p>
                             <div class="flex flex-wrap gap-1.5">
                                 <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Windows</span>
                                 <span class="bg-gray-800/50 border border-gray-600 text-gray-300 px-2.5 py-1 rounded-md text-[11px] font-mono font-bold">Linux</span>
@@ -433,23 +573,23 @@
                 </section>
 
                 <!-- Educación -->
-                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]">
-                    <h3 class="font-mono text-xs font-bold neon-text uppercase mb-5 tracking-widest border-b border-[#118C4F]/20 pb-2" data-es="/ Formación" data-en="/ Education">/ Formación</h3>
+                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]" aria-labelledby="formacion-heading">
+                    <h2 id="formacion-heading" class="font-mono text-xs font-bold neon-text uppercase mb-5 tracking-widest border-b border-[#118C4F]/20 pb-2" data-es="/ Formación" data-en="/ Education">/ Formación</h2>
                     <div class="pl-4 border-l-2 border-[#118C4F]">
-                        <h4 class="text-white text-[15px] font-bold" data-es="TSU en Informática" data-en="Associate Degree in Computer Science">TSU en Informática</h4>
-                        <p class="text-sm text-gray-400 font-medium mt-0.5">IUT José María Carreño</p>
+                        <h3 class="text-white text-[15px] font-bold" data-es="TSU en Informática" data-en="Associate Degree in Computer Science">TSU en Informática</h3>
+                        <p class="text-sm text-gray-300 font-medium mt-0.5">IUT José María Carreño</p>
                         <p class="text-[11px] font-mono font-bold text-[#16a861] mt-1.5 tracking-widest">2011 – 2015</p>
                     </div>
                 </section>
 
                 <!-- Idiomas + Otros -->
-                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]">
-                    <h3 class="font-mono text-xs font-bold neon-text uppercase mb-5 tracking-widest border-b border-[#118C4F]/20 pb-2" data-es="/ Idiomas & Extras" data-en="/ Languages & Extras">/ Idiomas & Extras</h3>
+                <section class="reveal glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem]" aria-labelledby="idiomas-heading">
+                    <h2 id="idiomas-heading" class="font-mono text-xs font-bold neon-text uppercase mb-5 tracking-widest border-b border-[#118C4F]/20 pb-2" data-es="/ Idiomas & Extras" data-en="/ Languages & Extras">/ Idiomas & Extras</h2>
 
                     <div class="space-y-4">
                         <div>
                             <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-white text-[14px] font-bold">🇻🇪 Español</span>
+                                <span class="text-white text-[14px] font-bold"><span aria-hidden="true">🇻🇪</span> Español</span>
                                 <span class="font-mono text-[11px] text-[#16a861] font-bold" data-es="Nativo" data-en="Native">Nativo</span>
                             </div>
                             <div class="h-1.5 bg-gray-800 rounded-full overflow-hidden">
@@ -458,11 +598,11 @@
                         </div>
 
                         <div class="pt-3 border-t border-[#118C4F]/15">
-                            <p class="text-[10px] font-mono font-black text-gray-500 uppercase mb-2 tracking-widest" data-es="Otros Datos" data-en="Other Info">Otros Datos</p>
+                            <p class="text-[11px] md:text-[10px] font-mono font-black text-gray-400 uppercase mb-2 tracking-widest" data-es="Otros Datos" data-en="Other Info">Otros Datos</p>
                             <ul class="space-y-1.5 text-sm text-gray-300">
-                                <li class="flex items-center gap-2"><span class="text-[#16a861]">✓</span><span data-es="Licencia de conducir" data-en="Driver's license">Licencia de conducir</span></li>
-                                <li class="flex items-center gap-2"><span class="text-[#16a861]">✓</span><span data-es="Vehículo propio" data-en="Own vehicle">Vehículo propio</span></li>
-                                <li class="flex items-center gap-2"><span class="text-[#16a861]">✓</span><span data-es="Disponible para trabajo remoto" data-en="Available for remote work">Disponible para trabajo remoto</span></li>
+                                <li class="flex items-center gap-2"><span class="text-[#16a861]" aria-hidden="true">✓</span><span data-es="Licencia de conducir" data-en="Driver's license">Licencia de conducir</span></li>
+                                <li class="flex items-center gap-2"><span class="text-[#16a861]" aria-hidden="true">✓</span><span data-es="Vehículo propio" data-en="Own vehicle">Vehículo propio</span></li>
+                                <li class="flex items-center gap-2"><span class="text-[#16a861]" aria-hidden="true">✓</span><span data-es="Disponible para trabajo remoto" data-en="Available for remote work">Disponible para trabajo remoto</span></li>
                             </ul>
                         </div>
                     </div>
@@ -471,147 +611,147 @@
             </aside>
 
             <!-- TIMELINE EXPERIENCIA -->
-            <main class="lg:col-span-8 reveal glass p-6 md:p-12 rounded-[1.5rem] md:rounded-[2.5rem]">
+            <section class="lg:col-span-8 reveal glass p-6 md:p-12 rounded-[1.5rem] md:rounded-[2.5rem]" aria-labelledby="experiencia-heading">
 
-                <div id="exp-es" class="lang-content">
-                    <h3 class="font-mono text-base font-bold neon-text uppercase tracking-widest border-b border-[#118C4F]/20 pb-3 mb-8">/ Experiencia Profesional</h3>
+                <div id="exp-es" class="lang-content" lang="es">
+                    <h2 id="experiencia-heading" class="font-mono text-base font-bold neon-text uppercase tracking-widest border-b border-[#118C4F]/20 pb-3 mb-8">/ Experiencia Profesional</h2>
                     <div class="relative border-l-2 border-[#118C4F]/20 space-y-8 pl-7">
 
                         <!-- ALCALDÍA DE CHARALLAVE -->
                         <article class="relative">
-                            <div class="timeline-dot"></div>
-                            <span class="font-mono text-[10px] font-black text-[#16a861] uppercase tracking-widest">2025 — Presente</span>
-                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Desarrollador Android</h4>
+                            <div class="timeline-dot" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-[#16a861] uppercase tracking-widest">2025 — Presente</span>
+                            <h3 class="mt-1 text-xl md:text-2xl font-bold text-white">Desarrollador Android</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Alcaldía de Charallave · Miranda, Venezuela</p>
                             <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Diseño y desarrollo de app móvil de <strong class="text-white">control de acceso</strong> para personal de la alcaldía (v1.0.8 en producción).</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Stack: Kotlin · Jetpack Compose · Supabase (Auth + Postgres) · Navigation3.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Implementación de sesión segura, geolocalización, dashboard administrativo y notificaciones de actualización.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Ciclo completo de release: distribución de APK firmado, gestión de versiones y soporte continuo.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Diseño y desarrollo de app móvil de <strong class="text-white">control de acceso</strong> para personal de la alcaldía (v1.0.8 en producción).</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Stack: Kotlin · Jetpack Compose · Supabase (Auth + Postgres) · Navigation3.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Implementación de sesión segura, geolocalización, dashboard administrativo y notificaciones de actualización.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Ciclo completo de release: distribución de APK firmado, gestión de versiones y soporte continuo.</span></li>
                             </ul>
                         </article>
 
                         <!-- INDEPENDIENTE / PANA VOY -->
                         <article class="relative">
-                            <div class="timeline-dot"></div>
-                            <span class="font-mono text-[10px] font-black text-[#16a861] uppercase tracking-widest">Feb 2026 — Presente</span>
-                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Fundador & Desarrollador Full-Stack</h4>
+                            <div class="timeline-dot" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-[#16a861] uppercase tracking-widest">Feb 2026 — Presente</span>
+                            <h3 class="mt-1 text-xl md:text-2xl font-bold text-white">Fundador & Desarrollador Full-Stack</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Independiente · Pana Voy · AeroSocio</p>
                             <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Diseño y construcción de <strong class="text-white">Pana Voy</strong>: app Android nativa + admin web + portal de socios + backend serverless.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Desarrollo de <strong class="text-white">AeroSocio</strong> (React 19 + Supabase): club de servicios mensuales para conductores en España.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Backend serverless: Firebase Cloud Functions + Cloudflare Workers + R2.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Análisis y manipulación de datos en Python con Pandas; APIs REST con Flask.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Diseño y construcción de <strong class="text-white">Pana Voy</strong>: app Android nativa + admin web + portal de socios + backend serverless.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Desarrollo de <strong class="text-white">AeroSocio</strong> (React 19 + Supabase): club de servicios mensuales para conductores en España.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Backend serverless: Firebase Cloud Functions + Cloudflare Workers + R2.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Análisis y manipulación de datos en Python con Pandas; APIs REST con Flask.</span></li>
                             </ul>
                         </article>
 
                         <!-- ParkMadrid -->
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Dic 2023 — Ene 2026</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Gerente / Administrador / Operador Logístico</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Dic 2023 — Ene 2026</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Gerente / Administrador / Operador Logístico</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">ParkMadrid · Madrid, España</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Gestión y supervisión de operaciones logísticas y administrativas.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Coordinación de personal y organización de turnos de trabajo.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Control de inventarios y seguimiento de procesos operativos.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Manejo de documentación administrativa y elaboración de reportes.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Resolución de incidencias operativas y optimización de eficiencia diaria.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Gestión y supervisión de operaciones logísticas y administrativas.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Coordinación de personal y organización de turnos de trabajo.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Control de inventarios y seguimiento de procesos operativos.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Manejo de documentación administrativa y elaboración de reportes.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Resolución de incidencias operativas y optimización de eficiencia diaria.</span></li>
                             </ul>
                         </article>
 
                         <!-- Ourworld -->
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Mar 2023 — May 2023</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Backend Junior</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Mar 2023 — May 2023</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Backend Junior</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Ourworld LTD · Madrid, España</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Desarrollo de sistema basado en Python.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Creación de APIs RESTful utilizando Flask.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Implementación de operaciones CRUD.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Desarrollo de scripts personalizados.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Desarrollo de sistema basado en Python.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Creación de APIs RESTful utilizando Flask.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Implementación de operaciones CRUD.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Desarrollo de scripts personalizados.</span></li>
                             </ul>
                         </article>
 
                         <!-- WIFITEL -->
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2021 — Feb 2022</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Soporte Técnico</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Nov 2021 — Feb 2022</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Soporte Técnico</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">WIFITEL · Cúa, Venezuela</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Instalación y mantenimiento de servicios de internet.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Configuración de antenas Ubiquiti y redes inalámbricas.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Administración de redes y routers.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Cableado estructurado (RJ45).</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Instalación y mantenimiento de servicios de internet.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Configuración de antenas Ubiquiti y redes inalámbricas.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Administración de redes y routers.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Cableado estructurado (RJ45).</span></li>
                             </ul>
                         </article>
 
                         <!-- COFESCO -->
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2020 — Jul 2021</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Notificador</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Nov 2020 — Jul 2021</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Notificador</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">COFESCO · Bogotá, Colombia</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Registro y gestión de documentos de predios.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Validación de información mediante visitas de campo.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Actualización de bases de datos.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Registro y gestión de documentos de predios.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Validación de información mediante visitas de campo.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Actualización de bases de datos.</span></li>
                             </ul>
                         </article>
 
                         <!-- Teleperformance -->
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Jul 2020 — Nov 2020</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Agente Contact Center</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Jul 2020 — Nov 2020</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Agente Contact Center</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Teleperformance · Bogotá, Colombia</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Atención al cliente y soporte técnico.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Escalamiento de incidencias a segundo nivel.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Gestión de backoffice.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Atención al cliente y soporte técnico.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Escalamiento de incidencias a segundo nivel.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Gestión de backoffice.</span></li>
                             </ul>
                         </article>
 
                         <!-- Flotas -->
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2018 — Jul 2019</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Jefe de Servicio y Analista Post Venta</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Nov 2018 — Jul 2019</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Jefe de Servicio y Analista Post Venta</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Flotas Service SPA · Santiago, Chile</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Elaboración de presupuestos preventivos y correctivos.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Gestión de repuestos y tarifarios.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Control de mantenimiento de flotas.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Manejo de bases de datos y Excel avanzado.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Elaboración de presupuestos preventivos y correctivos.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Gestión de repuestos y tarifarios.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Control de mantenimiento de flotas.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Manejo de bases de datos y Excel avanzado.</span></li>
                             </ul>
                         </article>
 
                         <!-- Novatex -->
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Jun 2016 — May 2018</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Operador Informático</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Jun 2016 — May 2018</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Operador Informático</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Inversiones Novatex · Bogotá, Colombia</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Mantenimiento de servidores y equipos.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Instalación de redes y CCTV.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Configuración de routers.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Atención al cliente y manejo de personal.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Mantenimiento de servidores y equipos.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Instalación de redes y CCTV.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Configuración de routers.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Atención al cliente y manejo de personal.</span></li>
                             </ul>
                         </article>
 
                         <!-- Bodegón Chara -->
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Mar 2010 — Dic 2015</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Gerente de Ventas</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Mar 2010 — Dic 2015</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Gerente de Ventas</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Bodegón Chara · Charallave, Venezuela</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Gestión de ventas y atención al cliente.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Soporte técnico de hardware y software.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Administración de redes y CCTV.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Gestión de ventas y atención al cliente.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Soporte técnico de hardware y software.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Administración de redes y CCTV.</span></li>
                             </ul>
                         </article>
 
@@ -619,239 +759,286 @@
                 </div>
 
                 <!-- VERSIÓN INGLÉS -->
-                <div id="exp-en" class="lang-content hidden">
-                    <h3 class="font-mono text-base font-bold neon-text uppercase tracking-widest border-b border-[#118C4F]/20 pb-3 mb-8">/ Professional Experience</h3>
+                <div id="exp-en" class="lang-content hidden" lang="en">
+                    <h2 class="font-mono text-base font-bold neon-text uppercase tracking-widest border-b border-[#118C4F]/20 pb-3 mb-8">/ Professional Experience</h2>
                     <div class="relative border-l-2 border-[#118C4F]/20 space-y-8 pl-7">
                         <!-- ALCALDÍA -->
                         <article class="relative">
-                            <div class="timeline-dot"></div>
-                            <span class="font-mono text-[10px] font-black text-[#16a861] uppercase tracking-widest">2025 — Present</span>
-                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Android Developer</h4>
+                            <div class="timeline-dot" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-[#16a861] uppercase tracking-widest">2025 — Present</span>
+                            <h3 class="mt-1 text-xl md:text-2xl font-bold text-white">Android Developer</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Charallave City Hall (Alcaldía) · Miranda, Venezuela</p>
                             <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Design and development of an <strong class="text-white">access control</strong> mobile app for city hall personnel (v1.0.8 in production).</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Stack: Kotlin · Jetpack Compose · Supabase (Auth + Postgres) · Navigation3.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Implementation of secure session, geolocation, admin dashboard and update notifications.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Full release cycle: signed APK distribution, version management and ongoing support.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Design and development of an <strong class="text-white">access control</strong> mobile app for city hall personnel (v1.0.8 in production).</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Stack: Kotlin · Jetpack Compose · Supabase (Auth + Postgres) · Navigation3.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Implementation of secure session, geolocation, admin dashboard and update notifications.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Full release cycle: signed APK distribution, version management and ongoing support.</span></li>
                             </ul>
                         </article>
 
                         <!-- INDEPENDIENTE EN -->
                         <article class="relative">
-                            <div class="timeline-dot"></div>
-                            <span class="font-mono text-[10px] font-black text-[#16a861] uppercase tracking-widest">Feb 2026 — Present</span>
-                            <h4 class="mt-1 text-xl md:text-2xl font-bold text-white">Founder & Full-Stack Developer</h4>
+                            <div class="timeline-dot" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-[#16a861] uppercase tracking-widest">Feb 2026 — Present</span>
+                            <h3 class="mt-1 text-xl md:text-2xl font-bold text-white">Founder & Full-Stack Developer</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Independent · Pana Voy · AeroSocio</p>
                             <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Design and build of <strong class="text-white">Pana Voy</strong>: native Android app + web admin + partner portal + serverless backend.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Development of <strong class="text-white">AeroSocio</strong> (React 19 + Supabase): monthly services club for drivers in Spain.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Serverless backend: Firebase Cloud Functions + Cloudflare Workers + R2.</span></li>
-                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0">▸</span><span>Python data analysis with Pandas; REST APIs with Flask.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Design and build of <strong class="text-white">Pana Voy</strong>: native Android app + web admin + partner portal + serverless backend.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Development of <strong class="text-white">AeroSocio</strong> (React 19 + Supabase): monthly services club for drivers in Spain.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Serverless backend: Firebase Cloud Functions + Cloudflare Workers + R2.</span></li>
+                                <li class="flex gap-2"><span class="text-[#16a861] flex-shrink-0" aria-hidden="true">▸</span><span>Python data analysis with Pandas; REST APIs with Flask.</span></li>
                             </ul>
                         </article>
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Dec 2023 — Jan 2026</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Manager / Administrative Admin / Logistics Operator</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Dec 2023 — Jan 2026</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Manager / Administrative Admin / Logistics Operator</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">ParkMadrid · Madrid, Spain</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Management and supervision of logistics and administrative operations.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Staff coordination and work shift organization.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Inventory control and operational process tracking.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Administrative documentation handling and report generation.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Operational incident resolution and daily efficiency optimization.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Management and supervision of logistics and administrative operations.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Staff coordination and work shift organization.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Inventory control and operational process tracking.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Administrative documentation handling and report generation.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Operational incident resolution and daily efficiency optimization.</span></li>
                             </ul>
                         </article>
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Mar 2023 — May 2023</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Junior Backend</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Mar 2023 — May 2023</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Junior Backend</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Ourworld LTD · Madrid, Spain</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Python-based system development.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Creation of RESTful APIs using Flask.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Implementation of CRUD operations.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Custom script development.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Python-based system development.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Creation of RESTful APIs using Flask.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Implementation of CRUD operations.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Custom script development.</span></li>
                             </ul>
                         </article>
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2021 — Feb 2022</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Technical Support</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Nov 2021 — Feb 2022</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Technical Support</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">WIFITEL · Cúa, Venezuela</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Internet service installation and maintenance.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Ubiquiti antenna and wireless network configuration.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Network and router administration.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Structured cabling (RJ45).</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Internet service installation and maintenance.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Ubiquiti antenna and wireless network configuration.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Network and router administration.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Structured cabling (RJ45).</span></li>
                             </ul>
                         </article>
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2020 — Jul 2021</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Notifier</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Nov 2020 — Jul 2021</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Notifier</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">COFESCO · Bogotá, Colombia</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Property document registration and management.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Information validation through field visits.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Database updating.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Property document registration and management.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Information validation through field visits.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Database updating.</span></li>
                             </ul>
                         </article>
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Jul 2020 — Nov 2020</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Contact Center Agent</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Jul 2020 — Nov 2020</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Contact Center Agent</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Teleperformance · Bogotá, Colombia</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Customer service and technical support.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Incident escalation to second level.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Backoffice management.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Customer service and technical support.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Incident escalation to second level.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Backoffice management.</span></li>
                             </ul>
                         </article>
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Nov 2018 — Jul 2019</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Service Manager & Post-Sales Analyst</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Nov 2018 — Jul 2019</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Service Manager & Post-Sales Analyst</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Flotas Service SPA · Santiago, Chile</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Preventive and corrective budget preparation.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Parts and pricing management.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Fleet maintenance control.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Database and advanced Excel handling.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Preventive and corrective budget preparation.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Parts and pricing management.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Fleet maintenance control.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Database and advanced Excel handling.</span></li>
                             </ul>
                         </article>
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Jun 2016 — May 2018</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Computer Operator</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Jun 2016 — May 2018</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Computer Operator</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Inversiones Novatex · Bogotá, Colombia</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Server and equipment maintenance.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Network and CCTV installation.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Router configuration.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Customer service and staff management.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Server and equipment maintenance.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Network and CCTV installation.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Router configuration.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Customer service and staff management.</span></li>
                             </ul>
                         </article>
                         <article class="relative">
-                            <div class="timeline-dot-muted"></div>
-                            <span class="font-mono text-[10px] font-black text-gray-500 uppercase tracking-widest">Mar 2010 — Dec 2015</span>
-                            <h4 class="mt-1 text-lg md:text-xl font-bold text-white/90">Sales Manager</h4>
+                            <div class="timeline-dot-muted" aria-hidden="true"></div>
+                            <span class="font-mono text-[11px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">Mar 2010 — Dec 2015</span>
+                            <h3 class="mt-1 text-lg md:text-xl font-bold text-white/90">Sales Manager</h3>
                             <p class="text-sm font-mono text-gray-400 mt-0.5">Bodegón Chara · Charallave, Venezuela</p>
-                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-400">
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Sales management and customer service.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Hardware and software technical support.</span></li>
-                                <li class="flex gap-2"><span class="text-gray-600 flex-shrink-0">▸</span><span>Network and CCTV administration.</span></li>
+                            <ul class="mt-3 space-y-1.5 text-[14px] text-gray-300">
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Sales management and customer service.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Hardware and software technical support.</span></li>
+                                <li class="flex gap-2"><span class="text-gray-400 flex-shrink-0" aria-hidden="true">▸</span><span>Network and CCTV administration.</span></li>
                             </ul>
                         </article>
                     </div>
                 </div>
 
-            </main>
+            </section>
         </div>
 
         <!-- ═══════════ SERVICIOS / CTA ═══════════ -->
-        <section class="reveal glass rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-12 relative overflow-hidden no-print">
-            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#118C4F]/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <section class="reveal glass rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-12 relative overflow-hidden no-print" aria-labelledby="servicios-heading">
+            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#118C4F]/10 rounded-full blur-[60px] pointer-events-none" aria-hidden="true"></div>
 
             <div class="relative text-center max-w-2xl mx-auto mb-10">
                 <span class="font-mono text-[11px] font-black uppercase tracking-[0.3em] text-[#16a861]" data-es="// Servicios" data-en="// Services">// Servicios</span>
-                <h3 class="mt-3 text-2xl md:text-4xl font-bold text-white tracking-tight" data-es="¿Tienes un proyecto?" data-en="Got a project?">¿Tienes un proyecto?</h3>
-                <p class="mt-3 text-gray-400" data-es="Resuelvo problemas de software, redes y operación. Trabajo remoto o presencial en Venezuela." data-en="I solve software, network and operations problems. Remote or on-site in Venezuela.">Resuelvo problemas de software, redes y operación. Trabajo remoto o presencial en Venezuela.</p>
+                <h2 id="servicios-heading" class="mt-3 text-2xl md:text-4xl font-bold text-white tracking-tight" data-es="¿Tienes un proyecto?" data-en="Got a project?">¿Tienes un proyecto?</h2>
+                <p class="mt-3 text-gray-300" data-es="Resuelvo problemas de software, redes y operación. Trabajo remoto o presencial en Venezuela." data-en="I solve software, network and operations problems. Remote or on-site in Venezuela.">Resuelvo problemas de software, redes y operación. Trabajo remoto o presencial en Venezuela.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 relative">
                 <div class="bg-black/30 border border-[#118C4F]/20 p-6 rounded-2xl hover:border-[#16a861] hover:bg-[#118C4F]/5 hover:-translate-y-1 transition-all">
-                    <div class="text-3xl mb-3">💻</div>
-                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Apps a medida" data-en="Custom apps">Apps a medida</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed" data-es="Android nativo con Kotlin + paneles web. Como Pana Voy." data-en="Native Android with Kotlin + web panels. Like Pana Voy.">Android nativo con Kotlin + paneles web. Como Pana Voy.</p>
+                    <div class="text-3xl mb-3" aria-hidden="true">💻</div>
+                    <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Apps a medida" data-en="Custom apps">Apps a medida</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed" data-es="Android nativo con Kotlin + paneles web. Como Pana Voy." data-en="Native Android with Kotlin + web panels. Like Pana Voy.">Android nativo con Kotlin + paneles web. Como Pana Voy.</p>
                 </div>
                 <div class="bg-black/30 border border-[#118C4F]/20 p-6 rounded-2xl hover:border-[#16a861] hover:bg-[#118C4F]/5 hover:-translate-y-1 transition-all">
-                    <div class="text-3xl mb-3">📊</div>
-                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Datos & APIs" data-en="Data & APIs">Datos & APIs</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed" data-es="APIs Python/Flask, automatización con Pandas, reportes." data-en="Python/Flask APIs, automation with Pandas, reports.">APIs Python/Flask, automatización con Pandas, reportes.</p>
+                    <div class="text-3xl mb-3" aria-hidden="true">📊</div>
+                    <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Datos & APIs" data-en="Data & APIs">Datos & APIs</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed" data-es="APIs Python/Flask, automatización con Pandas, reportes." data-en="Python/Flask APIs, automation with Pandas, reports.">APIs Python/Flask, automatización con Pandas, reportes.</p>
                 </div>
                 <div class="bg-black/30 border border-[#118C4F]/20 p-6 rounded-2xl hover:border-[#16a861] hover:bg-[#118C4F]/5 hover:-translate-y-1 transition-all">
-                    <div class="text-3xl mb-3">📡</div>
-                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Redes & CCTV" data-en="Networks & CCTV">Redes & CCTV</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed" data-es="Ubiquiti, cableado RJ45, configuración de routers y servidores." data-en="Ubiquiti, RJ45 cabling, router and server configuration.">Ubiquiti, cableado RJ45, configuración de routers y servidores.</p>
+                    <div class="text-3xl mb-3" aria-hidden="true">📡</div>
+                    <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Redes & CCTV" data-en="Networks & CCTV">Redes & CCTV</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed" data-es="Ubiquiti, cableado RJ45, configuración de routers y servidores." data-en="Ubiquiti, RJ45 cabling, router and server configuration.">Ubiquiti, cableado RJ45, configuración de routers y servidores.</p>
                 </div>
                 <div class="bg-black/30 border border-[#118C4F]/20 p-6 rounded-2xl hover:border-[#16a861] hover:bg-[#118C4F]/5 hover:-translate-y-1 transition-all">
-                    <div class="text-3xl mb-3">⚙️</div>
-                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Consultoría" data-en="Consulting">Consultoría</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed" data-es="Procesos operativos, logística, inventario, equipos." data-en="Operational processes, logistics, inventory, teams.">Procesos operativos, logística, inventario, equipos.</p>
+                    <div class="text-3xl mb-3" aria-hidden="true">⚙️</div>
+                    <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-2" data-es="Consultoría" data-en="Consulting">Consultoría</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed" data-es="Procesos operativos, logística, inventario, equipos." data-en="Operational processes, logistics, inventory, teams.">Procesos operativos, logística, inventario, equipos.</p>
                 </div>
             </div>
 
             <div class="relative mt-10 flex flex-col sm:flex-row gap-3 justify-center items-center">
-                <a href="https://wa.me/584142272792?text=Hola%20Carlos,%20me%20interesa%20hablar%20contigo" target="_blank" rel="noopener"
-                   class="inline-flex items-center gap-3 bg-[#118C4F] hover:bg-[#16a861] text-white px-7 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider shadow-[0_0_30px_rgba(17,140,79,0.4)] hover:scale-105 transition-all">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                <a href="#" data-contact-whatsapp aria-label="Hablar por WhatsApp con Carlos"
+                   class="inline-flex items-center gap-3 bg-[#118C4F] hover:bg-[#16a861] text-white px-7 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider shadow-[0_0_30px_rgba(17,140,79,0.4)] hover:scale-105 transition-all min-h-[44px]">
+                    <svg class="w-5 h-5" aria-hidden="true" focusable="false" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
                     <span data-es="Hablemos por WhatsApp" data-en="Let's talk on WhatsApp">Hablemos por WhatsApp</span>
                 </a>
-                <a href="mailto:carlos.linares.es@gmail.com" class="inline-flex items-center gap-3 bg-black/40 border border-[#118C4F]/30 hover:border-[#16a861] text-white px-7 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all">
+                <a href="#" data-contact-email aria-label="Enviar email a Carlos"
+                   class="inline-flex items-center gap-3 bg-black/40 border border-[#118C4F]/30 hover:border-[#16a861] text-white px-7 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all min-h-[44px]">
                     <span data-es="Enviar email" data-en="Send email">Enviar email</span>
                 </a>
             </div>
         </section>
 
-    </div>
+    </main>
 
     <footer class="text-center py-12 flex flex-col items-center justify-center gap-3 no-print">
-        <a href="https://hits.sh/carloslinareses-cloud.github.io/mi-cv/" rel="noopener">
-            <img alt="Hits" src="https://hits.sh/carloslinareses-cloud.github.io/mi-cv.svg?style=for-the-badge&label=VIEWS&color=118C4F&labelColor=030712"/>
-        </a>
-        <p class="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-gray-600">Carlos H. Linares M. · <span id="year">2026</span></p>
-        <p class="font-mono text-[9px] text-gray-700" data-es="Hecho con código y café en Charallave 🇻🇪" data-en="Made with code and coffee in Charallave 🇻🇪">Hecho con código y café en Charallave 🇻🇪</p>
+        <p class="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">Carlos H. Linares M. · <span id="year"></span></p>
+        <p class="font-mono text-[9px] text-gray-400" data-es="Hecho con código y café en Venezuela 🇻🇪" data-en="Made with code and coffee in Venezuela 🇻🇪">Hecho con código y café en Venezuela 🇻🇪</p>
     </footer>
 
     <script>
+        // ── Anti-scrape contact: arma mailto/whatsapp en runtime ──────────
+        (function setupContactLinks() {
+            // Email partes desarmadas para evitar harvesters
+            const emailParts = ['carlos.linares.es', '@', 'gmail', '.', 'com'];
+            const phoneParts = ['58', '414', '2272792'];
+
+            function buildEmail() { return emailParts.join(''); }
+            function buildPhone() { return phoneParts.join(''); }
+
+            document.querySelectorAll('[data-contact-email]').forEach(el => {
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'mailto:' + buildEmail();
+                });
+            });
+
+            document.querySelectorAll('[data-contact-whatsapp]').forEach(el => {
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const msg = encodeURIComponent('Hola Carlos, me interesa hablar contigo');
+                    window.open('https://wa.me/' + buildPhone() + '?text=' + msg, '_blank', 'noopener,noreferrer');
+                });
+            });
+        })();
+
         // ── Language toggle ──────────────────────────────────────────────
         let isEnglish = false;
 
         function applyLangAttrs() {
             document.querySelectorAll('[data-es]').forEach(el => {
-                el.textContent = isEnglish ? (el.getAttribute('data-en') || el.textContent) : (el.getAttribute('data-es') || el.textContent);
+                const target = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-es');
+                if (target !== null) el.textContent = target;
             });
         }
 
         function toggleLanguage() {
             isEnglish = !isEnglish;
-            document.querySelectorAll('.lang-content').forEach(el => el.classList.add('hidden'));
+
+            // Iteración dinámica: cualquier .lang-content[id$="-es"] o "-en"
+            const allEs = document.querySelectorAll('.lang-content[id$="-es"]');
+            const allEn = document.querySelectorAll('.lang-content[id$="-en"]');
 
             if (isEnglish) {
                 document.documentElement.lang = 'en';
-                ['role-en','panavoy-en','profile-en','exp-en'].forEach(id => {
-                    const el = document.getElementById(id); if (el) el.classList.remove('hidden');
-                });
-                document.getElementById('flag-icon').textContent = '🇪🇸';
-                document.getElementById('lang-label').textContent = 'ES';
+                allEs.forEach(el => el.classList.add('hidden'));
+                allEn.forEach(el => el.classList.remove('hidden'));
+                const flag = document.getElementById('flag-icon'); if (flag) flag.textContent = '🇪🇸';
+                const lbl = document.getElementById('lang-label'); if (lbl) lbl.textContent = 'ES';
+                const btn = document.getElementById('lang-toggle-btn');
+                if (btn) {
+                    btn.setAttribute('aria-pressed', 'true');
+                    btn.setAttribute('aria-label', 'Switch language to Spanish');
+                }
+                const announce = document.getElementById('lang-announce');
+                if (announce) announce.textContent = 'Language switched to English';
             } else {
                 document.documentElement.lang = 'es';
-                ['role-es','panavoy-es','profile-es','exp-es'].forEach(id => {
-                    const el = document.getElementById(id); if (el) el.classList.remove('hidden');
-                });
-                document.getElementById('flag-icon').textContent = '🇺🇸';
-                document.getElementById('lang-label').textContent = 'EN';
+                allEn.forEach(el => el.classList.add('hidden'));
+                allEs.forEach(el => el.classList.remove('hidden'));
+                const flag = document.getElementById('flag-icon'); if (flag) flag.textContent = '🇺🇸';
+                const lbl = document.getElementById('lang-label'); if (lbl) lbl.textContent = 'EN';
+                const btn = document.getElementById('lang-toggle-btn');
+                if (btn) {
+                    btn.setAttribute('aria-pressed', 'false');
+                    btn.setAttribute('aria-label', 'Cambiar idioma a inglés');
+                }
+                const announce = document.getElementById('lang-announce');
+                if (announce) announce.textContent = 'Idioma cambiado a español';
             }
             applyLangAttrs();
         }
 
-        // ── Scroll reveal ────────────────────────────────────────────────
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((e) => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('visible');
-                    observer.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        // ── DOMContentLoaded: aplica atributos iniciales y arranca observers ──
+        document.addEventListener('DOMContentLoaded', function() {
+            // Aplicar data-es/data-en según idioma inicial (es)
+            applyLangAttrs();
 
-        // ── Year en footer ───────────────────────────────────────────────
-        document.getElementById('year').textContent = new Date().getFullYear();
+            // Año dinámico en footer
+            const yearEl = document.getElementById('year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        // ── Keyboard shortcut: Ctrl/Cmd+P imprime correctamente ──────────
-        // (No interceptamos, dejamos el comportamiento nativo)
+            // Scroll reveal con IntersectionObserver
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((e) => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add('visible');
+                            observer.unobserve(e.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+                document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            } else {
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+            }
+        });
     </script>
 </body>
 </html>

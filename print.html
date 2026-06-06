@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CV - Carlos Humberto Linares Morales</title>
+<style>
+@page { size: A4; margin: 14mm 12mm; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.4;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+body { padding: 0; }
+
+/* HEADER */
+.header {
+  border-bottom: 2px solid #118C4F;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+.name {
+  font-size: 22pt;
+  font-weight: 700;
+  color: #0a1019;
+  letter-spacing: -0.3px;
+}
+.role {
+  font-size: 11.5pt;
+  color: #118C4F;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.contact {
+  margin-top: 6px;
+  font-size: 9.5pt;
+  color: #444;
+}
+.contact span { margin-right: 12px; white-space: nowrap; }
+.contact a { color: #444; text-decoration: none; }
+
+/* SECTIONS */
+section { margin-top: 12px; page-break-inside: avoid; }
+h2 {
+  font-size: 12pt;
+  font-weight: 700;
+  color: #0a1019;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 3px;
+  margin-bottom: 7px;
+}
+p { text-align: justify; }
+
+/* EXPERIENCE */
+.exp-item {
+  margin-bottom: 9px;
+  page-break-inside: avoid;
+}
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+.exp-title {
+  font-weight: 700;
+  font-size: 10.5pt;
+  color: #0a1019;
+}
+.exp-period {
+  font-size: 9pt;
+  color: #666;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.exp-company {
+  font-size: 10pt;
+  color: #118C4F;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.exp-item ul {
+  margin-left: 16px;
+  margin-top: 2px;
+}
+.exp-item li {
+  font-size: 9.5pt;
+  margin-bottom: 1px;
+}
+
+/* PROJECTS */
+.project {
+  border-left: 3px solid #118C4F;
+  padding-left: 9px;
+  margin-bottom: 9px;
+  page-break-inside: avoid;
+}
+.project.amber { border-left-color: #d97706; }
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.project-title {
+  font-weight: 700;
+  font-size: 11pt;
+  color: #0a1019;
+}
+.project-status {
+  font-size: 8pt;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: #118C4F;
+  color: #fff;
+  letter-spacing: 0.4px;
+}
+.project.amber .project-status { background: #d97706; }
+.project-role {
+  font-size: 9pt;
+  color: #666;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+.project-desc {
+  font-size: 9.5pt;
+  margin-bottom: 3px;
+}
+.project-bullets {
+  margin-left: 16px;
+  font-size: 9.5pt;
+}
+.project-stack {
+  font-size: 8.5pt;
+  color: #666;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+/* STACK */
+.stack-cat {
+  margin-bottom: 5px;
+  font-size: 9.5pt;
+}
+.stack-cat strong {
+  display: inline-block;
+  min-width: 165px;
+  color: #118C4F;
+  font-weight: 700;
+}
+
+/* GRID */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* FORMACION / IDIOMAS */
+.info-block {
+  font-size: 9.5pt;
+}
+.info-block .title {
+  font-weight: 700;
+  color: #0a1019;
+}
+.info-block .sub {
+  color: #666;
+  font-size: 9pt;
+}
+.info-block ul {
+  margin-left: 16px;
+  margin-top: 3px;
+}
+
+/* SERVICIOS */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+.service {
+  font-size: 9.5pt;
+}
+.service strong { color: #118C4F; }
+
+/* page-break helper */
+.page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="name">Carlos Humberto Linares Morales</div>
+  <div class="role">Desarrollador Full-Stack &amp; Especialista Operativo</div>
+  <div class="contact">
+    <span>Charallave, Miranda &middot; Venezuela</span>
+    <span>contacto@panavoy.com</span>
+    <span>WhatsApp: +58 414-2272792</span>
+    <span>linkedin.com/in/carlos-humberto-linares-morales-a474642a6</span>
+    <span>github.com/carloslinareses-cloud</span>
+    <span>panavoy.com</span>
+  </div>
+</header>
+
+<section>
+  <h2>Perfil Profesional</h2>
+  <p>Profesional en informatica con una trayectoria versatil en desarrollo de software, soporte tecnico y gestion operativa. Especializado en backend con Python, APIs RESTful y bases de datos. Recientemente he ampliado mi stack al desarrollo de apps Android nativas con Kotlin/Compose y al analisis de datos con Pandas. Destaco por mi capacidad para liderar equipos, optimizar procesos logisticos y aportar soluciones tecnologicas eficientes, con enfoque constante en el aprendizaje y resolucion de problemas complejos. 16+ anos de experiencia en 4 paises (Venezuela, Colombia, Chile y Espana).</p>
+</section>
+
+<section>
+  <h2>Experiencia Profesional</h2>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-title">Desarrollador Android</div>
+      <div class="exp-period">2025 &mdash; Presente</div>
+    </div>
+    <div class="exp-company">Alcaldia de Charallave &middot; Miranda, Venezuela</div>
+    <ul>
+      <li>Diseno y desarrollo de app movil de control de acceso para personal de la alcaldia (v1.0.8 en produccion).</li>
+      <li>Stack: Kotlin, Jetpack Compose, Supabase (Auth + Postgres), Navigation3.</li>
+      <li>Implementacion de sesion segura, geolocalizacion, dashboard administrativo y notificaciones de actualizacion.</li>
+      <li>Ciclo completo de release: distribucion de APK firmado, gestion de versiones y soporte continuo.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-title">Fundador &amp; Desarrollador Full-Stack</div>
+      <div class="exp-period">Feb 2026 &mdash; Presente</div>
+    </div>
+    <div class="exp-company">Independiente &middot; Pana Voy &middot; AeroSocio</div>
+    <ul>
+      <li>Diseno y construccion de Pana Voy: app Android nativa + admin web + portal de socios + backend serverless.</li>
+      <li>Desarrollo de AeroSocio (React 19 + Supabase): club de servicios mensuales para conductores en Espana.</li>
+      <li>Backend serverless: Firebase Cloud Functions + Cloudflare Workers + R2.</li>
+      <li>Analisis y manipulacion de datos en Python con Pandas; APIs REST con Flask.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-title">Gerente / Administrador / Operador Logistico</div>
+      <div class="exp-period">Dic 2023 &mdash; Ene 2026</div>
+    </div>
+    <div class="exp-company">ParkMadrid &middot; Madrid, Espana</div>
+    <ul>
+      <li>Gestion y supervision de operaciones logisticas y administrativas.</li>
+      <li>Coordinacion de personal y organizacion de turnos de trabajo.</li>
+      <li>Control de inventarios y seguimiento de procesos operativos.</li>
+      <li>Manejo de documentacion administrativa y elaboracion de reportes.</li>
+      <li>Resolucion de incidencias operativas y optimizacion de eficiencia diaria.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-title">Backend Junior</div>
+      <div class="exp-period">Mar 2023 &mdash; May 2023</div>
+    </div>
+    <div class="exp-company">Ourworld LTD &middot; Madrid, Espana</div>
+    <ul>
+      <li>Desarrollo de sistema basado en Python.</li>
+      <li>Creacion de APIs RESTful utilizando Flask.</li>
+      <li>Implementacion de operaciones CRUD.</li>
+      <li>Desarrollo de scripts personalizados.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-title">Soporte Tecnico</div>
+      <div class="exp-period">Nov 2021 &mdash; Feb 2022</div>
+    </div>
+    <div class="exp-company">WIFITEL &middot; Cua, Venezuela</div>
+    <ul>
+      <li>Instalacion y mantenimiento de servicios de internet.</li>
+      <li>Configuracion de antenas Ubiquiti y redes inalambricas.</li>
+      <li>Administracion de redes y routers; cableado estructurado (RJ45).</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-title">Notificador</div>
+      <div class="exp-period">Nov 2020 &mdash; Jul 2021</div>
+    </div>
+    <div class="exp-company">COFESCO &middot; Bogota, Colombia</div>
+    <ul>
+      <li>Registro y gestion de documentos de predios.</li>
+      <li>Validacion de informacion mediante visitas de campo.</li>
+      <li>Actualizacion de bases de datos.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-title">Agente Contact Center</div>
+      <div class="exp-period">Jul 2020 &mdash; Nov 2020</div>
+    </div>
+    <div class="exp-company">Teleperformance &middot; Bogota, Colombia</div>
+    <ul>
+      <li>Atencion al cliente y soporte tecnico.</li>
+      <li>Escalamiento de incidencias a segundo nivel y gestion de backoffice.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-title">Jefe de Servicio y Analista Post Venta</div>
+      <div class="exp-period">Nov 2018 &mdash; Jul 2019</div>
+    </div>
+    <div class="exp-company">Flotas Service SPA &middot; Santiago, Chile</div>
+    <ul>
+      <li>Direccion del area de servicio post-venta y coordinacion de equipos tecnicos.</li>
+      <li>Analisis de procesos y seguimiento a clientes corporativos.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-title">Operador Informatico</div>
+      <div class="exp-period">Jun 2016 &mdash; May 2018</div>
+    </div>
+    <div class="exp-company">Inversiones Novatex &middot; Bogota, Colombia</div>
+    <ul>
+      <li>Manejo de sistemas administrativos (SAINT, SIGA) y soporte de hardware/software.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-title">Gerente de Ventas</div>
+      <div class="exp-period">Mar 2010 &mdash; Dic 2015</div>
+    </div>
+    <div class="exp-company">Bodegon Chara &middot; Charallave, Venezuela</div>
+    <ul>
+      <li>Liderazgo del equipo de ventas, control de inventario y gestion comercial.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Proyectos Destacados</h2>
+
+  <div class="project">
+    <div class="project-head">
+      <div class="project-title">Pana Voy &mdash; Fundador &middot; Desarrollador Principal</div>
+      <div class="project-status">EN PRODUCCION</div>
+    </div>
+    <div class="project-role">Startup propia &middot; panavoy.com</div>
+    <div class="project-desc">Plataforma delivery + taxi para los Valles del Tuy, Venezuela. App nativa Android, backend serverless y panel de socios.</div>
+    <ul class="project-bullets">
+      <li>Multi-rol: cliente, tienda, repartidor, taxista.</li>
+      <li>Push real-time + geofencing 5 km.</li>
+      <li>Pagos en Bs a tasa BCV automatica.</li>
+      <li>En revision final Play Store.</li>
+    </ul>
+    <div class="project-stack">Stack: Kotlin &middot; Compose &middot; Firebase &middot; CF Workers &middot; R2 &middot; MapLibre</div>
+  </div>
+
+  <div class="project amber">
+    <div class="project-head">
+      <div class="project-title">AeroSocio &mdash; Creador &middot; Full-Stack Developer</div>
+      <div class="project-status">EN DESARROLLO</div>
+    </div>
+    <div class="project-role">Proyecto personal &middot; SaaS B2C &middot; Mercado Espana</div>
+    <div class="project-desc">Club VIP de servicios para conductores en Espana. Membresia mensual (5 EUR) con alertas ITV, gestion documental, plantillas legales y marketplace.</div>
+    <ul class="project-bullets">
+      <li>Recordatorios automaticos: ITV, seguro, carnet.</li>
+      <li>Gestion documental en la nube.</li>
+      <li>Plantillas para recursos de multas.</li>
+      <li>Marketplace con descuentos.</li>
+    </ul>
+    <div class="project-stack">Stack: React 19 &middot; Vite &middot; Supabase &middot; Tailwind v4 &middot; PostgreSQL</div>
+  </div>
+</section>
+
+<section>
+  <h2>Stack Tecnico</h2>
+  <div class="stack-cat"><strong>Backend &amp; Datos:</strong> Python, Flask, REST APIs, Pandas, CRUD, Firebase</div>
+  <div class="stack-cat"><strong>Mobile &amp; Frontend:</strong> Kotlin, Jetpack Compose, Android Studio, React, Astro, Tailwind</div>
+  <div class="stack-cat"><strong>Cloud &amp; DevOps:</strong> Cloudflare Workers, R2 Storage, Cloud Functions, Git, Linux</div>
+  <div class="stack-cat"><strong>Redes &amp; Infraestructura:</strong> TCP/IP, Ubiquiti, Routers, CCTV, RJ45</div>
+  <div class="stack-cat"><strong>Sistemas &amp; Productividad:</strong> Windows, Linux, SAINT, SIGA, MS Office</div>
+</section>
+
+<section>
+  <div class="two-col">
+    <div>
+      <h2>Formacion</h2>
+      <div class="info-block">
+        <div class="title">TSU en Informatica</div>
+        <div class="sub">IUT Jose Maria Carreno</div>
+        <div class="sub">2011 &ndash; 2015</div>
+      </div>
+    </div>
+    <div>
+      <h2>Idiomas &amp; Extras</h2>
+      <div class="info-block">
+        <div class="title">Espanol &mdash; Nativo</div>
+        <ul>
+          <li>Licencia de conducir</li>
+          <li>Vehiculo propio</li>
+          <li>Disponible para trabajo remoto</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Servicios</h2>
+  <div class="services-grid">
+    <div class="service"><strong>Apps a medida.</strong> Android nativo con Kotlin + paneles web. Como Pana Voy.</div>
+    <div class="service"><strong>Datos &amp; APIs.</strong> APIs Python/Flask, automatizacion con Pandas, reportes.</div>
+    <div class="service"><strong>Redes &amp; CCTV.</strong> Ubiquiti, cableado RJ45, configuracion de routers y servidores.</div>
+    <div class="service"><strong>Consultoria.</strong> Procesos operativos, logistica, inventario, equipos.</div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carloslinareses-cloud.github.io/mi-cv/sitemap.xml
