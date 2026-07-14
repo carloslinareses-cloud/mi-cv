@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "tailwindcss -i src/input.css -o style.css --minify",
+    "test": "node --test tests/*.test.mjs",
+    "validate": "npm run build:css && npm test"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/carloslinareses-cloud/mi-cv/issues"
   },
-  "homepage": "https://github.com/carloslinareses-cloud/mi-cv#readme",
+  "homepage": "https://carloslinareses-cloud.github.io/mi-cv/",
   "devDependencies": {
     "tailwindcss": "^3.4.17"
   }

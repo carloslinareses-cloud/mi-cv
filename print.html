@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carlos Humberto Linares Morales · CV</title>
-<meta name="description" content="CV profesional de Carlos Humberto Linares Morales — Desarrollador Full-Stack Android + Python, Fundador de Pana Voy.">
+<meta name="description" content="CV profesional de Carlos Humberto Linares Morales — Desarrollador Full-Stack Android, Web y Cloud; fundador de Pana Voy.">
 <meta name="author" content="Carlos Humberto Linares Morales">
 <meta name="robots" content="noindex,nofollow">
 <style>
@@ -37,6 +37,20 @@
         max-width: 210mm;
         margin: 0 auto;
         padding: 8mm 10mm;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .cv-contact a,
+    .cv-contact-list a,
+    .cv-project .subtitle a {
+        color: #0b6b3c;
+        text-decoration: underline;
+        text-decoration-thickness: 0.5px;
+        text-underline-offset: 1px;
     }
 
     /* ─────────────── HEADER ─────────────── */
@@ -112,10 +126,20 @@
         font-size: 10pt;
     }
 
+    section.cv-wide {
+        font-size: 10pt;
+        margin-top: 2mm;
+    }
+
     /* ─────────────── SECCIONES ─────────────── */
     .cv-section {
         margin-bottom: 7mm;
+    }
+
+    .cv-stack-group,
+    .cv-edu {
         page-break-inside: avoid;
+        break-inside: avoid;
     }
 
     h2.cv-h2 {
@@ -307,6 +331,7 @@
         margin-bottom: 5mm;
         padding-left: 3mm;
         page-break-inside: avoid;
+        break-inside: avoid;
     }
 
     .cv-job::before {
@@ -354,14 +379,16 @@
     /* ─────────────── MAIN · PROYECTOS ─────────────── */
     .cv-projects {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 4mm;
+        grid-template-columns: 1fr 1fr;
+        gap: 5mm 7mm;
+        align-items: start;
     }
 
     .cv-project {
         border-left: 3px solid #118C4F;
         padding-left: 3.5mm;
         page-break-inside: avoid;
+        break-inside: avoid;
     }
 
     .cv-project-head {
@@ -419,37 +446,6 @@
         margin-top: 1.5mm;
     }
 
-    /* ─────────────── MAIN · SERVICIOS ─────────────── */
-    .cv-services {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2mm 4mm;
-    }
-
-    .cv-service {
-        padding-left: 4mm;
-        position: relative;
-        font-size: 9.5pt;
-        color: #2a2a2a;
-        line-height: 1.35;
-    }
-
-    .cv-service::before {
-        content: "▸";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: #118C4F;
-        font-weight: 700;
-    }
-
-    .cv-service strong {
-        color: #1a1a1a;
-        display: block;
-        font-size: 10pt;
-        margin-bottom: 0.3mm;
-    }
-
     /* ─────────────── ENLACES ─────────────── */
     a {
         color: inherit;
@@ -471,14 +467,14 @@
         </div>
         <div class="cv-id">
             <h1>Carlos Humberto Linares Morales</h1>
-            <div class="cv-role">Desarrollador Full-Stack · Android + Python · Fundador de Pana Voy</div>
+            <div class="cv-role">Desarrollador Full-Stack · Android, Web &amp; Cloud · Fundador de Pana Voy</div>
             <div class="cv-contact">
-                <span><span class="ico">📧</span>carlos.linares.es@gmail.com</span>
+                <span><span class="ico">📧</span><a href="mailto:carlos.linares.es@gmail.com">carlos.linares.es@gmail.com</a></span>
                 <span><span class="ico">📱</span>+58 414-2272792</span>
                 <span><span class="ico">📍</span>Charallave, Miranda, Venezuela</span>
-                <span><span class="ico">💼</span>linkedin.com/in/carlos-humberto-linares-morales-a474642a6</span>
-                <span><span class="ico">💻</span>github.com/carloslinareses-cloud</span>
-                <span><span class="ico">🌐</span>panavoy.com</span>
+                <span><span class="ico">💼</span><a href="https://www.linkedin.com/in/carlos-humberto-linares-morales-a474642a6">LinkedIn</a></span>
+                <span><span class="ico">💻</span><a href="https://github.com/carloslinareses-cloud">GitHub</a></span>
+                <span><span class="ico">🌐</span><a href="https://carloslinareses-cloud.github.io/mi-cv/">CV web</a></span>
             </div>
         </div>
     </header>
@@ -493,12 +489,12 @@
             <div class="cv-section">
                 <h2 class="cv-h2">Contacto</h2>
                 <ul class="cv-contact-list">
-                    <li><span class="ico">📧</span>carlos.linares.es@gmail.com</li>
+                    <li><span class="ico">📧</span><a href="mailto:carlos.linares.es@gmail.com">carlos.linares.es@gmail.com</a></li>
                     <li><span class="ico">📱</span>+58 414-2272792</li>
                     <li><span class="ico">📍</span>Charallave, Miranda, Venezuela</li>
-                    <li><span class="ico">💼</span>linkedin.com/in/carlos-humberto-linares-morales-a474642a6</li>
-                    <li><span class="ico">💻</span>github.com/carloslinareses-cloud</li>
-                    <li><span class="ico">🌐</span>panavoy.com</li>
+                    <li><span class="ico">💼</span><a href="https://www.linkedin.com/in/carlos-humberto-linares-morales-a474642a6">Perfil de LinkedIn</a></li>
+                    <li><span class="ico">💻</span><a href="https://github.com/carloslinareses-cloud">github.com/carloslinareses-cloud</a></li>
+                    <li><span class="ico">🌐</span><a href="https://carloslinareses-cloud.github.io/mi-cv/">CV y portafolio web</a></li>
                 </ul>
             </div>
 
@@ -512,6 +508,8 @@
                         <span class="cv-chip">Python</span>
                         <span class="cv-chip">Kotlin</span>
                         <span class="cv-chip">JavaScript</span>
+                        <span class="cv-chip">TypeScript</span>
+                        <span class="cv-chip">SQL</span>
                         <span class="cv-chip">Java</span>
                     </div>
                 </div>
@@ -524,6 +522,7 @@
                         <span class="cv-chip">Material Design 3</span>
                         <span class="cv-chip">Android Studio</span>
                         <span class="cv-chip">Navigation3</span>
+                        <span class="cv-chip">Capacitor</span>
                     </div>
                 </div>
 
@@ -540,6 +539,8 @@
                         <span class="cv-chip">REST APIs</span>
                         <span class="cv-chip">Supabase</span>
                         <span class="cv-chip">PostgreSQL</span>
+                        <span class="cv-chip">RLS</span>
+                        <span class="cv-chip">Edge Functions</span>
                         <span class="cv-chip">Pandas</span>
                     </div>
                 </div>
@@ -561,6 +562,9 @@
                         <span class="cv-chip">Pages</span>
                         <span class="cv-chip">R2 Storage</span>
                         <span class="cv-chip">GitHub Actions</span>
+                        <span class="cv-chip">Docker</span>
+                        <span class="cv-chip">Caddy</span>
+                        <span class="cv-chip">systemd</span>
                         <span class="cv-chip">Git</span>
                         <span class="cv-chip">Linux</span>
                     </div>
@@ -569,9 +573,20 @@
                 <div class="cv-stack-group">
                     <h4>Pagos</h4>
                     <div class="cv-chips">
+                        <span class="cv-chip">SumUp</span>
+                        <span class="cv-chip">Wompi</span>
                         <span class="cv-chip">Pago Móvil VE</span>
-                        <span class="cv-chip">Integraciones bancarias</span>
                         <span class="cv-chip">Tasa BCV</span>
+                    </div>
+                </div>
+
+                <div class="cv-stack-group">
+                    <h4>QA &amp; IA</h4>
+                    <div class="cv-chips">
+                        <span class="cv-chip">JUnit</span>
+                        <span class="cv-chip">Vitest</span>
+                        <span class="cv-chip">Playwright</span>
+                        <span class="cv-chip">OpenAI API</span>
                     </div>
                 </div>
 
@@ -636,7 +651,7 @@
             <div class="cv-section cv-profile">
                 <h2 class="cv-h2">Perfil Profesional</h2>
                 <p>
-                    Profesional en informática con <strong>más de 16 años de trayectoria</strong> combinando <strong>desarrollo de software, soporte técnico y gestión operativa</strong>. <strong>Fundador y Desarrollador Principal de Pana Voy</strong>, plataforma nativa Android + serverless de delivery y taxi en producción para los Valles del Tuy (Venezuela). Especializado en backend con Python (Flask, Pandas, REST APIs), apps Android nativas con Kotlin/Jetpack Compose, y arquitecturas serverless sobre Firebase y Cloudflare. Experiencia comprobada en <strong>liderar equipos, optimizar procesos logísticos y entregar productos digitales de extremo a extremo</strong>, desde el diseño hasta la publicación en Play Store. Enfoque constante en el aprendizaje continuo, la resolución de problemas complejos y el equilibrio entre rigor técnico y resultados de negocio.
+                    Profesional en informática con <strong>más de 16 años de trayectoria</strong> entre desarrollo de productos, soporte, infraestructura y gestión operativa. Creador de aplicaciones Android, plataformas web y sistemas municipales publicados, con experiencia en Kotlin/Jetpack Compose, React/TypeScript, Python, Firebase, Supabase/PostgreSQL y Cloudflare. <strong>Fundador y desarrollador principal de Pana Voy</strong>, disponible en Google Play. Entrega soluciones de extremo a extremo: arquitectura, seguridad, pagos, pruebas automatizadas, despliegue, observabilidad y soporte de producción.
                 </p>
             </div>
 
@@ -648,15 +663,15 @@
                     <!-- ALCALDÍA DE CHARALLAVE -->
                     <article class="cv-job">
                         <div class="cv-job-head">
-                            <h3>Desarrollador Android</h3>
+                            <h3>Desarrollador Android y Web</h3>
                             <span class="dates">2025 — Presente</span>
                         </div>
                         <div class="org">Alcaldía de Charallave · Miranda, Venezuela</div>
                         <ul class="cv-bullets">
-                            <li>Diseño y desarrollo de una app móvil de <strong>control de acceso</strong> para el personal de la alcaldía, actualmente en producción (v1.0.8).</li>
-                            <li>Stack: Kotlin, Jetpack Compose, Supabase (Auth + PostgreSQL) y Navigation3.</li>
-                            <li>Implementación de sesión segura, geolocalización, dashboard administrativo y sistema de notificaciones de actualización.</li>
-                            <li>Ciclo completo de release: distribución de APK firmado, gestión de versiones y soporte continuo a usuarios internos.</li>
+                            <li>Construcción del <strong>ecosistema digital municipal</strong>: app Android de asistencia, dashboard React, portal público y Sala Situacional.</li>
+                            <li>App v1.0.17 con Kotlin, Jetpack Compose, Supabase/PostgreSQL, geocercas, biometría/PIN, FCM y actualizaciones remotas.</li>
+                            <li>Gestión de personal, carnets, reportes PDF/Excel, permisos, memorandos, cuadrillas y radar de ubicación en tiempo real.</li>
+                            <li>Censo territorial, mapas interactivos, tickets ciudadanos, auditoría, cliente Electron y soporte integral de versiones.</li>
                         </ul>
                     </article>
 
@@ -666,13 +681,12 @@
                             <h3>Fundador &amp; Desarrollador Full-Stack</h3>
                             <span class="dates">Feb 2026 — Presente</span>
                         </div>
-                        <div class="org">Independiente · Pana Voy · AeroSocio</div>
+                        <div class="org">Independiente · Productos digitales y plataformas cloud</div>
                         <ul class="cv-bullets">
-                            <li>Diseño y construcción integral de <strong>Pana Voy</strong>: app Android nativa, panel administrativo web, portal de socios y backend serverless desplegado en producción.</li>
-                            <li>Desarrollo de <strong>AeroSocio</strong> (React 19 + Supabase + PostgreSQL): club de servicios mensuales para conductores en España.</li>
-                            <li>Arquitectura serverless escalable con Firebase Cloud Functions, Cloudflare Workers, R2 Storage y Pages.</li>
-                            <li>Análisis y manipulación de datos en Python con Pandas; construcción de APIs REST con Flask.</li>
-                            <li>Integración de pagos en Bolívares con conversión automática a tasa BCV y geofencing en radio de 5 km.</li>
+                            <li>Creación de <strong>Pana Voy</strong>, publicada en Google Play con panel administrativo, portal de socios y backend serverless.</li>
+                            <li>Desarrollo y publicación de <strong>Resuelia, AeroSocio, Aula Virtual FUNCECAIND y Súmate VZLA</strong>.</li>
+                            <li>Operación cloud de Eternia con Docker, Caddy, MariaDB, sitios PHP y bot privado de observabilidad en Python/Discord.</li>
+                            <li>Firebase, Supabase y Cloudflare; pagos SumUp/Wompi; pruebas unitarias, instrumentadas y end-to-end.</li>
                         </ul>
                     </article>
 
@@ -792,80 +806,157 @@
                 </div>
             </div>
 
-            <!-- PROYECTOS DESTACADOS -->
+        </section>
+
+    </div>
+
+    <section class="cv-wide">
+
+            <!-- PRODUCTOS Y PROYECTOS DESTACADOS -->
             <div class="cv-section">
-                <h2 class="cv-h2">Proyectos Destacados</h2>
+                <h2 class="cv-h2">Productos y Proyectos Destacados</h2>
                 <div class="cv-projects">
 
                     <article class="cv-project">
                         <div class="cv-project-head">
                             <h3>Pana Voy</h3>
-                            <span class="status">En producción</span>
+                            <span class="status">Publicado</span>
                         </div>
-                        <div class="subtitle">Fundador · Desarrollador Principal · panavoy.com</div>
+                        <div class="subtitle">Fundador y desarrollador principal · <a href="https://panavoy.com">panavoy.com</a> · <a href="https://play.google.com/store/apps/details?id=com.panavoy.app">Google Play</a> · <a href="https://admin.panavoy.com">Admin</a> · <a href="https://socios.panavoy.com">Socios</a></div>
                         <p>
-                            Plataforma <strong>delivery + taxi</strong> para los Valles del Tuy (Venezuela). App nativa Android multi-rol (cliente, tienda, repartidor, taxista), backend serverless en Firebase + Cloudflare, panel administrativo web y portal de socios. Incluye notificaciones push en tiempo real, geofencing de 5 km, pagos en Bolívares con tasa BCV automática y modelo de membresías quincenales para socios comerciales.
+                            Ecosistema de movilidad y entregas para los Valles del Tuy: app Android, panel administrativo, portal de socios, autenticación, mapas, notificaciones, membresías y operación en tiempo real.
                         </p>
                         <div class="stack">
                             <span class="cv-chip">Kotlin</span>
                             <span class="cv-chip">Jetpack Compose</span>
-                            <span class="cv-chip">Firebase RTDB</span>
-                            <span class="cv-chip">Cloud Functions</span>
-                            <span class="cv-chip">FCM</span>
-                            <span class="cv-chip">Cloudflare Workers</span>
-                            <span class="cv-chip">R2</span>
-                            <span class="cv-chip">MapLibre</span>
+                            <span class="cv-chip">Firebase</span>
                             <span class="cv-chip">React</span>
+                            <span class="cv-chip">Cloudflare</span>
+                            <span class="cv-chip">MapLibre</span>
+                            <span class="cv-chip">JUnit / Playwright</span>
+                        </div>
+                    </article>
+
+                    <article class="cv-project">
+                        <div class="cv-project-head">
+                            <h3>Ecosistema digital municipal</h3>
+                            <span class="status">En producción</span>
+                        </div>
+                        <div class="subtitle">Alcaldía de Charallave · <a href="https://alcaldiadecharallave.com">Portal</a> · <a href="https://asistencia.alcaldiadecharallave.com">Asistencia</a> · <a href="https://salasituacional.alcaldiadecharallave.com">Sala Situacional</a></div>
+                        <p>
+                            App Android de control de asistencia y acceso, dashboard de personal, portal institucional y plataforma territorial para censos, mapas, cuadrillas, incidencias y reportes.
+                        </p>
+                        <div class="stack">
+                            <span class="cv-chip">Kotlin / Compose</span>
+                            <span class="cv-chip">React 19</span>
+                            <span class="cv-chip">Supabase</span>
+                            <span class="cv-chip">PostgreSQL</span>
+                            <span class="cv-chip">Firebase</span>
+                            <span class="cv-chip">Leaflet</span>
+                            <span class="cv-chip">Electron</span>
+                        </div>
+                    </article>
+
+                    <article class="cv-project">
+                        <div class="cv-project-head">
+                            <h3>Resuelia</h3>
+                            <span class="status">Publicado</span>
+                        </div>
+                        <div class="subtitle">Creador y desarrollador full-stack · <a href="https://resuelia.pages.dev/">resuelia.pages.dev</a></div>
+                        <p>Marketplace de servicios profesionales en Colombia con perfiles, contratación, billetera, pagos, retiros, verificación de identidad y aplicación Android híbrida.</p>
+                        <div class="stack">
+                            <span class="cv-chip">React / TypeScript</span>
+                            <span class="cv-chip">Supabase / RLS</span>
+                            <span class="cv-chip">Capacitor</span>
+                            <span class="cv-chip">Cloudflare R2</span>
+                            <span class="cv-chip">Wompi</span>
+                        </div>
+                    </article>
+
+                    <article class="cv-project">
+                        <div class="cv-project-head">
+                            <h3>Aula Virtual FUNCECAIND</h3>
+                            <span class="status">Publicado</span>
+                        </div>
+                        <div class="subtitle">Plataforma e-learning · <a href="https://elearningcharallave.github.io/elearning/">Ver aula virtual</a></div>
+                        <p>Gestión de cursos, módulos, clases, evaluaciones, asignaciones, materiales privados, analítica y certificados QR para estudiantes, profesores y administradores.</p>
+                        <div class="stack">
+                            <span class="cv-chip">JavaScript</span>
+                            <span class="cv-chip">Supabase</span>
+                            <span class="cv-chip">Edge Functions</span>
+                            <span class="cv-chip">Jitsi</span>
+                            <span class="cv-chip">OpenAI API</span>
                         </div>
                     </article>
 
                     <article class="cv-project">
                         <div class="cv-project-head">
                             <h3>AeroSocio</h3>
-                            <span class="status dev">En desarrollo</span>
+                            <span class="status">Publicado</span>
                         </div>
-                        <div class="subtitle">Creador · Full-Stack Developer · Mercado España</div>
-                        <p>
-                            <strong>Club VIP de servicios para conductores en España</strong> bajo modelo SaaS B2C de 5 €/mes. Ofrece alertas automáticas de ITV, seguro y carnet; gestión documental en la nube; plantillas legales para recursos de multas; y marketplace con descuentos. Construido con React 19 + Vite y Supabase (PostgreSQL) como backend.
-                        </p>
+                        <div class="subtitle">Creador y desarrollador full-stack · <a href="https://aerosocio.es">aerosocio.es</a></div>
+                        <p>Club digital para conductores en España con área privada, recordatorios documentales, plantillas legales, marketplace, pagos y administración de socios.</p>
                         <div class="stack">
                             <span class="cv-chip">React 19</span>
                             <span class="cv-chip">Vite</span>
-                            <span class="cv-chip">Tailwind v4</span>
                             <span class="cv-chip">Supabase</span>
                             <span class="cv-chip">PostgreSQL</span>
+                            <span class="cv-chip">SumUp</span>
+                        </div>
+                    </article>
+
+                    <article class="cv-project">
+                        <div class="cv-project-head">
+                            <h3>Eternia</h3>
+                            <span class="status">En producción</span>
+                        </div>
+                        <div class="subtitle">Infraestructura y operación · <a href="https://eterniaot.com/">eterniaot.com</a> · <a href="https://classic.eterniaot.com/">classic.eterniaot.com</a></div>
+                        <p>Dos mundos MMO con sitios y servicios propios, despliegue en contenedores, base de datos, pagos y observabilidad privada con alertas y reinicios controlados.</p>
+                        <div class="stack">
+                            <span class="cv-chip">Docker</span>
+                            <span class="cv-chip">Caddy</span>
+                            <span class="cv-chip">MariaDB</span>
+                            <span class="cv-chip">PHP / Lua / SQL</span>
+                            <span class="cv-chip">Python / Discord</span>
+                        </div>
+                    </article>
+
+                    <article class="cv-project">
+                        <div class="cv-project-head">
+                            <h3>Súmate VZLA</h3>
+                            <span class="status">Publicado</span>
+                        </div>
+                        <div class="subtitle">Plataforma de aportes · <a href="https://sumatevzla.org">sumatevzla.org</a></div>
+                        <p>Sitio público de aportes internacionales con pagos en euros y pesos colombianos, webhooks firmados, actividad pública y pruebas de accesibilidad.</p>
+                        <div class="stack">
+                            <span class="cv-chip">HTML / CSS / JS</span>
+                            <span class="cv-chip">Supabase</span>
+                            <span class="cv-chip">SumUp</span>
+                            <span class="cv-chip">Wompi</span>
+                            <span class="cv-chip">Playwright / axe</span>
+                        </div>
+                    </article>
+
+                    <article class="cv-project">
+                        <div class="cv-project-head">
+                            <h3>IA, redes y automatización</h3>
+                            <span class="status dev">Laboratorio técnico</span>
+                        </div>
+                        <div class="subtitle">Herramientas internas de infraestructura y monitoreo</div>
+                        <p>Gateway de modelos cloud/locales y sistema de alertas de tráfico para cámaras IP con panel local, Telegram/Discord y ejecución en Windows, Linux, VPS y Termux.</p>
+                        <div class="stack">
+                            <span class="cv-chip">Python</span>
+                            <span class="cv-chip">LiteLLM / Ollama</span>
+                            <span class="cv-chip">Docker</span>
+                            <span class="cv-chip">PowerShell</span>
+                            <span class="cv-chip">Tapo / Mercusys</span>
                         </div>
                     </article>
 
                 </div>
             </div>
 
-            <!-- SERVICIOS -->
-            <div class="cv-section">
-                <h2 class="cv-h2">Servicios</h2>
-                <div class="cv-services">
-                    <div class="cv-service">
-                        <strong>Apps a medida</strong>
-                        Android nativo con Kotlin/Compose + paneles web administrativos, al estilo Pana Voy.
-                    </div>
-                    <div class="cv-service">
-                        <strong>Datos &amp; APIs</strong>
-                        APIs en Python/Flask, automatización con Pandas y generación de reportes operativos.
-                    </div>
-                    <div class="cv-service">
-                        <strong>Redes &amp; CCTV</strong>
-                        Ubiquiti, cableado RJ45, configuración de routers y servidores.
-                    </div>
-                    <div class="cv-service">
-                        <strong>Consultoría operativa</strong>
-                        Optimización de procesos, logística, inventarios y coordinación de equipos.
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-    </div>
+    </section>
 
 </body>
 </html>
