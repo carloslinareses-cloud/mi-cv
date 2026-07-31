@@ -33,7 +33,7 @@ Desarrollador full stack con 7 productos en producción y 2 aplicaciones Android
 
 Trabajo con Kotlin y Jetpack Compose, React y TypeScript, Node.js y bases de datos Supabase, Firebase y PostgreSQL. Entrego de extremo a extremo: arquitectura, APIs REST, pasarelas de pago, mapas en tiempo real, pruebas automatizadas y despliegue continuo.
 
-Mi recorrido no es el habitual y creo que ahí está la diferencia. Empecé en 2016 en soporte técnico, redes e infraestructura: instalando internet en casa de clientes, configurando antenas Ubiquiti, montando CCTV y atendiendo usuarios en un contact center. Después coordiné operaciones y equipos durante dos años y medio en Madrid. Desde 2026 me dedico por completo al desarrollo de software.
+Mi recorrido no es el habitual y creo que ahí está la diferencia. Empecé en 2016 en soporte técnico, redes e infraestructura: instalando internet en casa de clientes, configurando antenas Ubiquiti, montando CCTV y atendiendo usuarios en un contact center. Después coordiné durante dos años y medio en Madrid un equipo de 4 personas y el cuadrante de una operación de 5:00 a 23:00. Desde 2026 me dedico por completo al desarrollo de software.
 
 Eso significa que cuando construyo un producto ya sé qué se rompe en producción, qué pregunta el usuario cuando algo falla y qué cuesta operar lo que se entrega. No diseño para el caso feliz.
 
@@ -100,7 +100,9 @@ Como fundador llevo también la operación diaria: atención a clientes, comerci
 ```
 Gestión y supervisión de operaciones logísticas y administrativas.
 
-Coordinación de personal y organización de los turnos de trabajo. Control de inventarios, seguimiento de procesos operativos, documentación administrativa y elaboración de informes.
+Coordinación de un equipo de 4 personas y elaboración del cuadrante de turnos para cubrir una operación de 18 horas diarias, de 5:00 a 23:00.
+
+Control de inventarios, seguimiento de procesos operativos, documentación administrativa y elaboración de informes.
 ```
 
 **Ourworld LTD**

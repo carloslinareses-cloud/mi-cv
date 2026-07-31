@@ -63,7 +63,7 @@ PARKMADRID = {
     "lugar": "Madrid, España",
     "fechas": "07/2023 – 01/2026",
     "logros": [
-        "Coordinación de personal y organización de los turnos de trabajo.",
+        "Coordinación de un equipo de 4 personas y elaboración del cuadrante de turnos para cubrir una operación de 18 horas diarias, de 5:00 a 23:00.",
         "Resolución de incidencias operativas del día a día y seguimiento de procesos.",
         "Control de inventarios, documentación administrativa y elaboración de informes.",
     ],
@@ -159,7 +159,7 @@ IDIOMAS = ("Español: nativo. Inglés: lectura y comprensión escrita "
 
 ADICIONAL_BASE = [
     "Disponibilidad: incorporación inmediata, jornada completa.",
-    "Trabajo 100% remoto, con disponibilidad para turnos rotativos, turnos nocturnos y fines de semana.",
+    "Trabajo 100% remoto, con disponibilidad para turnos rotativos, turnos nocturnos y fines de semana; ya he trabajado y organizado turnos en operaciones de 5:00 a 23:00.",
     "Zona horaria GMT-4 (Venezuela): jornada completa coincidente con EE. UU. y Latinoamérica, y solapamiento con la tarde en España.",
     "Equipo propio: portátil, auriculares con micrófono y conexión a internet estable, en espacio de trabajo sin interrupciones.",
 ]
@@ -270,7 +270,8 @@ PERFILES = [
         "titular": "Asistente Virtual · Soporte Administrativo y Automatización",
         "resumen": (
             "Perfil administrativo con base técnica: dos años y medio como gerente y administrador "
-            "en ParkMadrid gestionando documentación, inventarios, turnos e informes, más "
+            "en ParkMadrid, coordinando un equipo de 4 personas y el cuadrante de una operación "
+            "de 5:00 a 23:00, además de documentación, inventarios e informes; más "
             "experiencia en contact center, en registro y validación documental y en elaboración de "
             "presupuestos con Excel avanzado. Manejo alto de hojas de cálculo y capacidad poco "
             "habitual en el puesto: programo, así que automatizo las tareas repetitivas en vez de "
