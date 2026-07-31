@@ -245,7 +245,8 @@ PERFILES = [
         "resumen": (
             "Más de 10 años de trato directo con clientes: comercio (2010-2015), soporte "
             "informático (2016-2018), contact center y trabajo de campo (2020-2022) y gestión de "
-            "operaciones y equipos (2023-2026), incluida una campaña en Teleperformance Bogotá "
+            "un equipo de 4 personas con turnos de 5:00 a 23:00 en Madrid (2023-2026), "
+            "incluida una campaña en Teleperformance Bogotá "
             "(atención, soporte técnico de primer nivel, escalamiento y backoffice). Actualmente "
             "atiendo a diario a clientes, comercios y repartidores en mi propia plataforma. "
             "Perfil técnico: TSU en Informática y experiencia en soporte de redes, equipos y CCTV, "
