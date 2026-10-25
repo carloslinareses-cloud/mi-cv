@@ -22,5 +22,8 @@
   "homepage": "https://carloslinareses-cloud.github.io/mi-cv/",
   "devDependencies": {
     "tailwindcss": "^3.4.17"
+  },
+  "overrides": {
+    "postcss-selector-parser@<7.1.6": "^7.1.6"
   }
 }
